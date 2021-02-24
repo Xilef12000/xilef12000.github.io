@@ -1,0 +1,148 @@
+<body style="background-image: url('Background.png'); font-family: arial; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+	<TABLE width="100%">
+		<tbody>
+			<tr>
+				<td colspan="3">
+					<center>
+						<h1 style="color:white">
+							Minecraft-Server Info:
+						</h1>
+					</center>
+					<img src="https://eu.mc-api.net/v3/server/favicon/xilef12000.minecraftserver.de" width="128" height="128">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					<center>
+						<h1 style="color:white">
+							Minecraft-Server overviewmap:
+						</h1>
+					</center>
+				</td>
+			</tr>
+			<tr>
+				<td width="25%" valign="top">
+					<center>
+						<h2 style="color:white">
+							Bases:
+						</h2>
+					</center>
+					<button onclick="displayIframe_overview()" style="color:black">Overview</button>
+					<br>
+					<button onclick="displayIframe_base_xilef()" style="color:black">Xilef12000's and Ihtak12000's base</button>
+					<br>
+					<button onclick="displayIframe_base_swabian_old()" style="color:black">SwabianReeve's and Rafelian's old base</button>
+					<br>
+					<button onclick="displayIframe_base_rafelian()" style="color:black">Rafelian's base</button>
+					<br>
+					<button onclick="displayIframe_base_swabian()" style="color:black">SwabianReeve's base</button>
+					<br>
+					<button onclick="displayIframe_base_xilef_old()" style="color:black">Xilef12000's and Ihtak12000's old base</button>
+					<br>
+				</td>
+				<td width="25%" valign="top">
+					<center>
+						<h2 style="color:white">
+							Biomes:
+						</h2>
+					</center>
+					<button onclick="displayIframe_biome_mesa()" style="color:black">Mesa/Badlands</button>
+					<br>
+					<button onclick="displayIframe_biome_ice()" style="color:black">Ice</button>
+					<br>
+					<button onclick="displayIframe_biome_jungle()" style="color:black">Jungle</button>
+					<br>
+				</td>
+				<td width="50%" height=100%>
+					<div id="iframeHeading" width="100%"></div>
+					<div id="iframeDisplay" height= 600; width="100%"></div>
+					<button onclick="openFullscreen()" style="color:black">Fullscreen</button>
+					<br>
+					<script>
+       					document.getElementById("iframeDisplay").innerHTML = "<iframe src=\"https://minecraft.nitrado.net/map/6913655\" height=\"600\" width=\"100%\" ></iframe>";
+       					document.getElementById("iframeHeading").innerHTML = "<h2 style=\"color:white\">Overview:</h2>";
+					</script>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					<center>
+						<p style="color:white">
+							test
+						</p>	
+					</center>
+					<button onclick="window.location='https://takeb1nzyto.space/';" style="background-color: Transparent; border: none;">
+						<img src="https://takeb1nzyto.space/assets/img\b1nzy.png" height="20px">
+					</button>
+				</td>
+			</tr>
+		</tbody>
+	</TABLE>
+</body>
+<script>
+    function displayIframe_overview() {
+        document.getElementById("iframeDisplay").innerHTML = "<iframe src=\"https://minecraft.nitrado.net/map/6913655\" height=\"600\" width=\"100%\" ></iframe>";
+        document.getElementById("iframeHeading").innerHTML = "<h2 style=\"color:white\">Overview:</h2>";
+    }
+</script>
+<script>
+    function displayIframe_base_xilef() {
+        document.getElementById("iframeDisplay").innerHTML = "<iframe src=\"https://minecraft.nitrado.net/map/6913655/#/-1543/64/1766/-2/world/world-lighting\" height=\"600\" width=\"100%\" ></iframe>";
+        document.getElementById("iframeHeading").innerHTML = "<h2 style=\"color:white\">Xilef12000's and Ihtak12000's base:</h2>";
+    }
+</script>
+<script>
+    function displayIframe_base_swabian_old() {
+        document.getElementById("iframeDisplay").innerHTML = "<iframe src=\"https://minecraft.nitrado.net/map/6913655/#/-1479/64/1185/-1/world/world-lighting\" height=\"600\" width=\"100%\" ></iframe>";
+        document.getElementById("iframeHeading").innerHTML = "<h2 style=\"color:white\">SwabianReeve's and Rafelian's old base:</h2>";
+    }
+</script>
+<script>
+    function displayIframe_base_rafelian() {
+        document.getElementById("iframeDisplay").innerHTML = "<iframe src=\"https://minecraft.nitrado.net/map/6913655/#/-1709/64/1937/max/world/world-lighting\" height=\"600\" width=\"100%\" ></iframe>";
+        document.getElementById("iframeHeading").innerHTML = "<h2 style=\"color:white\">Rafelian's base:</h2>";
+    }
+</script>
+<script>
+    function displayIframe_base_swabian() {
+        document.getElementById("iframeDisplay").innerHTML = "<iframe src=\"https://minecraft.nitrado.net/map/6913655/#/-1250/64/1699/max/world/world-lighting\" height=\"600\" width=\"100%\" ></iframe>";
+        document.getElementById("iframeHeading").innerHTML = "<h2 style=\"color:white\">SwabianReeve's base:</h2>";
+    }
+</script>
+<script>
+    function displayIframe_base_xilef_old() {
+        document.getElementById("iframeDisplay").innerHTML = "<iframe src=\"https://minecraft.nitrado.net/map/6913655/#/35/64/-22/max/world/world-lighting\" height=\"600\" width=\"100%\" ></iframe>";
+        document.getElementById("iframeHeading").innerHTML = "<h2 style=\"color:white\">Xilef12000's and Ihtak12000's old base:</h2>";
+    }
+</script>
+
+<script>
+    function displayIframe_biome_mesa() {
+        document.getElementById("iframeDisplay").innerHTML = "<iframe src=\"https://minecraft.nitrado.net/map/6913655/#/-3846/64/1759/-3/world/world-lighting\" height=\"600\" width=\"100%\" ></iframe>";
+        document.getElementById("iframeHeading").innerHTML = "<h2 style=\"color:white\">Mesa/Badlands:</h2>";
+    }
+</script>
+<script>
+    function displayIframe_biome_ice() {
+        document.getElementById("iframeDisplay").innerHTML = "<iframe src=\"https://minecraft.nitrado.net/map/6913655/#/-3134/64/-3506/-2/world/world-lighting\" height=\"600\" width=\"100%\" ></iframe>";
+        document.getElementById("iframeHeading").innerHTML = "<h2 style=\"color:white\">Ice:</h2>";
+    }
+</script>
+<script>
+    function displayIframe_biome_jungle() {
+        document.getElementById("iframeDisplay").innerHTML = "<iframe src=\"https://minecraft.nitrado.net/map/6913655/#/-3750/64/-5017/-4/world/world-lighting\" height=\"600\" width=\"100%\" ></iframe>";
+        document.getElementById("iframeHeading").innerHTML = "<h2 style=\"color:white\">Jungle:</h2>";
+    }
+</script>
+
+<script>
+	function openFullscreen() {
+	 	if (iframeDisplay.requestFullscreen) {
+	    	iframeDisplay.requestFullscreen();
+	  	} else if (iframeDisplay.webkitRequestFullscreen) { /* Safari */
+	    	iframeDisplay.webkitRequestFullscreen();
+	  	} else if (iframeDisplay.msRequestFullscreen) { /* IE11 */
+	   	 	iframeDisplay.msRequestFullscreen();
+	  	}
+	}
+</script>
