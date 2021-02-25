@@ -1,11 +1,14 @@
 <body>
+	<script>
+		alert("Wenn du denn Nutzungsbedingungen nicht zustimmst, darfst dieses Tool nicht nutzten");
+	</script>
 	<h1>BBB Lösungs-/Präsentations- Stehler</h1>
 	<TABLE width="100%">
 		<tbody>
 			<tr>
 				<td width="50%" valign="top">
 					<h2>Nutzungsbedingungen:</h2>
-					<p>1. Das Programm nur mit verstand einsetzen, d.h. dem Lehrer nicht 1 zu 1 seine Lösung vortragen, sondern nur daran orientieren</p>
+					<p>1. Das Programm nur mit verstand einsetzten, d.h. dem Lehrer nicht 1 zu 1 seine lösung vortragen, sondern nur daran orientieren</p>
 					<p>2. Dieses Programm nicht verpetzen</p>
 				</td>
 				<td width="50%" valign="top">
@@ -50,6 +53,6 @@
 		var url = document.getElementById('bbb-url').value;
 		var iframe = "<iframe src=\"" + url.slice(0, -1) + number + "\" height=\"720\" width=\"1280\" ></iframe>"
 		document.getElementById("frame").innerHTML = iframe;
-		document.getElementById("framenr").innerHTML = "<p>Page: " + number + "</p>";
+		document.getElementById("framenr").innerHTML = "<p>Seite: " + number + "</p>";
 	}
 </script>
