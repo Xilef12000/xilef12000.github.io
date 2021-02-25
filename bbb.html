@@ -24,7 +24,7 @@
 	<br>
 	<button onclick="pp()" style="color:black"> Previous Page</button>
 	<button onclick="np()" style="color:black"> Next Page</button>
-	<br>
+	<div id="framenr"></div>
 	<div id="frame"></div>
 </body>
 <script>
@@ -50,5 +50,6 @@
 		var url = document.getElementById('bbb-url').value;
 		var iframe = "<iframe src=\"" + url.slice(0, -1) + number + "\" height=\"720\" width=\"1280\" ></iframe>"
 		document.getElementById("frame").innerHTML = iframe;
+		document.getElementById("framenr").innerHTML = "<p>Seite: " + number + "</p>";
 	}
 </script>
