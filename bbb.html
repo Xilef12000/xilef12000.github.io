@@ -1,58 +1,89 @@
-<body>
-	<script>
-		alert("Wenn du denn Nutzungsbedingungen nicht zustimmst, darfst dieses Tool nicht nutzten!");
-	</script>
-	<h1>BBB Lösungs-/Präsentations- Stehler</h1>
-	<TABLE width="100%">
-		<tbody>
-			<tr>
-				<td width="50%" valign="top">
-					<h2>Nutzungsbedingungen:</h2>
-					<p>1. Das Programm nur mit verstand einsetzten, d.h. dem Lehrer nicht 1 zu 1 seine lösung vortragen, sondern nur daran orientieren</p>
-					<p>2. Dieses Programm nicht verpetzen</p>
-				</td>
-				<td width="50%" valign="top">
-					<h2>Anleitung:</h2>
-					<p>1. Rechtsklick auf die Präsentation in BBB machen</p>
-					<p>2. "Grafikadresse kopieren" drücken</p>
-					<p>3. Grafikadresse auf dieser Seite einfügen</p>
-					<p>4. "GO" drücken</p>
-				</td>
-			</tr>
-		</tbody>
-	</TABLE>
-	<label for="fname">Präsentations-Link: </label>
-	<input type="url" id="bbb-url" name="bbb-url">
-	<button onclick="GO()" style="color:black"> GO </button>
-	<br>
-	<button onclick="pp()" style="color:black"> Previous Page</button>
-	<button onclick="np()" style="color:black"> Next Page</button>
-	<div id="framenr"></div>
-	<div id="frame"></div>
-</body>
-<script>
-	var number = 1
-</script>
-<script>
-	function pp() {
-		number = number - 1
-		if (number == 0){
-			number = 1;
-		}
-		GO()
-	}
-</script>
-<script>
-	function np() {
-		number = number + 1
-		GO()
-	}
-</script>
-<script>
-	function GO() {
-		var url = document.getElementById('bbb-url').value;
-		var iframe = "<iframe src=\"" + url.slice(0, -1) + number + "\" height=\"100%\" width=\"100%\" ></iframe>"
-		document.getElementById("frame").innerHTML = iframe;
-		document.getElementById("framenr").innerHTML = "<p>Seite: " + number + "</p>";
-	}
-</script>
+<!DOCTYPE html>
+	<html>
+		<head>
+			<style>
+				body {
+					background-color: #202225;
+					color: white;
+				}
+			</style>
+			<style>
+				.toggle-darklight {
+					background-color: white;
+					color: black;
+				}
+			</style>
+		</head>
+		<body>
+			<script>
+				alert("Wenn du denn Nutzungsbedingungen nicht zustimmst, darfst dieses Tool nicht nutzten!");
+			</script>
+			<h1>BBB Lösungs-/Präsentations- Stehler</h1>
+			<button onclick="toggledarklight()">Toggle dark/light mode</button>
+			<TABLE width="100%">
+				<tbody>
+					<tr>
+						<td width="50%" valign="top">
+							<h2>Nutzungsbedingungen:</h2>
+							<p>1. Das Programm nur mit verstand einsetzten, d.h. dem Lehrer nicht 1 zu 1 seine lösung vortragen, sondern nur daran orientieren</p>
+							<p>2. Dieses Programm nicht verpetzen</p>
+						</td>
+						<td width="50%" valign="top">
+							<h2>Anleitung:</h2>
+							<p>1. Rechtsklick auf die Präsentation in BBB machen</p>
+							<p>2. "Grafikadresse kopieren" drücken</p>
+							<p>3. Grafikadresse auf dieser Seite einfügen</p>
+							<p>4. "GO" drücken</p>
+						</td>
+					</tr>
+				</tbody>
+			</TABLE>
+			<label for="fname">Präsentations-Link: </label>
+			<input type="url" id="bbb-url" name="bbb-url">
+			<button onclick="GO()"> GO </button>
+			<br>
+			<button onclick="pp()"> Previous Page</button>
+			<button onclick="np()"> Next Page</button>
+			<div id="framenr"></div>
+			<div id="frame"></div>
+		</body>
+		<script>
+			var number = 1
+		</script>
+		<script>
+			function pp() {
+				number = number - 1
+				if (number == 0){
+					number = 1;
+				}
+				GO()
+			}
+		</script>
+		<script>
+			function np() {
+				number = number + 1
+				GO()
+			}
+		</script>
+		<script>
+			function GO() {
+				var url = document.getElementById('bbb-url').value;
+				var spliturl = url.split("/");
+				var newurl
+				for (i = 0; i < spliturl.length - 1; i++) {
+  					newurl += spliturl[i] + "/";
+  				}
+  				newurl = newurl.slice(9, newurl.length);
+				var iframe = "<iframe src=\"" + newurl + number + "\" height=\"100%\" width=\"100%\" ></iframe>"
+				document.getElementById("frame").innerHTML = iframe;
+				document.getElementById("framenr").innerHTML = "<p>Seite: " + number + "</p>";
+			}
+		</script>
+		<script>
+			function toggledarklight() {
+				var element = document.body;
+				element.classList.toggle("toggle-darklight");
+			}
+		</script>
+	</body>
+</html>
