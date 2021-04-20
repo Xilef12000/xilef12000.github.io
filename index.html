@@ -17,14 +17,17 @@
 					<tr>
 						<td width="25%" valign="top">
 							<h2>BBB-Tools:</h2>
-							<button onclick="bbb()">BBB-Tools</button>
+							<button onclick="bbb()">BBB-Tools</button><br>
+							<br>
+							<button onclick="Prae()">BBB Lösungs-/Präsentations-Stehler</button><br>
+							<button onclick="Noti()">BBB Geteilte-Notizen-Schreiber</button>
 						</td>
 						<td width="25%" valign="top">
 							<h2>Minecraft Server Page:</h2>
 							<button onclick="minecraft()">Minecraft Server Page</button>
 						</td>
 						<td width="50%" valign="top">
-							<h2>New/Troll Page:</h2>
+							<h2>New,Troll,Test Pages:</h2>
 							<button onclick="newtroll()">New/Troll Page</button>
 						</td>
 					</tr>
@@ -51,6 +54,24 @@
 			}
 		</script>
 		<script>
+			function Prae() {
+				if (event.ctrlKey) {
+					window.open("https://xilef12000.github.io/bbb-pr%C3%A4sentation","_blank");
+				} else {
+					window.open("https://xilef12000.github.io/bbb-pr%C3%A4sentation","_self");
+				}
+			}
+		</script>
+		<script>
+			function Noti() {
+				if (event.ctrlKey) {
+					window.open("https://xilef12000.github.io/bbb-notizen","_blank");
+				} else {
+					window.open("https://xilef12000.github.io/bbb-notizen","_self");
+				}
+			}
+		</script>
+		<script>
 			function minecraft() {
 				if (event.ctrlKey) {
 					window.open("https://xilef12000.github.io/minecraftserver","_blank")
@@ -62,9 +83,9 @@
 		<script>
 			function newtroll() {
 				if (event.ctrlKey) {
-					window.open("https://xilef12000.github.io/new","_blank")
+					window.open("https://xilef12000.github.io/troll","_blank")
 				} else {
-					window.open("https://xilef12000.github.io/new","_self")
+					window.open("https://xilef12000.github.io/troll","_self")
 				}
 			}
 		</script>
