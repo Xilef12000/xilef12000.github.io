@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<link rel="stylesheet" href="style.css">
+		</head>
+		<body>
+			<h1>Rick Astley - Never Gonna Give You Up (Video)</h1>
+			<button onclick="toggledarklight()">Toggle dark/light mode</button>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<TABLE width="100%">
+				<tbody>
+					<tr>
+						<td width="25%" valign="top">
+							<iframe src="https://player.vimeo.com/video/148751763?autoplay=1&title=0&byline=0&portrait=0" width="640" height="480" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+							<br>
+							<p>You got rick rolled!</p>
+							<br>
+							<br>
+							<h2>Home Page:</h2>
+							<button onclick="home()">Home Page</button>
+						</td>
+					</tr>
+				</tbody>
+			</TABLE>
+		<script>
+			function toggledarklight() {
+				var element = document.body;
+				element.classList.toggle("toggle-darklight");
+			}
+		</script>
+		<script>
+			function home() {
+				if (event.ctrlKey) {
+					window.open("https://xilef12000.github.io/","_blank");
+				} else {
+					window.open("https://xilef12000.github.io/","_self");
+				}
+			}
+		</script>
+	</body>
+</html>
