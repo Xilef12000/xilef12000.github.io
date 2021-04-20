@@ -35,8 +35,6 @@
 		</body>
 		<script>
 			var number = 1
-		</script>
-		<script>
 			function pp() {
 				number = number - 1
 				if (number == 0){
@@ -44,14 +42,10 @@
 				}
 				GO()
 			}
-		</script>
-		<script>
 			function np() {
 				number = number + 1
 				GO()
 			}
-		</script>
-		<script>
 			function GO() {
 				var url = document.getElementById('bbb-url').value;
 				var spliturl = url.split("/");
@@ -64,8 +58,6 @@
 				document.getElementById("frame").innerHTML = iframe;
 				document.getElementById("framenr").innerHTML = "<p>Seite: " + number + "</p>";
 			}
-		</script>
-		<script>
 			function toggledarklight() {
 				var element = document.body;
 				element.classList.toggle("toggle-darklight");
