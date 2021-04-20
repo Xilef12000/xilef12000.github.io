@@ -4,6 +4,9 @@
 			<link rel="stylesheet" href="style.css">
 		</head>
 		<body>
+			<script>
+				alert("Dieses Tool wurde wegen der Gefahr des Missbrauches und des Identitätsdiebstahles deaktiviert!");
+			</script>
 			<h1>BBB Geteilte-Notizen-Schreiber</h1>
 			<button onclick="toggledarklight()">Toggle dark/light mode</button>
 			<TABLE width="100%">
@@ -60,7 +63,7 @@
   					name += splitname[i] + "%20";
   				}
   				name = name.slice(0, name.length - 3);
-				var iframe = "<iframe title=\"etherpad\" src=\"" + url + "pad/p/" + padid + "?showLineNumbers=false&amp;showChat=false&amp;noColors=true&amp;showControls=true&amp;rtl=false&amp;userName=" + name + "&amp;userColor=%234527a0&amp;lang=de&amp;sessionToken=" + token + "\" aria-describedby=\"sharedNotesEscapeHint\"\" height=\"400\" width=\"800\"></iframe>"
+				var iframe = "<p>Dieses Tool wurde wegen der Gefahr des Missbrauches und des Identitätsdiebstahles deaktiviert!</p>"
 				document.getElementById("frame").innerHTML = iframe;
 			}
 			function toggledarklight() {
