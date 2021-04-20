@@ -12,29 +12,43 @@
 			<br>
 			<br>
 			<br>
-			<TABLE width="100%">
-				<tbody>
-					<tr>
-						<td width="25%" valign="top">
-							<h2>BBB-Tools:</h2>
-							<button onclick="bbb()">BBB-Tools</button><br>
-							<br>
-							<button onclick="Prae()">BBB Lösungs-/Präsentations-Stehler</button><br>
-							<button onclick="Noti()">BBB Geteilte-Notizen-Schreiber</button>
-						</td>
-						<td width="25%" valign="top">
+			<table width="100%">
+				<tr>
+					<th width="25%" valign="top"></th>
+					<th width="25%" valign="top"></th>
+					<th width="25%" valign="top"></th>
+					<th width="25%" valign="top"></th>
+				</tr>
+				<tr>
+					<td valign="top">
+						<h2>BBB-Tools:</h2>
+						<button onclick="bbb()">BBB-Tools</button><br>
+						<br>
+						<button onclick="Prae()">BBB Lösungs-/Präsentations-Stehler</button><br>
+						<button onclick="Noti()">BBB Geteilte-Notizen-Schreiber</button>
+					</td>
+					<td valign="top">
 							<h2>Minecraft Server Page:</h2>
-							<button onclick="minecraft()">Minecraft Server Page</button>
-						</td>
-						<td width="50%" valign="top">
-							<h2>News-, Changes-, Troll- and Test- Pages:</h2>
-							<button onclick="troll()">Troll Page</button><br>
-							<button onclick="test()">Test Page</button><br>
-							<button onclick="news()">News/Changes Page</button>
-						</td>
-					</tr>
-				</tbody>
-			</TABLE>
+						<button onclick="minecraft()">Minecraft Server Page</button>
+					</td>
+					<td valign="top">
+						<h2>News-, Changes-, Troll- and Test- Pages:</h2>
+						<button onclick="troll()">Troll Page</button><br>
+						<button onclick="test()">Test Page</button><br>
+						<button onclick="news()">News Page</button>
+					</td>
+					<td valign="top">
+						<h2>The Github Repository for this Page:</h2>
+						<button onclick="github()">The Github Repository for this Page</button>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top" colspan="4">
+						<br>
+						<h3>Quick note: This whole website and its subpages are still under construction.</h3>
+					</td>
+				</tr>
+			</table>
 			<div class="cat">
 				<button onclick="window.location='https://takeb1nzyto.space/';" style="background-color: Transparent; border: none;">
 					<img src="https://takeb1nzyto.space/assets/img\b1nzy.png" height="20px">
@@ -92,6 +106,13 @@
 					window.open("https://xilef12000.github.io/new","_blank")
 				} else {
 					window.open("https://xilef12000.github.io/new","_self")
+				}
+			}
+			function github() {
+				if (event.ctrlKey) {
+					window.open("https://github.com/Xilef12000/xilef12000.github.io","_blank")
+				} else {
+					window.open("https://github.com/Xilef12000/xilef12000.github.io","_self")
 				}
 			}
 		</script>
