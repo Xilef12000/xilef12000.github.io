@@ -46,12 +46,20 @@
 		</script>
 		<script>
 			function Prae() {
-				window.open("https://xilef12000.github.io/bbb-pr%C3%A4sentation","_self")
+				if (event.ctrlKey) {
+					window.open("https://xilef12000.github.io/bbb-pr%C3%A4sentation","_blank");
+				} else {
+					window.open("https://xilef12000.github.io/bbb-pr%C3%A4sentation","_self");
+				}
 			}
 		</script>
 		<script>
 			function Noti() {
-				window.open("https://xilef12000.github.io/bbb-notizen","_self")
+				if (event.ctrlKey) {
+					window.open("https://xilef12000.github.io/bbb-notizen","_blank");
+				} else {
+					window.open("https://xilef12000.github.io/bbb-notizen","_self");
+				}
 			}
 		</script>
 	</body>
