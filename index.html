@@ -15,14 +15,50 @@
 			</style>
 		</head>
 		<body>
-			<h1>Rick Astley - Never Gonna Give You Up (Video)</h1>
+			<h1>Xilef12000's Github Page</h1>
 			<button onclick="toggledarklight()">Toggle dark/light mode</button>
 			<br>
-			<iframe src="https://player.vimeo.com/video/148751763?autoplay=1&title=0&byline=0&portrait=0" width="640" height="480" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<TABLE width="100%">
+				<tbody>
+					<tr>
+						<td width="25%" valign="top">
+							<h2>BBB-Tools:</h2>
+							<button onclick="bbb()">BBB-Tools</button>
+						</td>
+						<td width="75%" valign="top">
+							<h2>Minecraft Server Page:</h2>
+							<button onclick="minecraft()">Minecraft Server Page</button>
+						</td>
+					</tr>
+				</tbody>
+			</TABLE>
 		<script>
 			function toggledarklight() {
 				var element = document.body;
 				element.classList.toggle("toggle-darklight");
+			}
+		</script>
+		<script>
+			function bbb() {
+				if (event.shiftKey) {
+					window.open("https://xilef12000.github.io/bbb","_blank");
+				} else {
+					window.open("https://xilef12000.github.io/bbb","_self");
+				}
+			}
+		</script>
+		<script>
+			function minecraft() {
+				if (event.shiftKey) {
+					window.open("https://xilef12000.github.io/minecraftserver","_blank")
+				} else {
+					window.open("https://xilef12000.github.io/minecraftserver","_self")
+				}
 			}
 		</script>
 	</body>
