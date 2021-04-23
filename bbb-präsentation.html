@@ -17,7 +17,12 @@
 						<td width="50%" valign="top">
 							<h2>Anleitung:</h2>
 							<p>1. Rechtsklick auf die Präsentation in BBB machen</p>
-							<p>2. "Grafikadresse kopieren" drücken</p>
+							<p>2. Dieser Schritt variiert nun je nach Browser:</p>
+							<p style="text-indent:16px;">(Es kann sein das dein Browser diese Funktion nicht Unterstützt, oder sie in den EInstellungen Deaktiviert ist.)</p>
+							<p style="text-indent:16px;">Firefox: "Grafikadresse kopieren" drücken</p>
+							<p style="text-indent:16px;">Edge: "Bildlink kopieren" drücken</p>
+							<p style="text-indent:16px;">Chrome: "Bildadresse kopieren" drücken</p>
+							<p style="text-indent:16px;">Tor: "Copy Image Location" drücken</p>
 							<p>3. Grafikadresse auf dieser Seite einfügen</p>
 							<p>4. "GO" drücken</p>
 						</td>
@@ -54,7 +59,7 @@
   					newurl += spliturl[i] + "/";
   				}
   				newurl = newurl.slice(9, newurl.length);
-				var iframe = "<iframe src=\"" + newurl + number + "\" height=\"1080\" width=\"1920\" ></iframe>"
+				var iframe = "<iframe src=\"" + newurl + number + "\" height=\"1080\" width=\"1920\"></iframe>"
 				document.getElementById("frame").innerHTML = iframe;
 				document.getElementById("framenr").innerHTML = "<p>Seite: " + number + "</p>";
 			}
