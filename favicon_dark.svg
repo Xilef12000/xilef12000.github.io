@@ -8,7 +8,7 @@
 		</linearGradient>
 	</defs>
 	<g id="X">
-		<rect id="eins" x="0"	y="0" width="128" height="128" rx="16" fill="rgba(0,0,0,0)" />
+		<rect id="eins" x="0"	y="0" width="128" height="128" rx="16" fill="rgba(0,0,0,1)" />
 		<text x="50%" y="59%" dominant-baseline="middle" text-anchor="middle" style=" font: bold 128px Arial;" fill="url(#purple)">X</text>
 	</g>
 </svg>
