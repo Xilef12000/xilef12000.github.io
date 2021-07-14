@@ -6,6 +6,47 @@ body {
 	background-color: white;
 	color: black;
 }
+.overlay {
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 2;
+	cursor: pointer;
+}
+.overlay_banner_red {
+	width: 100%;
+	color:  black;
+	background-color: #E41B0C;
+	margin-top: 10%;
+	padding: 10px;
+}
+.overlay_banner_yellow {
+	width: 100%;
+	color:  black;
+	background-color: #E4CC00;
+	margin-top: 10%;
+	padding: 10px;
+}
+.overlay_banner_green {
+	width: 100%;
+	color:  black;
+	background-color: #52BD56;
+	margin-top: 10%;
+	padding: 10px;
+}
+.overlay_banner_blue {
+	width: 100%;
+	color:  black;
+	background-color: #0E8FF6;
+	margin-top: 10%;
+	padding: 10px;
+}
 .cat {
 	position: absolute;
 	bottom: 8px;

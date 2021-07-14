@@ -1,5 +1,26 @@
 <!DOCTYPE html>
 	<html>
+		<div id="overlay" class="overlay" onclick="overlay_off()">
+			<div class="overlay_banner_yellow">
+				<center>
+					<h1>
+						Attention! This website is under construction!
+					</h1>
+					<p>This website is under construction.</p>
+					<p>Some things will be repaired, new features will be added, and the "Notitzen-schreiber" will be reactivated.</p>
+					<p>During the work it can happen that the website partly does not work anymore.</p>
+					<br>
+					<br>
+					<p>click to close</p>
+				</center>
+			</div>
+		</div>
+		<script>
+			document.getElementById("overlay").style.display = "block";
+			function overlay_off() {
+				document.getElementById("overlay").style.display = "none";
+			}
+		</script>
 		<head>
 			<link rel="stylesheet" href="style.css">
 		</head>
@@ -48,54 +69,53 @@
 					<img src="https://takeb1nzyto.space/assets/img\b1nzy.png" height="20px">
 				</button>
 			</div>
-		<script>
-			function toggledarklight() {
-				var element = document.body;
-				element.classList.toggle("toggle-darklight");
-			}
-			function bbb() {
-				if (event.ctrlKey) {
-					window.open("https://xilef12000.github.io/bbb","_blank");
-				} else {
-					window.open("https://xilef12000.github.io/bbb","_self");
+			<script>
+				function toggledarklight() {
+					var element = document.body;
+					element.classList.toggle("toggle-darklight");
 				}
-			}
-			function Prae() {
-				if (event.ctrlKey) {
-					window.open("https://xilef12000.github.io/bbb-pr%C3%A4sentation","_blank");
-				} else {
-					window.open("https://xilef12000.github.io/bbb-pr%C3%A4sentation","_self");
+				function bbb() {
+					if (event.ctrlKey) {
+						window.open("https://xilef12000.github.io/bbb","_blank");
+					} else {
+						window.open("https://xilef12000.github.io/bbb","_self");
+					}
 				}
-			}
-			function Noti() {
-				if (event.ctrlKey) {
-					window.open("https://xilef12000.github.io/bbb-notizen","_blank");
-				} else {
-					window.open("https://xilef12000.github.io/bbb-notizen","_self");
+				function Prae() {
+					if (event.ctrlKey) {
+						window.open("https://xilef12000.github.io/bbb-pr%C3%A4sentation","_blank");
+					} else {
+						window.open("https://xilef12000.github.io/bbb-pr%C3%A4sentation","_self");
+					}
 				}
-			}
-			function minecraft() {
-				if (event.ctrlKey) {
-					window.open("https://xilef12000.github.io/minecraftserver","_blank")
-				} else {
-					window.open("https://xilef12000.github.io/minecraftserver","_self")
+				function Noti() {
+					if (event.ctrlKey) {
+						window.open("https://xilef12000.github.io/bbb-notizen","_blank");
+					} else {
+						window.open("https://xilef12000.github.io/bbb-notizen","_self");
+					}
 				}
-			}
-			function troll() {
-				if (event.ctrlKey) {
-					window.open("https://xilef12000.github.io/troll","_blank")
-				} else {
-					window.open("https://xilef12000.github.io/troll","_self")
+				function minecraft() {
+					if (event.ctrlKey) {
+						window.open("https://xilef12000.github.io/minecraftserver","_blank")
+					} else {
+						window.open("https://xilef12000.github.io/minecraftserver","_self")
+					}
 				}
-			}
-			function github() {
-				if (event.ctrlKey) {
-					window.open("https://github.com/Xilef12000/xilef12000.github.io","_blank")
-				} else {
-					window.open("https://github.com/Xilef12000/xilef12000.github.io","_self")
+				function troll() {
+					if (event.ctrlKey) {
+						window.open("https://xilef12000.github.io/troll","_blank")
+					} else {
+						window.open("https://xilef12000.github.io/troll","_self")
+					}
 				}
-			}
-		</script>
-	</body>
-	<span id="myPopup">A Simple Popup!</span>
-</html>
+				function github() {
+					if (event.ctrlKey) {
+						window.open("https://github.com/Xilef12000/xilef12000.github.io","_blank")
+					} else {
+						window.open("https://github.com/Xilef12000/xilef12000.github.io","_self")
+					}
+				}
+			</script>
+		</body>
+	</html>
