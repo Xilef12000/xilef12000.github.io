@@ -6,10 +6,26 @@
 			<link rel="icon" sizes="any" type="image/svg+xml" href="favicon.svg"/>
 			<link rel="stylesheet" href="style.css">
 		</head>
+		<div id="overlay" class="overlay" onclick="overlay_off()">
+			<div class="overlay_banner_blue">
+				<center>
+					<h1>
+						Attention!
+					</h1>
+					<p>Dieses Tool wurde wegen der Gefahr des Missbrauches und des Identitätsdiebstahles deaktiviert!</p>
+					<br>
+					<br>
+					<p>click to close</p>
+				</center>
+			</div>
+		</div>
+		<script>
+			document.getElementById("overlay").style.display = "block";
+			function overlay_off() {
+				document.getElementById("overlay").style.display = "none";
+			}
+		</script>
 		<body>
-			<script>
-				alert("Dieses Tool wurde wegen der Gefahr des Missbrauches und des Identitätsdiebstahles deaktiviert!");
-			</script>
 			<h1>BBB Geteilte-Notizen-Schreiber</h1>
 			<button onclick="toggledarklight()">Toggle dark/light mode</button>
 			<TABLE width="100%">
