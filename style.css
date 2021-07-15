@@ -3,6 +3,22 @@ body {
 	color: #CDCDD4;
 	font-family: Arial;
 }
+.button {
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px 0px, rgba(0, 0, 0, 0.2) 0px 2px 2px 0px;
+	border: double 1px transparent;
+	border-radius: 4px;
+	background-image: linear-gradient(#CDCDD4, #CDCDD4), radial-gradient(circle at top left, #D717F0,#8416F2);
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+}
+input {
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px 0px, rgba(0, 0, 0, 0.2) 0px 2px 2px 0px;
+	border: double 1px transparent;
+	border-radius: 4px;
+	background-image: linear-gradient(#CDCDD4, #CDCDD4), radial-gradient(circle at top left, #D717F0,#8416F2);
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+}
 .toggle-darklight {
 	background-color: white;
 	color: black;
@@ -22,28 +38,28 @@ body {
 }
 .overlay_banner_red {
 	width: 100%;
-	color:  black;
+	color:	black;
 	background-color: #E41B0C;
 	margin-top: 10%;
 	padding: 10px;
 }
 .overlay_banner_yellow {
 	width: 100%;
-	color:  black;
+	color:	black;
 	background-color: #E4CC00;
 	margin-top: 10%;
 	padding: 10px;
 }
 .overlay_banner_green {
 	width: 100%;
-	color:  black;
+	color:	black;
 	background-color: #52BD56;
 	margin-top: 10%;
 	padding: 10px;
 }
 .overlay_banner_blue {
 	width: 100%;
-	color:  black;
+	color:	black;
 	background-color: #0E8FF6;
 	margin-top: 10%;
 	padding: 10px;
