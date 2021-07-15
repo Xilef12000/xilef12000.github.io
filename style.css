@@ -36,6 +36,13 @@ input {
 	z-index: 2;
 	cursor: pointer;
 }
+.overlay_banner_purple_gradient {
+	width: 100%;
+	color:	black;
+	background-image: linear-gradient(to bottom right, #D717F0,#8416F2);
+	margin-top: 10%;
+	padding: 10px;
+}
 .overlay_banner_red {
 	width: 100%;
 	color:	black;
