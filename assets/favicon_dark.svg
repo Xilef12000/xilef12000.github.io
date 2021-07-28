@@ -7,8 +7,10 @@
 			<stop offset="100%" stop-color="#8416F2" />
 		</linearGradient>
 	</defs>
-	<g id="X">
+	<g id="background">
 		<rect id="eins" x="0"	y="0" width="128" height="128" rx="16" fill="rgba(0,0,0,1)" />
+	</g>
+	<g id="X">
 		<text x="50%" y="59%" dominant-baseline="middle" text-anchor="middle" style=" font: bold 128px Arial;" fill="url(#purple)">X</text>
 	</g>
 </svg>
