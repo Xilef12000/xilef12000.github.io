@@ -1,16 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
-	<defs>
-		<linearGradient id="purple" x1="0%" y1="0%" x2="0%" y2="100%">
-			<stop offset="0%" stop-color="#D717F0" />
-			<stop offset="100%" stop-color="#8416F2" />
-		</linearGradient>
-	</defs>
-	<g id="background">
-		<rect id="eins" x="0"	y="0" width="128" height="128" rx="16" fill="rgba(0,0,0,0)" />
-	</g>
-	<g id="X">
-		<text x="50%" y="59%" dominant-baseline="middle" text-anchor="middle" style=" font: bold 128px Arial;" fill="url(#purple)">X</text>
-	</g>
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="128" height="128" rx="16" fill="white"/>
+<path d="M21.3125 108L52.625 60.1875L24.25 16.375H45.875L64.25 45.8125L82.25 16.375H103.688L75.1875 60.875L106.5 108H84.1875L63.875 76.3125L43.5 108H21.3125Z" fill="url(#paint0_linear)"/>
+<defs>
+<linearGradient id="paint0_linear" x1="64" y1="0" x2="64" y2="128" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D717F0"/>
+<stop offset="1" stop-color="#8416F2"/>
+</linearGradient>
+</defs>
 </svg>
