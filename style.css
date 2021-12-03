@@ -2,6 +2,9 @@ body {
 	background-color: #202324;
 	color: #CDCDD4;
 	font-family: Arial;
+	position: relative;
+ 	min-height: 100vh;
+	
 }
 button {
 	box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px 0px, rgba(0, 0, 0, 0.2) 0px 2px 2px 0px;
@@ -20,8 +23,14 @@ input {
 	background-origin: border-box;
 	background-clip: content-box, border-box;
 }
+footer {
+  position: absolute;
+  bottom: 0;
+  width: calc(100vw - 32px);
+  height: 0rem;            /* Footer height */
+}
 .line {
-	width: calc(100vw - 16px);
+	width: calc(100vw - 32px);
 	height: 4px;
 	object-fit: fill;
 }
@@ -76,10 +85,4 @@ input {
 	background-color: #0E8FF6;
 	margin-top: 10%;
 	padding: 10px;
-}
-.cat {
-	position: absolute;
-	bottom: 8px;
-	left: 16px;
-	font-size: 18px;
 }
