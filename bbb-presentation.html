@@ -7,10 +7,10 @@
 			<link rel="stylesheet" href="style.css">
 		</head>
 		<body>
-			<img src="assets/line.svg">
+			<img class="line" src="assets/line.svg">
 			<h1>BBB Solution/Presentation-Stealer</h1>
-			<button class="button" onclick="toggledarklight()">Toggle dark/light mode</button>
-			<img src="assets/line.svg">
+			<button onclick="toggledarklight()">Toggle dark/light mode</button>
+			<img class="line" src="assets/line.svg">
 			<TABLE width="100%">
 				<tbody>
 					<tr>
@@ -31,10 +31,10 @@
 			</TABLE>
 			<label for="fname">Presentation link: </label>
 			<input type="url" id="bbb-url" name="bbb-url">
-			<button class="button" onclick="GO()"> GO </button>
+			<button onclick="GO()"> GO </button>
 			<br>
-			<button class="button" onclick="pp()"> Previous Page</button>
-			<button class="button" onclick="np()"> Next Page</button>
+			<button onclick="pp()"> Previous Page</button>
+			<button onclick="np()"> Next Page</button>
 			<div id="framenr"></div>
 			<div id="frame"></div>
 		</body>
