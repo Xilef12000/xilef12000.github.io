@@ -1,8 +1,8 @@
 if (navigator.language.includes("de")){
-	window.location.replace("http://www.w3schools.com/de");
+	window.location.replace("de");
 }
 else
-	window.location.replace("http://www.w3schools.com/en");
+	window.location.replace("en");
 function onload() {
 	if(!(window.matchMedia('(prefers-color-scheme: dark)').matches)){
 		var element = document.body;
