@@ -5,6 +5,7 @@
 			<title>BBB Shared-Notes-Writer</title>
 			<link rel="icon" sizes="any" type="image/svg+xml" href="assets/favicon.svg"/>
 			<link rel="stylesheet" href="style.css">
+			<script src="script.js"></script> 
 		</head>
 		<div id="overlay" class="overlay" onclick="overlay_off()">
 			<div class="overlay_banner_blue">
@@ -86,10 +87,6 @@
   				name = name.slice(0, name.length - 3);
 				var iframe = "<p>This tool has been disabled due to the risk of misuse and identity theft!</p>"
 				document.getElementById("frame").innerHTML = iframe;
-			}
-			function toggledarklight() {
-				var element = document.body;
-				element.classList.toggle("toggle-darklight");
 			}
 		</script>
 	</body>

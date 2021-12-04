@@ -5,6 +5,7 @@
 			<title>BBB Solution/Presentation-Stealer</title>
 			<link rel="icon" sizes="any" type="image/svg+xml" href="assets/favicon.svg"/>
 			<link rel="stylesheet" href="style.css">
+			<script src="script.js"></script> 
 		</head>
 		<body>
 			<img class="line" src="assets/line.svg">
@@ -62,10 +63,6 @@
 				var iframe = "<iframe src=\"" + newurl + number + "\" height=\"1080\" width=\"1920\"></iframe>"
 				document.getElementById("frame").innerHTML = iframe;
 				document.getElementById("framenr").innerHTML = "<p>Seite: " + number + "</p>";
-			}
-			function toggledarklight() {
-				var element = document.body;
-				element.classList.toggle("toggle-darklight");
 			}
 		</script>
 	</body>
