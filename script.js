@@ -1,8 +1,3 @@
-if (navigator.language.includes("de")){
-	window.location.replace("de");
-}
-else
-	window.location.replace("en");
 function onload() {
 	if(!(window.matchMedia('(prefers-color-scheme: dark)').matches)){
 		var element = document.body;
