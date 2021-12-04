@@ -1,82 +1,82 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<meta charset="utf-8">
-			<title>BBB Shared-Notes-Schreiber</title>
-			<link rel="icon" sizes="any" type="image/svg+xml" href="../assets/favicon.svg"/>
-			<link rel="stylesheet" href="../style.css">
-			<script type="text/javascript" src="../script.js"></script> 
-			<script type="text/javascript" src="../scripts/bbb-notes.js"></script>
-		</head>
-		<div id="overlay" class="overlay" onclick="overlay_off()">
-			<div class="overlay_banner_blue">
-				<center>
-					<h1>
-						Achtung!
-					</h1>
-					<p>Dieses Tool wurde wegen der Gefahr des Missbrauchs und des Identitätsdiebstahls deaktiviert!</p>
-					<br>
-					<br>
-					<p>zum Schließen klicken</p>
-				</center>
-			</div>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>BBB Shared-Notes-Schreiber</title>
+	<link rel="icon" sizes="any" type="image/svg+xml" href="../assets/favicon.svg"/>
+	<link rel="stylesheet" href="../style.css">
+	<script type="text/javascript" src="../script.js"></script> 
+	<script type="text/javascript" src="../scripts/bbb-notes.js"></script>
+</head>
+<div id="overlay" class="overlay" onclick="overlay_off()">
+	<div class="overlay_banner_blue">
+		<center>
+			<h1>
+				Achtung!
+			</h1>
+			<p>Dieses Tool wurde wegen der Gefahr des Missbrauchs und des Identitätsdiebstahls deaktiviert!</p>
+			<br>
+			<br>
+			<p>zum Schließen klicken</p>
+		</center>
+	</div>
+</div>
+<script>
+	document.getElementById("overlay").style.display = "block";
+</script>
+<body>
+	<header>
+		<img class="line" src="../assets/line.svg">
+		<div style="text-align: right;">
+			<button onclick="toggledarklight()">Umschalten zwischen Dunklem-/Helllemmodus</button>
+			<a href="../de/">🇩🇪</a>
+			<a href="../en/">🇬🇧</a>
 		</div>
-		<script>
-			document.getElementById("overlay").style.display = "block";
-		</script>
-		<body>
-			<header>
-				<img class="line" src="../assets/line.svg">
-				<div style="text-align: right;">
-					<button onclick="toggledarklight()">Umschalten zwischen Dunklem-/Helllemmodus</button>
-					<a href="../de/">🇩🇪</a>
-					<a href="../en/">🇬🇧</a>
-				</div>
-				<h1>BBB Shared-Notes-Schreiber</h1>
-				<br>
-				<img class="line" src="../assets/line.svg">
-			</header>
-			<TABLE width="100%">
-				<tbody>
-					<tr>
-						<td width="50%" valign="top">
-							<h2>Nutzungsbedingungen:</h2>
-							<p>1. Verwende das Programm nur mit Verstand, d.h. ärgere andere nicht zu sehr, und treibe es nicht zu weit.</p>
-							<p>2. Verpfeife dieses Programm nicht.</p>
-						</td>
-						<td width="50%" valign="top">
-							<h2>Anleitung:</h2>
-							<p>1. Kopiere die Url der BBB-Sitzung (die Url, nachdem beitreten) und füge sie hier ein.</p>
-							<p>2. Lade das Notizen log herunter. (dazu das Herunterlad-Symbol rechts oben in den geteilten Notitzen drücken).</p>
-							<p>3. Drücke "download Etherpad".</p>
-							<p>4. Öffne das Log mit irgendeinem Texteditor.</p>
-							<p>5. Kopiere die Id, Sie beginnt nach <em>{"pad:</em> und endet vor dem nächsten <em>"</em> (die Länge kann extrem variieren).</p>
-							<p>6. Füge die Etherpad Id hier ein.</p>
-							<p>7. Tippe einen Namen ein.</p>
-							<p>8. Drücke "GO".</p>
-						</td>
-					</tr>
-				</tbody>
-			</TABLE>
-			<label>BBB-Url: </label>
-			<input type="url" id="bbb-url" name="bbb-url">
-			<br>
-			<label>Notizen Id: </label>
-			<input type="string" id="notizen-id" name="notizen-id">
-			<br>
-			<label>Name: </label>
-			<input type="string" id="name" name="name">
-			<br>
-			<button onclick="GO_de()"> GO </button>
-			<br>
-			<div id="frame"></div>
-		</body>
-		<footer>
-			<br>
-			<img class="line" src="../assets/line.svg">
-			<a href="xilef12000.github.io">
-				<button>index/Hauptseite</button>
-			</a>
-		</footer>
-	</body>
+		<h1>BBB Shared-Notes-Schreiber</h1>
+		<br>
+		<img class="line" src="../assets/line.svg">
+	</header>
+	<TABLE width="100%">
+		<tbody>
+			<tr>
+				<td width="50%" valign="top">
+					<h2>Nutzungsbedingungen:</h2>
+					<p>1. Verwende das Programm nur mit Verstand, d.h. ärgere andere nicht zu sehr, und treibe es nicht zu weit.</p>
+					<p>2. Verpfeife dieses Programm nicht.</p>
+				</td>
+				<td width="50%" valign="top">
+					<h2>Anleitung:</h2>
+					<p>1. Kopiere die Url der BBB-Sitzung (die Url, nachdem beitreten) und füge sie hier ein.</p>
+					<p>2. Lade das Notizen log herunter. (dazu das Herunterlad-Symbol rechts oben in den geteilten Notitzen drücken).</p>
+					<p>3. Drücke "download Etherpad".</p>
+					<p>4. Öffne das Log mit irgendeinem Texteditor.</p>
+					<p>5. Kopiere die Id, Sie beginnt nach <em>{"pad:</em> und endet vor dem nächsten <em>"</em> (die Länge kann extrem variieren).</p>
+					<p>6. Füge die Etherpad Id hier ein.</p>
+					<p>7. Tippe einen Namen ein.</p>
+					<p>8. Drücke "GO".</p>
+				</td>
+			</tr>
+		</tbody>
+	</TABLE>
+	<label>BBB-Url: </label>
+	<input type="url" id="bbb-url" name="bbb-url">
+	<br>
+	<label>Notizen Id: </label>
+	<input type="string" id="notizen-id" name="notizen-id">
+	<br>
+	<label>Name: </label>
+	<input type="string" id="name" name="name">
+	<br>
+	<button onclick="GO_de()"> GO </button>
+	<br>
+	<div id="frame"></div>
+</body>
+<footer>
+	<br>
+	<img class="line" src="../assets/line.svg">
+	<a href="xilef12000.github.io">
+		<button>index/Hauptseite</button>
+	</a>
+</footer>
+</body>
 </html>

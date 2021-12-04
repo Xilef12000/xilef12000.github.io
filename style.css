@@ -3,7 +3,7 @@ body {
 	color: #CDCDD4;
 	font-family: Arial;
 	position: relative;
- 	min-height: 100vh;
+	min-height: 100vh;
 	
 }
 button {
@@ -24,10 +24,10 @@ input {
 	background-clip: content-box, border-box;
 }
 footer {
-  position: absolute;
-  bottom: 0;
-  width: calc(100vw - 32px);
-  height: 0rem;            /* Footer height */
+	position: absolute;
+	bottom: 0;
+	width: calc(100vw - 32px);
+	height: 0rem;            /* Footer height */
 }
 a {
 	text-decoration: none;

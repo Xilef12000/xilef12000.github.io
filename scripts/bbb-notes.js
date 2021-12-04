@@ -20,23 +20,23 @@ function GO_en() {
 	document.getElementById("frame").innerHTML = iframe;
 }
 function GO_de() {
-				var bbburl = document.getElementById('bbb-url').value;
-				var spliturl = bbburl.split("=");
-				var token = spliturl[1]
-				var spliturl = bbburl.split("/");
-				var url
-				for (i = 0; i < 3; i++) {
-  					url += spliturl[i] + "/";
-  				}
-  				url = url.slice(9, url.length);
-				var padid = document.getElementById('notizen-id').value;
-				var name = document.getElementById('name').value;
-				splitname = name.split(" ");
-				name = ""
-				for (i = 0; i < splitname.length; i++) {
-  					name += splitname[i] + "%20";
-  				}
-  				name = name.slice(0, name.length - 3);
-				var iframe = "<p>Dieses Tool wurde wegen der Gefahr des Missbrauchs und des Identitätsdiebstahls deaktiviert!</p>"
-				document.getElementById("frame").innerHTML = iframe;
-			}
+	var bbburl = document.getElementById('bbb-url').value;
+	var spliturl = bbburl.split("=");
+	var token = spliturl[1]
+	var spliturl = bbburl.split("/");
+	var url
+	for (i = 0; i < 3; i++) {
+		url += spliturl[i] + "/";
+	}
+	url = url.slice(9, url.length);
+	var padid = document.getElementById('notizen-id').value;
+	var name = document.getElementById('name').value;
+	splitname = name.split(" ");
+	name = ""
+	for (i = 0; i < splitname.length; i++) {
+		name += splitname[i] + "%20";
+	}
+	name = name.slice(0, name.length - 3);
+	var iframe = "<p>Dieses Tool wurde wegen der Gefahr des Missbrauchs und des Identitätsdiebstahls deaktiviert!</p>"
+	document.getElementById("frame").innerHTML = iframe;
+}
