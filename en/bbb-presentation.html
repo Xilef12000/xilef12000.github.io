@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<title>BBB Solution/Presentation-Stealer</title>
+			<link rel="icon" sizes="any" type="image/svg+xml" href="../assets/favicon.svg"/>
+			<link rel="stylesheet" href="../style.css">
+			<script src="../script.js"></script> 
+		</head>
+		<body>
+			<header>
+				<img class="line" src="../assets/line.svg">
+				<div style="text-align: right;">
+					<button onclick="toggledarklight()">Toggle dark/light mode</button>
+					<a href="../de/">🇩🇪</a>
+					<a href="../en/">🇬🇧</a>
+				</div>
+				<h1>BBB Solution/Presentation-Stealer</h1>
+				<br>
+				<img class="line" src="../assets/line.svg">
+			</header>
+			<TABLE width="100%">
+				<tbody>
+					<tr>
+						<td width="50%" valign="top">
+							<h2>Terms of use:</h2>
+							<p>1. Use the program only with understanding, i.e. do not present the solution to the teacher 1 to 1, but only orientate yourself on it.</p>
+							<p>2. Do not snitch this program.</p>
+						</td>
+						<td width="50%" valign="top">
+							<h2>Instruction:</h2>
+							<p>1. make a right click on the presentation in BBB.</p>
+							<p>2. Press "Copy Image Link".</p>
+							<p>3. Insert graphic address on this page.</p>
+							<p>4. Press "GO".</p>
+						</td>
+					</tr>
+				</tbody>
+			</TABLE>
+			<label for="fname">Presentation link: </label>
+			<input type="url" id="bbb-url" name="bbb-url">
+			<button onclick="GO()"> GO </button>
+			<br>
+			<button onclick="pp()"> Previous Page</button>
+			<button onclick="np()"> Next Page</button>
+			<div id="framenr"></div>
+			<div id="frame"></div>
+		</body>
+		<script>
+			var number = 1
+			function pp() {
+				number = number - 1
+				if (number == 0){
+					number = 1;
+				}
+				GO()
+			}
+			function np() {
+				number = number + 1
+				GO()
+			}
+			function GO() {
+				var url = document.getElementById('bbb-url').value;
+				var spliturl = url.split("/");
+				var newurl
+				for (i = 0; i < spliturl.length - 1; i++) {
+  					newurl += spliturl[i] + "/";
+  				}
+  				newurl = newurl.slice(9, newurl.length);
+				var iframe = "<iframe src=\"" + newurl + number + "\" height=\"1080\" width=\"1920\"></iframe>"
+				document.getElementById("frame").innerHTML = iframe;
+				document.getElementById("framenr").innerHTML = "<p>Seite: " + number + "</p>";
+			}
+		</script>
+		<footer>
+			<br>
+			<img class="line" src="../assets/line.svg">
+			<a href="https://takeb1nzyto.space/">
+				<button style="background-color: Transparent; border: none;">
+					<img src="https://takeb1nzyto.space/assets/img\b1nzy.png" height="20px">
+				</button>
+			</a>
+			<a href="xilef12000.github.io">
+				<button>index</button>
+			</a>
+		</footer>
+	</body>
+</html>
