@@ -18,7 +18,9 @@ function GO() {
 		newurl += spliturl[i] + "/";
 	}
 	newurl = newurl.slice(9, newurl.length);
-	var iframe = "<iframe src=\"" + newurl + number + "\" height=\"1080\" width=\"1920\"></iframe>"
+	var iframe = "<iframe src=\"" + newurl + number + "\" width=100% id=\"iframe\"></iframe>"
 	document.getElementById("frame").innerHTML = iframe;
-	document.getElementById("framenr").innerHTML = "<p>Seite: " + number + "</p>";
+	document.getElementById("framenr").innerHTML = "<p>Page: " + number + "</p>";
+	var element = document.getElementById("iframe");
+    element.style.height = element.contentWindow.document.body.scrollWidth*0.5625 + 'px';
 }
