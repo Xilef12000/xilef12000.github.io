@@ -1,3 +1,14 @@
+if (navigator.language.includes("de")){
+	console.log("German")
+}
+else
+	console.log("English")
+function onload() {
+	if(!(window.matchMedia('(prefers-color-scheme: dark)').matches)){
+		var element = document.body;
+		element.classList.toggle("toggle-darklight");
+	}
+}
 function toggledarklight() {
 	var element = document.body;
 	element.classList.toggle("toggle-darklight");
