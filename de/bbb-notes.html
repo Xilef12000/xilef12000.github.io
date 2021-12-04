@@ -2,7 +2,7 @@
 	<html>
 		<head>
 			<meta charset="utf-8">
-			<title>BBB Shared-Notes-Writer</title>
+			<title>BBB Shared-Notes-Schreiber</title>
 			<link rel="icon" sizes="any" type="image/svg+xml" href="../assets/favicon.svg"/>
 			<link rel="stylesheet" href="../style.css">
 			<script src="../script.js"></script> 
@@ -11,12 +11,12 @@
 			<div class="overlay_banner_blue">
 				<center>
 					<h1>
-						Attention!
+						Achtung!
 					</h1>
-					<p>This tool has been disabled due to the risk of misuse and identity theft!</p>
+					<p>Dieses Tool wurde wegen der Gefahr des Missbrauchs und des Identitätsdiebstahls deaktiviert!</p>
 					<br>
 					<br>
-					<p>click to close</p>
+					<p>zum Schließen klicken</p>
 				</center>
 			</div>
 		</div>
@@ -27,11 +27,11 @@
 			<header>
 				<img class="line" src="../assets/line.svg">
 				<div style="text-align: right;">
-					<button onclick="toggledarklight()">Toggle dark/light mode</button>
+					<button onclick="toggledarklight()">Umschalten zwischen Dunklem-/Helllemmodus</button>
 					<a href="../de/">🇩🇪</a>
 					<a href="../en/">🇬🇧</a>
 				</div>
-				<h1>BBB Shared-Notes-Writer</h1>
+				<h1>BBB Shared-Notes-Schreiber</h1>
 				<br>
 				<img class="line" src="../assets/line.svg">
 			</header>
@@ -39,20 +39,20 @@
 				<tbody>
 					<tr>
 						<td width="50%" valign="top">
-							<h2>Terms of use:</h2>
-							<p>1. use the program only wisely, i.e. do not annoy too much, and do not push it too far.</p>
-							<p>2. Do not snitch this program.</p>
+							<h2>Nutzungsbedingungen:</h2>
+							<p>1. Verwende das Programm nur mit Verstand, d.h. ärgere andere nicht zu sehr, und treibe es nicht zu weit.</p>
+							<p>2. Verpfeife dieses Programm nicht.</p>
 						</td>
 						<td width="50%" valign="top">
-							<h2>Instruction:</h2>
-							<p>1. Copy and paste the url of the BBB session (the url when you joined).</p>
-							<p>2. Copy the etherpad id, download the notes log (press the download sign in the top left corner of the shared notes).</p>
-							<p>3. Press download Etherpad.</p>
-							<p>4. Open the log with any text editor.</p>
-							<p>5. Copy the id, it starts after {"pad: and ends before the next " (the length can vary extremely).</p>
-							<p>6. Enter the Etherpad Id here.</p>
-							<p>7. Insert a desired name.</p>
-							<p>8. Press "GO".</p>
+							<h2>Anleitung:</h2>
+							<p>1. Kopiere die Url der BBB-Sitzung (die Url, nachdem beitreten) und füge sie hier ein.</p>
+							<p>2. Lade das Notizen log herunter. (dazu das Herunterlad-Symbol rechts oben in den geteilten Notitzen drücken).</p>
+							<p>3. Drücke "download Etherpad".</p>
+							<p>4. Öffne das Log mit irgendeinem Texteditor.</p>
+							<p>5. Kopiere die Id, Sie beginnt nach <em>{"pad:</em> und endet vor dem nächsten <em>"</em> (die Länge kann extrem variieren).</p>
+							<p>6. Füge die Etherpad Id hier ein.</p>
+							<p>7. Tippe einen Namen ein.</p>
+							<p>8. Drücke "GO".</p>
 						</td>
 					</tr>
 				</tbody>
@@ -89,7 +89,7 @@
   					name += splitname[i] + "%20";
   				}
   				name = name.slice(0, name.length - 3);
-				var iframe = "<p>This tool has been disabled due to the risk of misuse and identity theft!</p>"
+				var iframe = "<p>Dieses Tool wurde wegen der Gefahr des Missbrauchs und des Identitätsdiebstahls deaktiviert!</p>"
 				document.getElementById("frame").innerHTML = iframe;
 			}
 		</script>
