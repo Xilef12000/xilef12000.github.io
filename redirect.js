@@ -5,3 +5,9 @@ function redirect(page){
 	else
 		window.location.replace("en/" + page);
 }
+function redirectde(page){
+	window.location.replace("../de/" + page);
+}
+function redirecten(page){
+	window.location.replace("../en/" + page);
+}
