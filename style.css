@@ -29,6 +29,10 @@ footer {
 	width: calc(100vw - 32px);
 	height: 0rem;            /* Footer height */
 }
+.link{
+	text-decoration: underline;
+	color: #A4EC01;
+}
 a {
 	text-decoration: none;
 	color: inherit;
