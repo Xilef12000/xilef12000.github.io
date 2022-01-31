@@ -7,7 +7,7 @@ sudo apt-get install python3
 echo installing pip3
 sudo apt-get install python3-pip
 
-echo installing adafruit neopixel (ws2812-library)
+echo installing adafruit neopixel ws2812-library
 sudo pip3 install rpi_ws281x adafruit-circuitpython-neopixel
 sudo python3 -m pip install --force-reinstall adafruit-blinka
 
@@ -31,4 +31,4 @@ cd ../
 rmdir ws2812-over-artnet-1.0
 rm v1.0.zip
 
-echo instalation complete
+echo installation complete
