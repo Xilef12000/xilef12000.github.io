@@ -1,8 +1,20 @@
 {
 	"Xilef12000":{
-		"xilef12000.github.io":"0.0",
-		"custom-browser-start-page":"0.0",
-		"qlcplus-dark-theme":"1.0",
-		"ws2812-over-artnet":"1.0"
+		"xilef12000.github.io":{
+			"version":"0.0",
+			"message":"No Versioning"
+		},
+		"custom-browser-start-page":{
+			"version":"0.0",
+			"message":"Documentation will follow"
+		},
+		"qlcplus-dark-theme":{
+			"version":"1.0.1",
+			"message":"New Documentation on Instructables"
+		},
+		"ws2812-over-artnet":{
+			"version":"1.1",
+			"message":"Versioning System added"
+		}
 	}
 }
