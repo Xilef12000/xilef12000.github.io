@@ -5,16 +5,16 @@
 			"message":"No Versioning"
 		},
 		"custom-browser-start-page":{
-			"version":"0.0",
-			"message":"Documentation will follow"
+			"version":"pre-v1.0a",
+			"message":"New Versioning System - you may don't need to update"
 		},
 		"qlcplus-dark-theme":{
-			"version":"1.0.1",
-			"message":"New Documentation on Instructables"
+			"version":"v1.0.1",
+			"message":"New Versioning System - you may don't need to update"
 		},
 		"ws2812-over-artnet":{
-			"version":"1.1",
-			"message":"Versioning System added"
+			"version":"v1.1",
+			"message":"New Versioning System - you may don't need to update"
 		}
 	}
 }
