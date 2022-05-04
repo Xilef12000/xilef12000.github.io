@@ -1,2 +1,2 @@
-Sitemap: https://xilef12000.github.io/sitemap.xml
-Sitemap: https://xilef12000.github.io/sitemap.txt
+Sitemap: https://www.xilef12000.com/sitemap.xml
+Sitemap: https://www.xilef12000.com/sitemap.txt
