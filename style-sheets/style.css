@@ -1,5 +1,6 @@
 body {
-	background: url(../assets/basic.png) no-repeat center center fixed; 
+	background: url(../assets/basic.png) no-repeat center center fixed;
+	background-color: #202324;
 	background-size: cover;
 	font-family: Arial;
 	color:#CDCDD4;
@@ -18,6 +19,9 @@ footer {
 a {
 	text-decoration: none;
 	color:#CDCDD4;
+}
+.left {
+	text-align: left;
 }
 .a {
 	text-decoration: underline;
