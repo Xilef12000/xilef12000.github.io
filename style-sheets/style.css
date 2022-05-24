@@ -28,6 +28,8 @@ p {
 	text-align: left;
 	text-align: justify;
 	text-justify: inter-word;
+	padding-left: 32px;
+	padding-right: 32px;
 }
 .left {
 	text-align: left;
