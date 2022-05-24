@@ -60,7 +60,7 @@ p {
 }
 .content-wrapper {
 	min-height:50px;
-	max-width: min(120vh, 80vw);
+	width: min(120vh, 80vw);
 	border-radius: 16px;
 	background-color: #202324;
 	margin-left: auto;
