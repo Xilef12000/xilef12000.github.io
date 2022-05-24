@@ -21,7 +21,8 @@ a {
 	color:#CDCDD4;
 }
 code {
-	font-family: Consolas
+	font-family: Consolas;
+	outline: #A4EC01 solid 1px;
 }
 p {
 	text-align: left;
