@@ -19,7 +19,6 @@ footer {
 a {
 	text-decoration: none;
 	color:#CDCDD4;
-	text-align: left;
 }
 code {
 	font-family: Consolas
@@ -31,12 +30,21 @@ p {
 	padding-left: 32px;
 	padding-right: 32px;
 }
+.image_table {
+	padding-top: 16px;
+	padding-left: 32px;
+	padding-right: 32px;
+}
+.image_table img {
+	border-radius: 8px;
+}
 .left {
 	text-align: left;
 }
 .a {
 	text-decoration: underline;
 	color: #A4EC01;
+	text-align: left;
 }
 .gallery-title {
 	padding-left: 16px;
