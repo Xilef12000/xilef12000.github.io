@@ -19,9 +19,15 @@ footer {
 a {
 	text-decoration: none;
 	color:#CDCDD4;
+	text-align: left;
 }
 code {
 	font-family: Consolas
+}
+p {
+	text-align: left;
+	text-align: justify;
+	text-justify: inter-word;
 }
 .left {
 	text-align: left;
