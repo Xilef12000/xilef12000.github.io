@@ -1,6 +1,7 @@
 https://www.xilef12000.com
-https://www.xilef12000.com/en
-https://www.xilef12000.com/en/bbb-presentation
-https://www.xilef12000.com/de
-https://www.xilef12000.com/de/bbb-presentation
 https://www.xilef12000.com/about
+https://www.xilef12000.com/gallery
+https://www.xilef12000.com/projects
+https://www.xilef12000.com/post/custom-browser-start-page_29b7
+https://www.xilef12000.com/post/ws2812-over-artnet_6497
+https://www.xilef12000.com/post/qlcplus-dark-theme_10a2
