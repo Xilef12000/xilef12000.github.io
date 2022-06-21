@@ -4,7 +4,7 @@ body {
 	background: url(../assets/basic.png) no-repeat center center fixed;
 	background-color: #202324;
 	background-size: cover;
-	font-family: Arial;
+	font-family: Arial, sans-serif;
 	color:#CDCDD4;
 	min-height: 100vh;
 	grid-template-rows: auto 1fr auto;
@@ -13,7 +13,7 @@ body {
 	text-align: center;
 }
 h1 {
-	font-family: major_snafuregular, Arial;
+	font-family: major_snafuregular, Arial, sans-serif;
 	font-size: 64px;
 	margin-top: 4px;
 	margin-bottom: 4px;
@@ -31,6 +31,8 @@ a {
 code {
 	font-family: FiraCode-Retina, SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace !important;
 	outline: #A4EC01 solid 1px;
+	margin: 2px;
+	padding: 2px;
 }
 p {
 	text-align: left;
