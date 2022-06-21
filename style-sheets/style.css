@@ -1,3 +1,4 @@
+@import "Fonts/major_shift-webfont.css";
 body {
 	background: url(../assets/basic.png) no-repeat center center fixed;
 	background-color: #202324;
@@ -9,6 +10,12 @@ body {
 	margin: 0;
 	display: grid;
 	text-align: center;
+}
+h1 {
+	font-family: major_snafuregular, Arial;
+	font-size: 64px;
+	margin-top: 4px;
+	margin-bottom: 4px;
 }
 header {
 	min-height:50px;
