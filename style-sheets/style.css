@@ -31,6 +31,7 @@ a {
 code {
 	font-family: FiraCode-Retina, SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace !important;
 	outline: #A4EC01 solid 1px;
+	border-radius: 4px;
 	margin: 2px;
 	padding: 2px;
 }
