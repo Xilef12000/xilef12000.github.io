@@ -1,0 +1,123 @@
+@import "Fonts/major_shift-webfont.css";
+@import "Fonts/FiraCode-Retina.css";
+body {
+	background: url(../assets/basic.png) no-repeat center center fixed;
+	background-color: #202324;
+	background-size: cover;
+	font-family: Arial, sans-serif;
+	color:#CDCDD4;
+	min-height: 100vh;
+	grid-template-rows: auto 1fr auto;
+	margin: 0;
+	display: grid;
+	text-align: center;
+}
+h1 {
+	font-family: major_snafuregular, Arial, sans-serif;
+	font-size: 64px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+header {
+	min-height:50px;
+}
+footer {
+	min-height:50px;
+}
+a {
+	text-decoration: none;
+	color:#CDCDD4;
+}
+code {
+	font-family: FiraCode-Retina, SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace !important;
+	outline: #A4EC01 solid 1px;
+	border-radius: 4px;
+	margin: 2px;
+	padding: 2px;
+}
+p {
+	text-align: left;
+	text-align: justify;
+	text-justify: inter-word;
+	padding-left: 32px;
+	padding-right: 32px;
+}
+.content-wrapper {
+	min-height:50px;
+	width: min(120vh, 80vw);
+	border-radius: 16px;
+	background-color: #202324;
+	margin-left: auto;
+	margin-right: auto;
+}
+.image_table {
+	width: 100%;
+	padding-top: 16px;
+	padding-left: 32px;
+	padding-right: 32px;
+}
+.image_table img {
+	max-height: calc(100% - 2em);
+	max-width:  100%;
+	border-radius: 8px;
+}
+.image_table img:hover {
+	opacity: 0.7;
+}
+.image_table div:focus img{
+	opacity: 1;
+}
+.image_table div:focus a{
+	opacity: 0;
+}
+.image_table div:focus {
+	border-radius: 16px;
+	background-color: #00000080;
+	cursor: pointer;
+	position: fixed;
+	aspect-ratio: auto;
+	height: 80%;
+	width: 80%;
+	top: 10%;
+	left: 10%;
+	right: 10%;
+	bottom: 10%;
+}
+.image_table td {
+	width:50%;
+}
+.image_table div {
+	padding: 16px;
+	aspect-ratio: 1;
+}
+.left {
+	text-align: left;
+}
+.center {
+	text-align: center;
+}
+.a {
+	text-decoration: underline;
+	color: #A4EC01;
+	text-align: left;
+}
+.gallery-title {
+	padding-left: 16px;
+	padding-right: 16px;
+}
+.gallery-title:hover {
+	color: white;
+}
+.line {
+	width: calc(100vw - 32px);
+	height: 4px;
+	object-fit: fill;
+}
+.icon{
+	fill: #CDCDD4;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+.icon:hover {
+	fill: white;
+}
