@@ -3,6 +3,8 @@ Xilef12000's Github Repository for his Github Pages website
 
 [www.Xilef12000.com](https://www.xilef12000.com/)
 
+the actual webpage lives in the [/docs](https://github.com/Xilef12000/xilef12000.github.io/tree/main/docs) folder
+
 MIT License
 
 Copyright (c) 2022 Xilef12000
