@@ -10,12 +10,12 @@ with con:
     content = con.execute("SELECT * FROM CONTENT")
 
 for row in content:
-    print(row)
+    #print(row)
     print("Building: {}".format(row[0]))
     os.system("touch docs/{}".format(row[0]))
     with open("docs/{}".format(row[0]), "a") as file:
         # head ------------------------------------------------------
-        print("    head: {}".format(row[2]))
+        print("    head: {}".format(row[2]), end="")
         file.write('''
 <!DOCTYPE html>
 <html>
@@ -32,7 +32,7 @@ for row in content:
 </head>
         ''')
         # header ------------------------------------------------------
-        print("    header: {}".format(row[3]))
+        print("    header: {}".format(row[3]), end="")
         file.write('''
 <body>
     <header>
@@ -43,12 +43,15 @@ for row in content:
     </header>
         ''')
         # body ------------------------------------------------------
-        print("    body: {}".format(row[4]))
+        print("    body: {}".format(row[4]), end="")
         file.write('''
 <div class="content-wrapper">
         ''')
-        if row[4]:
-            file.write(open("content/body/{}".format(row[4]), 'r').read())
+        if str(row[4]).split('.')[-1] == "html":
+            if row[4]:
+                file.write(open("content/body/{}".format(row[4]), 'r').read())
+        elif str(row[4]).split('.')[-1] == "md":
+            pass
         file.write('''
 </div>
         ''')
