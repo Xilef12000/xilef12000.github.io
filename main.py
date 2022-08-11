@@ -45,36 +45,65 @@ def build_page(data, id, path, table):
     </header>
         ''')
         # body ------------------------------------------------------
-        if table == 'projects':
+        if table == 'projects': # Projects ------------------------------------------------------
             print("    body: PROJECTS", end="")
             file.write('''
 <div class="content-wrapper">
-		<h2>Projects</h2>
-		<table class="image_table">
+        <h2>Projects</h2>
+        <table class="image_table">
             ''')
             for i in range(math.ceil(len(projects)/2)):
                 file.write('''
             <tr>
-				<td>
-					<a href="project/{}/">
-						<h3>{}</h3>
-						<img src="project/{}/thumbnail.png">
-					</a>
-				</td>
-				<td>
-					<a href="project/{}/">
-						<h3>{}</h3>
-						<img src="project/{}/thumbnail.png">
-					</a>
-				</td>
-			</tr>
+                <td>
+                    <a href="project/{}/">
+                        <h3>{}</h3>
+                        <img src="project/{}/thumbnail.png">
+                    </a>
+                </td>
+                <td>
+                    <a href="project/{}/">
+                        <h3>{}</h3>
+                        <img src="project/{}/thumbnail.png">
+                    </a>
+                </td>
+            </tr>
                 '''.format(projects[(i+1)*2-2][0],projects[(i+1)*2-2][1],projects[(i+1)*2-2][0],projects[(i+1)*2-1][0],projects[(i+1)*2-1][1],projects[(i+1)*2-1][0]))
             #file.write(str(projects))
             file.write('''
-	</table>
+    </table>
 </div>
             ''')
-        else:
+        elif table == 'gallery': # Gallery/ART ------------------------------------------------------
+            print("    body: GALLERY", end="")
+            file.write('''
+<div class="content-wrapper">
+        <h2>gallery</h2>
+        <table class="image_table">
+            ''')
+            for i in range(math.ceil(len(gallery)/2)):
+                file.write('''
+            <tr>
+                <td>
+                    <div tabindex="0">
+                        <h3>{}</h3>
+                        <img src="art/{}">
+                    </div>
+               </td>
+                <td>
+                    <div tabindex="0">
+                        <h3>{}</h3>
+                        <img src="art/{}">
+                    </div>
+                </td>
+            </tr>
+                '''.format(gallery[(i+1)*2-2][1],gallery[(i+1)*2-2][0],gallery[(i+1)*2-1][1],gallery[(i+1)*2-1][0]))
+            #file.write(str(gallery))
+            file.write('''
+    </table>
+</div>
+            ''')
+        else: # Pages ------------------------------------------------------
             print("    body: {}".format(data[4]), end="")
             file.write('''
 <div class="content-wrapper">
@@ -114,14 +143,16 @@ for row in content:
     #projects.append((row[0], row[1]))
     projects.insert(0,(row[0], row[1]))
 print(projects)
-# Gallery ------------------------------------------------------
+
+# Gallery/ART ------------------------------------------------------
 gallery = []
 with con:
-    content = con.execute("SELECT * FROM CONTENT WHERE type='gallery'")
+    content = con.execute("SELECT * FROM CONTENT WHERE type='art'")
 
 for row in content:
-    #build_page(row,"index.html", "project/{}/".format(row[0]), "")
-    pass
+    #build_page(row,"index.html", "art/{}/".format(row[0]), "")
+    gallery.insert(0,(row[0], row[1]))
+print(gallery)
 
 
 # Pages ------------------------------------------------------
