@@ -78,7 +78,7 @@ def build_page(data, id, path, table):
             print("    body: GALLERY", end="")
             file.write('''
 <div class="content-wrapper">
-        <h2>gallery</h2>
+        <h2>Gallery</h2>
         <table class="image_table">
             ''')
             for i in range(math.ceil(len(gallery)/2)):
