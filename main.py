@@ -87,17 +87,35 @@ def build_page(data, id, path, table):
                 <td>
                     <div tabindex="0">
                         <h3>{}</h3>
+                '''.format(gallery[(i+1)*2-2][1]))
+                print(gallery[(i+1)*2-2][2])
+                if gallery[(i+1)*2-2][2] == 'img':
+                    file.write('''
                         <img src="art/{}">
+                    '''.format(gallery[(i+1)*2-2][0]))
+                elif gallery[(i+1)*2-2][2] == 'html':
+                    file.write(open("sources/art/{}".format(gallery[(i+1)*2-2][3]), 'r').read())
+
+                file.write('''
                     </div>
                </td>
                 <td>
                     <div tabindex="0">
                         <h3>{}</h3>
+                '''.format(gallery[(i+1)*2-1][1]))
+                print(gallery[(i+1)*2-1][2])
+                if gallery[(i+1)*2-1][2] == 'img':
+                    file.write('''
                         <img src="art/{}">
+                    '''.format(gallery[(i+1)*2-1][0]))
+                elif gallery[(i+1)*2-1][2] == 'html':
+                    file.write(open("sources/art/{}".format(gallery[(i+1)*2-1][3]), 'r').read())
+
+                file.write('''
                     </div>
                 </td>
             </tr>
-                '''.format(gallery[(i+1)*2-2][1],gallery[(i+1)*2-2][0],gallery[(i+1)*2-1][1],gallery[(i+1)*2-1][0]))
+                ''')
             #file.write(str(gallery))
             file.write('''
     </table>
@@ -151,7 +169,7 @@ with con:
 
 for row in content:
     #build_page(row,"index.html", "art/{}/".format(row[0]), "")
-    gallery.insert(0,(row[0], row[1]))
+    gallery.insert(0,(row[0], row[1], row[2], row[4]))
 print(gallery)
 
 
