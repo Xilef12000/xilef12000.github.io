@@ -1,6 +1,7 @@
 import os
 import sqlite3 as sl
 import markdown
+import math
 
 print("deleting old files...")
 os.system("rm -r  docs/*")
@@ -10,7 +11,7 @@ os.system("cp -r sources/* docs")
 con = sl.connect("content.db", check_same_thread=False)
 
 # Build Page ------------------------------------------------------
-def build_page(data, id, path):
+def build_page(data, id, path, table):
     #print(data)
     print("Building: {}".format(path + id))
     os.system("touch docs/{}".format(path + id))
@@ -44,18 +45,48 @@ def build_page(data, id, path):
     </header>
         ''')
         # body ------------------------------------------------------
-        print("    body: {}".format(data[4]), end="")
-        file.write('''
+        if table == 'projects':
+            print("    body: PROJECTS", end="")
+            file.write('''
 <div class="content-wrapper">
-        ''')
-        if data[4]:
-            if str(data[4]).split('.')[-1] == "html":
-                file.write(open("content/body/{}".format(data[4]), 'r').read())
-            elif str(data[4]).split('.')[-1] == "md":
-                file.write(markdown.markdown(open("content/body/{}".format(data[4]), 'r').read()))
-        file.write('''
+		<h2>Projects</h2>
+		<table class="image_table">
+            ''')
+            for i in range(math.ceil(len(projects)/2)):
+                file.write('''
+            <tr>
+				<td>
+					<a href="project/{}/">
+						<h3>{}</h3>
+						<img src="project/{}/thumbnail.png">
+					</a>
+				</td>
+				<td>
+					<a href="project/{}/">
+						<h3>{}</h3>
+						<img src="project/{}/thumbnail.png">
+					</a>
+				</td>
+			</tr>
+                '''.format(projects[(i+1)*2-2][0],projects[(i+1)*2-2][1],projects[(i+1)*2-2][0],projects[(i+1)*2-1][0],projects[(i+1)*2-1][1],projects[(i+1)*2-1][0]))
+            #file.write(str(projects))
+            file.write('''
+	</table>
 </div>
-        ''')
+            ''')
+        else:
+            print("    body: {}".format(data[4]), end="")
+            file.write('''
+<div class="content-wrapper">
+            ''')
+            if data[4]:
+                if str(data[4]).split('.')[-1] == "html":
+                    file.write(open("content/body/{}".format(data[4]), 'r').read())
+                elif str(data[4]).split('.')[-1] == "md":
+                    file.write(markdown.markdown(open("content/body/{}".format(data[4]), 'r').read()))
+            file.write('''
+</div>
+            ''')
         # footer ------------------------------------------------------
         print("    footer: {}".format(data[5]))
         file.write('''
@@ -69,18 +100,36 @@ def build_page(data, id, path):
 </html>
         ''')
 
-# Pages ------------------------------------------------------
-with con:
-    content = con.execute("SELECT * FROM CONTENT WHERE type='page'")
 
-for row in content:
-    build_page(row, row[0],"")
 
 # Projects ------------------------------------------------------
+projects = []
 with con:
     content = con.execute("SELECT * FROM CONTENT WHERE type='project'")
 
 for row in content:
     if not os.path.isdir("docs/project/{}".format(row[0])):
         os.system("mkdir docs/project/{}".format(row[0]))
-    build_page(row,"index.html", "project/{}/".format(row[0]))
+    build_page(row,"index.html", "project/{}/".format(row[0]), "")
+    #projects.append((row[0], row[1]))
+    projects.insert(0,(row[0], row[1]))
+print(projects)
+# Gallery ------------------------------------------------------
+gallery = []
+with con:
+    content = con.execute("SELECT * FROM CONTENT WHERE type='gallery'")
+
+for row in content:
+    #build_page(row,"index.html", "project/{}/".format(row[0]), "")
+    pass
+
+
+# Pages ------------------------------------------------------
+with con:
+    content = con.execute("SELECT * FROM CONTENT WHERE type='page'")
+
+for row in content:
+    if row[0] == 'projects.html' or row[0] == 'gallery.html':
+        build_page(row, row[0], "", row[0].split('.')[0])
+    else:
+        build_page(row, row[0], "", "")
