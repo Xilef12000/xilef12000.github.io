@@ -1,5 +1,6 @@
 import os
 import sqlite3 as sl
+import markdown
 
 os.system("rm -r  docs/*")
 os.system("cp -r sources/* docs")
@@ -47,11 +48,11 @@ for row in content:
         file.write('''
 <div class="content-wrapper">
         ''')
-        if str(row[4]).split('.')[-1] == "html":
-            if row[4]:
+        if row[4]:
+            if str(row[4]).split('.')[-1] == "html":
                 file.write(open("content/body/{}".format(row[4]), 'r').read())
-        elif str(row[4]).split('.')[-1] == "md":
-            pass
+            elif str(row[4]).split('.')[-1] == "md":
+                file.write(markdown.markdown(open("content/body/{}".format(row[4]), 'r').read()))
         file.write('''
 </div>
         ''')
