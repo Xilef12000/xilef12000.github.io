@@ -2,21 +2,21 @@ import os
 import sqlite3 as sl
 import markdown
 
+print("deleting old files...")
 os.system("rm -r  docs/*")
+print("copying new files...")
 os.system("cp -r sources/* docs")
 
 con = sl.connect("content.db", check_same_thread=False)
 
-with con:
-    content = con.execute("SELECT * FROM CONTENT")
-
-for row in content:
-    #print(row)
-    print("Building: {}".format(row[0]))
-    os.system("touch docs/{}".format(row[0]))
-    with open("docs/{}".format(row[0]), "a") as file:
+# Build Page ------------------------------------------------------
+def build_page(data, id, path):
+    #print(data)
+    print("Building: {}".format(path + id))
+    os.system("touch docs/{}".format(path + id))
+    with open("docs/{}".format(path + id), "a") as file:
         # head ------------------------------------------------------
-        print("    head: {}".format(row[2]), end="")
+        print("    head: {}".format(data[2]), end="")
         file.write('''
 <!DOCTYPE html>
 <html>
@@ -26,45 +26,61 @@ for row in content:
     <meta charset="utf-8" name="description" content="Xilef12000 {}">
     <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/favicon_dark.svg" id="icon"/>
     <link rel="stylesheet" href="/style-sheets/style.css">
-        '''.format(row[1], row[1]))
-        if row[2]:
-            file.write(open("content/head/{}".format(row[2]), 'r').read())
+        '''.format(data[1], data[1]))
+        if data[2]:
+            file.write(open("content/head/{}".format(data[2]), 'r').read())
         file.write('''
 </head>
         ''')
         # header ------------------------------------------------------
-        print("    header: {}".format(row[3]), end="")
+        print("    header: {}".format(data[3]), end="")
         file.write('''
 <body>
     <header>
         ''')
-        if row[3]:
-            file.write(open("content/header/{}".format(row[3]), 'r').read())
+        if data[3]:
+            file.write(open("content/header/{}".format(data[3]), 'r').read())
         file.write('''
     </header>
         ''')
         # body ------------------------------------------------------
-        print("    body: {}".format(row[4]), end="")
+        print("    body: {}".format(data[4]), end="")
         file.write('''
 <div class="content-wrapper">
         ''')
-        if row[4]:
-            if str(row[4]).split('.')[-1] == "html":
-                file.write(open("content/body/{}".format(row[4]), 'r').read())
-            elif str(row[4]).split('.')[-1] == "md":
-                file.write(markdown.markdown(open("content/body/{}".format(row[4]), 'r').read()))
+        if data[4]:
+            if str(data[4]).split('.')[-1] == "html":
+                file.write(open("content/body/{}".format(data[4]), 'r').read())
+            elif str(data[4]).split('.')[-1] == "md":
+                file.write(markdown.markdown(open("content/body/{}".format(data[4]), 'r').read()))
         file.write('''
 </div>
         ''')
         # footer ------------------------------------------------------
-        print("    footer: {}".format(row[5]))
+        print("    footer: {}".format(data[5]))
         file.write('''
     <footer>
         ''')
-        if row[5]:
-            file.write(open("content/footer/{}".format(row[5]), 'r').read())
+        if data[5]:
+            file.write(open("content/footer/{}".format(data[5]), 'r').read())
         file.write('''
     </footer>
 </body>
 </html>
         ''')
+
+# Pages ------------------------------------------------------
+with con:
+    content = con.execute("SELECT * FROM CONTENT WHERE type='page'")
+
+for row in content:
+    build_page(row, row[0],"")
+
+# Projects ------------------------------------------------------
+with con:
+    content = con.execute("SELECT * FROM CONTENT WHERE type='project'")
+
+for row in content:
+    if not os.path.isdir("docs/project/{}".format(row[0])):
+        os.system("mkdir docs/project/{}".format(row[0]))
+    build_page(row,"index.html", "project/{}/".format(row[0]))
