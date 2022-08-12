@@ -2,10 +2,12 @@
 var i = 0;
 var n = 0;
 var txt = 'XILEF12000';
+var last = 0;
+var current = 0;
 const speed = 100;
 var cursor = true;
 const speed_divisor = 4;
-const teyt = []
+const text = ["XILEF12000", "ANIMATOR", "RENDERER", "PROGRAMMER", "DEVELOPER", "ARTIST"]
 
 
 setInterval(typeWriter, speed);
@@ -22,6 +24,12 @@ function typeWriter() {
         i--
         if (i <= 0) {
             n = 0;
+            current = Math.floor(Math.random()* text.length)
+            while (current == last){
+                current = Math.floor(Math.random()* text.length)
+            }
+            txt = text[current];
+            last = current;
         }
     }
     else {
