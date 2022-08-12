@@ -54,6 +54,8 @@ p {
 }
 .cursor {
 	font-size: 30px !important;
+	transition-property: opacity;
+  	transition-duration: 0.25s;
 }
 .zero {
 	font-size: 0px;

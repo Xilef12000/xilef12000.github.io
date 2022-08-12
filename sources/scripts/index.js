@@ -5,7 +5,7 @@ var txt = 'XILEF12000';
 const speed = 50;
 var cursor = true;
 const speed_divisor = 4;
-
+const teyt = []
 
 
 setInterval(typeWriter, speed);
