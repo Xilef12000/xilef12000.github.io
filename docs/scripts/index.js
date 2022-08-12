@@ -7,7 +7,7 @@ var current = 0;
 const speed = 100;
 var cursor = true;
 const speed_divisor = 4;
-const text = ["XILEF12000", "ANIMATOR", "RENDERER", "PROGRAMMER", "DEVELOPER", "ARTIST"]
+const text = ["XILEF12000", "ANIMATOR", "RENDERER", "PROGRAMMER", "DEVELOPER", "ARTIST", ""]
 
 
 setInterval(typeWriter, speed);
