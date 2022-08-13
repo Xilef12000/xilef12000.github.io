@@ -172,3 +172,9 @@ p {
 .Xilef12000:hover {
 	color: #D717F0;
 }
+.Bgray {
+ background-color: #606060;
+}
+.rounded {
+	border-radius: 8px;
+}
