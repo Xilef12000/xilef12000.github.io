@@ -56,13 +56,13 @@ def build_page(data, id, path, table):
                 file.write('''
             <tr>
                 <td>
-                    <a href="project/{}/">
+                    <a class="aH" href="project/{}/">
                         <h3>{}</h3>
                         <img src="project/{}/thumbnail.png">
                     </a>
                 </td>
                 <td>
-                    <a href="project/{}/">
+                    <a class="aH" href="project/{}/">
                         <h3>{}</h3>
                         <img src="project/{}/thumbnail.png">
                     </a>
@@ -143,13 +143,13 @@ def build_page(data, id, path, table):
                 file.write('''
             <tr>
                 <td>
-                    <a href="project/{}/">
+                    <a class="aH" href="project/{}/">
                         <h3>{}</h3>
                         <img src="project/{}/thumbnail.png">
                     </a>
                 </td>
                 <td>
-                    <a href="project/{}/">
+                    <a class="aH" href="project/{}/">
                         <h3>{}</h3>
                         <img src="project/{}/thumbnail.png">
                     </a>

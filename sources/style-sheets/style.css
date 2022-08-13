@@ -33,8 +33,9 @@ footer {
 	min-height:50px;
 }
 a {
-	text-decoration: none;
-	color:#CDCDD4;
+	text-decoration: underline;
+	color: #A4EC01;
+	text-align: left;
 }
 code {
 	font-family: FiraCode-Retina, SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace !important;
@@ -120,10 +121,10 @@ p {
 .center {
 	text-align: center;
 }
-.a {
-	text-decoration: underline;
-	color: #A4EC01;
-	text-align: left;
+.aH {
+	text-decoration: none;
+	color:#CDCDD4;
+	text-align: center;
 }
 .gallery-title {
 	padding-left: 16px;
