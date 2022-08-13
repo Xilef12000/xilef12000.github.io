@@ -121,6 +121,89 @@ def build_page(data, id, path, table):
     </table>
 </div>
             ''')
+        elif table == 'index': # Index ------------------------------------------------------
+            print("    body: {}".format(data[4]), end="")
+            file.write('''
+<div class="content-wrapper">
+            ''')
+            if data[4]:
+                if str(data[4]).split('.')[-1] == "html":
+                    file.write(open("content/body/{}".format(data[4]), 'r').read())
+                elif str(data[4]).split('.')[-1] == "md":
+                    file.write(markdown.markdown(open("content/body/{}".format(data[4]), 'r').read()))
+            file.write('''
+        <br>
+        <br>
+        <h2>Projects:</h2>
+        <table class="image_table">
+            ''')
+            projects_short = projects[0:2]
+            print(projects_short)
+            for i in range(math.ceil(len(projects_short)/2)):
+                file.write('''
+            <tr>
+                <td>
+                    <a href="project/{}/">
+                        <h3>{}</h3>
+                        <img src="project/{}/thumbnail.png">
+                    </a>
+                </td>
+                <td>
+                    <a href="project/{}/">
+                        <h3>{}</h3>
+                        <img src="project/{}/thumbnail.png">
+                    </a>
+                </td>
+            </tr>
+                '''.format(projects_short[(i+1)*2-2][0],projects_short[(i+1)*2-2][1],projects_short[(i+1)*2-2][0],projects_short[(i+1)*2-1][0],projects_short[(i+1)*2-1][1],projects_short[(i+1)*2-1][0]))
+            file.write('''
+        </table>
+        <a href="projects">See More...</a>
+        <br>
+        <h2>Gallery:</h2>
+        <table class="image_table">
+            ''')
+            gallery_short = gallery[0:1]
+            for i in range(math.ceil(len(gallery_short)/2)):
+                file.write('''
+            <tr>
+                <td>
+                    <div tabindex="0">
+                        <h3>{}</h3>
+                '''.format(gallery_short[(i+1)*2-2][1]))
+                print(gallery_short[(i+1)*2-2][2])
+                if gallery_short[(i+1)*2-2][2] == 'img':
+                    file.write('''
+                        <img src="art/{}">
+                    '''.format(gallery_short[(i+1)*2-2][0]))
+                elif gallery_short[(i+1)*2-2][2] == 'html':
+                    file.write(open("content/body/{}".format(gallery_short[(i+1)*2-2][3]), 'r').read())
+
+                file.write('''
+                    </div>
+               </td>
+                <td>
+                    <div tabindex="0">
+                        <h3>{}</h3>
+                '''.format(gallery[(i+1)*2-1][1]))
+                print(gallery[(i+1)*2-1][2])
+                if gallery[(i+1)*2-1][2] == 'img':
+                    file.write('''
+                        <img src="art/{}">
+                    '''.format(gallery[(i+1)*2-1][0]))
+                elif gallery[(i+1)*2-1][2] == 'html':
+                    file.write(open("content/body/{}".format(gallery[(i+1)*2-1][3]), 'r').read())
+
+                file.write('''
+                    </div>
+                </td>
+            </tr>
+                ''')
+            file.write('''
+    </table>
+    <a href="gallery">See More...</a>
+</div>
+            ''')
         else: # Pages ------------------------------------------------------
             print("    body: {}".format(data[4]), end="")
             file.write('''
@@ -178,7 +261,7 @@ with con:
     content = con.execute("SELECT * FROM CONTENT WHERE type='page'")
 
 for row in content:
-    if row[0] == 'projects.html' or row[0] == 'gallery.html':
+    if row[0] == 'projects.html' or row[0] == 'gallery.html' or row[0] == 'index.html':
         build_page(row, row[0], "", row[0].split('.')[0])
     else:
         build_page(row, row[0], "", "")

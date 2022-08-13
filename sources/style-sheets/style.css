@@ -153,3 +153,9 @@ p {
 .bold {
 	font-weight: bold !important;
 }
+.purple {
+	color: #D717F0;
+}
+.purple_dark {
+	color: #8416F2;
+}
