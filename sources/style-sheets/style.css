@@ -128,9 +128,11 @@ p {
 .gallery-title {
 	padding-left: 16px;
 	padding-right: 16px;
+	transition-property: color;
+  	transition-duration: 0.5s;
 }
 .gallery-title:hover {
-	color: white;
+	color: #D717F0;
 }
 .line {
 	width: calc(100vw - 32px);
@@ -141,9 +143,11 @@ p {
 	fill: #CDCDD4;
 	padding-left: 8px;
 	padding-right: 8px;
+	transition-property: fill;
+  	transition-duration: 0.5s;
 }
 .icon:hover {
-	fill: white;
+	fill: #D717F0;
 }
 .left {
 	text-align: left;
@@ -155,7 +159,16 @@ p {
 }
 .purple {
 	color: #D717F0;
+	fill: #D717F0;
 }
 .purple_dark {
 	color: #8416F2;
+	fill: #8416F2;
+}
+.Xilef12000 {
+	transition-property: color;
+  	transition-duration: 0.5s;
+}
+.Xilef12000:hover {
+	color: #D717F0;
 }
