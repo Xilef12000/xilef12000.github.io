@@ -58,6 +58,9 @@ p {
 	transition-property: opacity;
   	transition-duration: 0.25s;
 }
+.small {
+	font-size: 12px;
+}
 .zero {
 	font-size: 0px;
 }
@@ -90,9 +93,6 @@ p {
 }
 .image_table div:focus img{
 	opacity: 1;
-}
-.image_table div:focus a{
-	opacity: 0;
 }
 .image_table div:focus {
 	border-radius: 16px;
