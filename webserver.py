@@ -39,7 +39,7 @@ class HTTPRequestHandler(server.SimpleHTTPRequestHandler):
                 finally:
                     f.close()
         elif os.path.isfile("docs/404.html"):
-            self.send_response(200)
+            self.send_response(404)
             self.send_header("Content-type", self.guess_type("docs/404.html"))
             self.end_headers()
             f = open("docs/404.html", 'rb')
