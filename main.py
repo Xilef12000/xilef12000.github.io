@@ -85,7 +85,7 @@ def build_page(data, id, path, table):
                 file.write('''
             <tr>
                 <td>
-                    <div tabindex="0">
+                    <div tabindex="0" class="image_table_div">
                         <h3>{}</h3>
                 '''.format(gallery[(i+1)*2-2][1]))
                 print(gallery[(i+1)*2-2][2])
@@ -100,7 +100,7 @@ def build_page(data, id, path, table):
                     </div>
                </td>
                 <td>
-                    <div tabindex="0">
+                    <div tabindex="0" class="image_table_div">
                         <h3>{}</h3>
                 '''.format(gallery[(i+1)*2-1][1]))
                 print(gallery[(i+1)*2-1][2])
@@ -168,7 +168,7 @@ def build_page(data, id, path, table):
                 file.write('''
             <tr>
                 <td>
-                    <div tabindex="0">
+                    <div tabindex="0"  class="image_table_div">
                         <h3>{}</h3>
                 '''.format(gallery_short[(i+1)*2-2][1]))
                 print(gallery_short[(i+1)*2-2][2])
@@ -183,7 +183,7 @@ def build_page(data, id, path, table):
                     </div>
                </td>
                 <td>
-                    <div tabindex="0">
+                    <div tabindex="0"  class="image_table_div">
                         <h3>{}</h3>
                 '''.format(gallery[(i+1)*2-1][1]))
                 print(gallery[(i+1)*2-1][2])

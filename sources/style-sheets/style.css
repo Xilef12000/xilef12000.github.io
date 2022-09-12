@@ -95,7 +95,20 @@ p {
 .image_table div:focus img{
 	opacity: 1;
 }
-.image_table div:focus {
+.image_table_div:focus {
+	border-radius: 16px;
+	background-color: #00000080;
+	cursor: pointer;
+	position: fixed;
+	aspect-ratio: auto;
+	height: 80%;
+	width: 80%;
+	top: 10%;
+	left: 10%;
+	right: 10%;
+	bottom: 10%;
+}
+.image_table_div:focus-within {
 	border-radius: 16px;
 	background-color: #00000080;
 	cursor: pointer;
