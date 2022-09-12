@@ -95,6 +95,11 @@ def build_page(data, id, path, table):
                     '''.format(gallery[(i+1)*2-2][0]))
                 elif gallery[(i+1)*2-2][2] == 'html':
                     file.write(open("content/body/{}".format(gallery[(i+1)*2-2][3]), 'r').read())
+                elif gallery[(i+1)*2-2][2] == 'img+html':
+                    file.write('''
+                        <img src="art/{}">
+                        {}
+                    '''.format(gallery[(i+1)*2-2][0], open("content/body/{}".format(gallery[(i+1)*2-2][3]), 'r').read()))
 
                 file.write('''
                     </div>
@@ -110,6 +115,11 @@ def build_page(data, id, path, table):
                     '''.format(gallery[(i+1)*2-1][0]))
                 elif gallery[(i+1)*2-1][2] == 'html':
                     file.write(open("content/body/{}".format(gallery[(i+1)*2-1][3]), 'r').read())
+                elif gallery[(i+1)*2-1][2] == 'img+html':
+                    file.write('''
+                        <img src="art/{}">
+                        {}
+                    '''.format(gallery[(i+1)*2-1][0], open("content/body/{}".format(gallery[(i+1)*2-1][3]), 'r').read()))
 
                 file.write('''
                     </div>
