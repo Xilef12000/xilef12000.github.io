@@ -9,7 +9,10 @@ print("copying new files...")
 os.system("cp -r sources/* docs")
 
 con = sl.connect("content.db", check_same_thread=False)
-# Definitons ------------------------------------------------------
+
+
+
+# Definitons ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # head ------------------------------------------------------
 def buildHead(title, head):
     print("    head: {}".format(title))
@@ -53,7 +56,43 @@ def buildFooter(footer):
 </body>
 </html>
     ''')
-# SYSTEM ------------------------------------------------------
+
+
+
+# Projects ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+projects = []
+with con:
+    content = con.execute('SELECT * FROM "PROJECTS"')
+for row in content:
+    id = row[0]
+    title = row[1]
+    head = ""
+    header = row[2]
+    body = row[3]
+    footer = row[4]
+    if not os.path.isdir("docs/project/{}".format(id)):
+        os.system("mkdir docs/project/{}".format(id))
+    projects.insert(0,(id, title))
+    print(" \nBuilding: project/{}".format(id))
+    os.system("touch docs/project/{}".format(id))
+    with open("docs/project/{}/index.html".format(id), "a") as file:
+        buildHead(title, head)
+        buildHeader(header)
+        # body ------------------------------------------------------
+        print("    body: {}".format(body))
+        file.write('''
+<div class="content-wrapper">
+        ''')
+        if body:
+            if str(body).split('.')[-1] == "html":
+                file.write(open("content/body/{}".format(body), 'r').read())
+            elif str(body).split('.')[-1] == "md":
+                file.write(markdown.markdown(open("content/body/{}".format(body), 'r').read()))
+        file.write('''
+</div>
+        ''')
+        buildFooter(footer)
+# SYSTEM ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 with con: #read DB
     content = con.execute('SELECT * FROM "SYSTEM"')
 for row in content:
@@ -85,3 +124,4 @@ for row in content:
 </div>
             ''')
         buildFooter(footer)
+    
