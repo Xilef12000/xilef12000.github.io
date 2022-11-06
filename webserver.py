@@ -7,7 +7,7 @@ serverPort = 8000
 
 class HTTPRequestHandler(server.SimpleHTTPRequestHandler):
     def do_GET(self):
-        path = "docs/" + self.path[1:]
+        path = "docs/" + self.path[1:].split("?")[0]
         if os.path.isfile(path):
             self.send_response(200)
             self.send_header("Content-type", self.guess_type(path))
