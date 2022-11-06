@@ -118,8 +118,8 @@ for row in content:
         buildHead(title, head)
         buildHeader(header)
         # body ------------------------------------------------------
-        if id == 'index.html':
-            print("    body: {}".format(body),)
+        if id == 'index.html': # index ------------------------------------------------------
+            print("    body: {}".format(body))
             file.write('''
 <div class="content-wrapper">
             ''')
@@ -160,7 +160,8 @@ for row in content:
         <h2>Gallery:</h2>
         <table class="image_table">
             ''')
-            gallery_short = gallery[0:1]
+            gallery_short = gallery[0:2]
+            print(gallery_short)
             for i in range(math.ceil(len(gallery_short)/2)):
                 file.write('''
             <tr>
@@ -168,7 +169,6 @@ for row in content:
                     <div tabindex="0"  class="image_table_div">
                         <h3>{}</h3>
                 '''.format(gallery_short[(i+1)*2-2][1]))
-                print(gallery_short[(i+1)*2-2][3])
                 if gallery_short[(i+1)*2-2][3] == 'img':
                     file.write('''
                         <img src="art/{}">
@@ -183,7 +183,6 @@ for row in content:
                     <div tabindex="0"  class="image_table_div">
                         <h3>{}</h3>
                 '''.format(gallery[(i+1)*2-1][1]))
-                print(gallery[(i+1)*2-1][2])
                 if gallery[(i+1)*2-1][3] == 'img':
                     file.write('''
                         <img src="art/{}">
@@ -199,6 +198,61 @@ for row in content:
             file.write('''
     </table>
     <a href="gallery">See More...</a>
+</div>
+            ''')
+        elif id == 'gallery.html': # Gallery/ART ------------------------------------------------------
+            print("    body: GALLERY")
+            file.write('''
+<div class="content-wrapper">
+        <h2>Gallery</h2>
+        <table class="image_table">
+            ''')
+            for i in range(math.ceil(len(gallery)/2)):
+                file.write('''
+            <tr>
+                <td>
+                    <div tabindex="0" class="image_table_div">
+                        <h3>{}</h3>
+                '''.format(gallery[(i+1)*2-2][1]))
+                if gallery[(i+1)*2-2][3] == 'img':
+                    file.write('''
+                        <img src="art/{}">
+                    '''.format(gallery[(i+1)*2-2][2]))
+                elif gallery[(i+1)*2-2][3] == 'html':
+                    file.write(open("content/body/{}".format(gallery[(i+1)*2-2][2]), 'r').read())
+                elif gallery[(i+1)*2-2][3] == 'img+html':
+                    file.write('''
+                        <img src="art/{}">
+                        {}
+                    '''.format(gallery[(i+1)*2-2][0], open("content/body/{}".format(gallery[(i+1)*2-2][2]), 'r').read()))
+
+                file.write('''
+                    </div>
+               </td>
+                <td>
+                    <div tabindex="0" class="image_table_div">
+                        <h3>{}</h3>
+                '''.format(gallery[(i+1)*2-1][1]))
+                if gallery[(i+1)*2-1][3] == 'img':
+                    file.write('''
+                        <img src="art/{}">
+                    '''.format(gallery[(i+1)*2-1][2]))
+                elif gallery[(i+1)*2-1][3] == 'html':
+                    file.write(open("content/body/{}".format(gallery[(i+1)*2-1][2]), 'r').read())
+                elif gallery[(i+1)*2-1][3] == 'img+html':
+                    file.write('''
+                        <img src="art/{}">
+                        {}
+                    '''.format(gallery[(i+1)*2-1][0], open("content/body/{}".format(gallery[(i+1)*2-1][2]), 'r').read()))
+
+                file.write('''
+                    </div>
+                </td>
+            </tr>
+                ''')
+            #file.write(str(gallery))
+            file.write('''
+    </table>
 </div>
             ''')
         else: # Pages ------------------------------------------------------
