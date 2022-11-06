@@ -1,7 +1,7 @@
 -- ART definition
 
 CREATE TABLE ART (
-	id TEXT(4) NOT NULL, title TEXT NOT NULL, "source" TEXT NOT NULL,
+	id TEXT(4) NOT NULL, title TEXT NOT NULL, "source" TEXT NOT NULL, "type" TEXT NOT NULL,
 	CONSTRAINT ART_PK PRIMARY KEY (id)
 );
 
@@ -35,13 +35,13 @@ CREATE TABLE "SYSTEM" (
 
 -- ART content
 
-INSERT INTO ART (id,title,"source") VALUES
-	 ('4f35','Rexouium Head','4f35.png'),
-	 ('b62e','Canine Refsheet','b62e.png'),
-	 ('d72b','garden seating area daycycle','d72b.html'),
-	 ('d72c','garden seating area','d72c.png'),
-	 ('8f58','Meerkat Base','8f58.png'),
-	 ('8f59','Meerkat Base White Background','8f59.png');
+INSERT INTO ART (id,title,"source","type") VALUES
+	 ('4f35','Rexouium Head','4f35.png','img'),
+	 ('b62e','Canine Refsheet','b62e.png','img'),
+	 ('d72b','garden seating area daycycle','d72b.html','html'),
+	 ('d72c','garden seating area','d72c.png','img'),
+	 ('8f58','Meerkat Base','8f58.png','img'),
+	 ('8f59','Meerkat Base White Background','8f59.png','img');
 
 -- ID content
 
