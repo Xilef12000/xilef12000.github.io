@@ -255,6 +255,35 @@ for row in content:
     </table>
 </div>
             ''')
+        elif id == 'projects.html': # Projects ------------------------------------------------------
+            print("    body: PROJECTS", end="")
+            file.write('''
+<div class="content-wrapper">
+        <h2>Projects</h2>
+        <table class="image_table">
+            ''')
+            for i in range(math.ceil(len(projects)/2)):
+                file.write('''
+            <tr>
+                <td>
+                    <a class="aH" href="project/{}/">
+                        <h3>{}</h3>
+                        <img src="project/{}/thumbnail.png">
+                    </a>
+                </td>
+                <td>
+                    <a class="aH" href="project/{}/">
+                        <h3>{}</h3>
+                        <img src="project/{}/thumbnail.png">
+                    </a>
+                </td>
+            </tr>
+                '''.format(projects[(i+1)*2-2][0],projects[(i+1)*2-2][1],projects[(i+1)*2-2][0],projects[(i+1)*2-1][0],projects[(i+1)*2-1][1],projects[(i+1)*2-1][0]))
+            #file.write(str(projects))
+            file.write('''
+    </table>
+</div>
+            ''')
         else: # Pages ------------------------------------------------------
             print("    body: {}".format(body))
             file.write('''
