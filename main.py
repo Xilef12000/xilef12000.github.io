@@ -92,6 +92,16 @@ for row in content:
 </div>
         ''')
         buildFooter(footer)
+# Gallery/ART ------------------------------------------------------
+gallery = []
+with con:
+    content = con.execute('SELECT * FROM "ART"')
+for row in content:
+    id = row[0]
+    title = row[1]
+    source = row[2]
+    type = row[3]
+    gallery.insert(0,(id, title, source, type))
 # SYSTEM ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 with con: #read DB
     content = con.execute('SELECT * FROM "SYSTEM"')
@@ -108,8 +118,89 @@ for row in content:
         buildHead(title, head)
         buildHeader(header)
         # body ------------------------------------------------------
-        if False:
-            pass # later for index
+        if id == 'index.html':
+            print("    body: {}".format(body),)
+            file.write('''
+<div class="content-wrapper">
+            ''')
+            if body:
+                if str(body).split('.')[-1] == "html":
+                    file.write(open("content/body/{}".format(body), 'r').read())
+                elif str(body).split('.')[-1] == "md":
+                    file.write(markdown.markdown(open("content/body/{}".format(body), 'r').read()))
+            file.write('''
+        <br>
+        <br>
+        <h2>Projects:</h2>
+        <table class="image_table">
+            ''')
+            projects_short = projects[0:2]
+            print(projects_short)
+            for i in range(math.ceil(len(projects_short)/2)):
+                file.write('''
+            <tr>
+                <td>
+                    <a class="aH" href="project/{}/">
+                        <h3>{}</h3>
+                        <img src="project/{}/thumbnail.png">
+                    </a>
+                </td>
+                <td>
+                    <a class="aH" href="project/{}/">
+                        <h3>{}</h3>
+                        <img src="project/{}/thumbnail.png">
+                    </a>
+                </td>
+            </tr>
+                '''.format(projects_short[(i+1)*2-2][0],projects_short[(i+1)*2-2][1],projects_short[(i+1)*2-2][0],projects_short[(i+1)*2-1][0],projects_short[(i+1)*2-1][1],projects_short[(i+1)*2-1][0]))
+            file.write('''
+        </table>
+        <a href="projects">See More...</a>
+        <br>
+        <h2>Gallery:</h2>
+        <table class="image_table">
+            ''')
+            gallery_short = gallery[0:1]
+            for i in range(math.ceil(len(gallery_short)/2)):
+                file.write('''
+            <tr>
+                <td>
+                    <div tabindex="0"  class="image_table_div">
+                        <h3>{}</h3>
+                '''.format(gallery_short[(i+1)*2-2][1]))
+                print(gallery_short[(i+1)*2-2][3])
+                if gallery_short[(i+1)*2-2][3] == 'img':
+                    file.write('''
+                        <img src="art/{}">
+                    '''.format(gallery_short[(i+1)*2-2][2]))
+                elif gallery_short[(i+1)*2-2][3] == 'html':
+                    file.write(open("content/body/{}".format(gallery_short[(i+1)*2-2][2]), 'r').read())
+
+                file.write('''
+                    </div>
+               </td>
+                <td>
+                    <div tabindex="0"  class="image_table_div">
+                        <h3>{}</h3>
+                '''.format(gallery[(i+1)*2-1][1]))
+                print(gallery[(i+1)*2-1][2])
+                if gallery[(i+1)*2-1][3] == 'img':
+                    file.write('''
+                        <img src="art/{}">
+                    '''.format(gallery[(i+1)*2-1][2]))
+                elif gallery[(i+1)*2-1][3] == 'html':
+                    file.write(open("content/body/{}".format(gallery[(i+1)*2-1][2]), 'r').read())
+
+                file.write('''
+                    </div>
+                </td>
+            </tr>
+                ''')
+            file.write('''
+    </table>
+    <a href="gallery">See More...</a>
+</div>
+            ''')
         else: # Pages ------------------------------------------------------
             print("    body: {}".format(body))
             file.write('''
