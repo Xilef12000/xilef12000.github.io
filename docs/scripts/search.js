@@ -1,11 +1,11 @@
-//tags.db
+//get tags.db
 array = httpGet("/tags.db").split(";\n");
 tags = [];
 for (element of array) {
     tags.push(element.split(", "));
 }
 console.table(tags);
-//id.db
+//get id.db
 array = httpGet("/id.db").split(";\n");
 ids = [];
 for (element of array) {

@@ -229,9 +229,9 @@ for row in content:
                 file.write('''
             <tr>
                 <td>
-                    <div tabindex="0" class="image_table_div">
+                    <div tabindex="0" class="image_table_div" id="{}">
                         <h3>{}</h3>
-                '''.format(gallery[(i+1)*2-2][1]))
+                '''.format(gallery[(i+1)*2-2][1],gallery[(i+1)*2-2][1]))
                 if gallery[(i+1)*2-2][3] == 'img':
                     file.write('''
                         <img src="art/{}">
@@ -248,9 +248,9 @@ for row in content:
                     </div>
                </td>
                 <td>
-                    <div tabindex="0" class="image_table_div">
+                    <div tabindex="0" class="image_table_div" id="{}">
                         <h3>{}</h3>
-                '''.format(gallery[(i+1)*2-1][1]))
+                '''.format(gallery[(i+1)*2-1][1],gallery[(i+1)*2-1][1]))
                 if gallery[(i+1)*2-1][3] == 'img':
                     file.write('''
                         <img src="art/{}">

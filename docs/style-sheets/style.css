@@ -100,6 +100,7 @@ p {
 	text-align: center;
 }
 .image_table_div:focus {
+	outline: none;
 	border-radius: 16px;
 	background-color: #00000080;
 	cursor: pointer;
