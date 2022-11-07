@@ -2,6 +2,7 @@ import os
 import sqlite3 as sl
 import markdown
 import math
+import urllib.parse
 
 print("deleting old files...")
 os.system("rm -r  docs/*")
@@ -25,7 +26,8 @@ def buildHead(title, head):
 <meta charset="utf-8" name="description" content="Xilef12000 {}">
 <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/favicon_dark.svg" id="icon"/>
 <link rel="stylesheet" href="/style-sheets/style.css">
-    '''.format(title, title))
+<script src="/scripts/urlName.js" args="{}" type="text/javascript"></script>
+    '''.format(title, title, urllib.parse.quote(title)))
     if head:
         file.write(open("content/head/{}".format(head), 'r').read())
     file.write('''
