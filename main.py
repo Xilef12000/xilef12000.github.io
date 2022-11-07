@@ -258,7 +258,7 @@ for row in content:
 </div>
             ''')
         elif id == 'projects.html': # Projects ------------------------------------------------------
-            print("    body: PROJECTS", end="")
+            print("    body: PROJECTS")
             file.write('''
 <div class="content-wrapper">
         <h2>Projects</h2>
