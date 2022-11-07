@@ -1,3 +1,4 @@
 *.sql linguist-detectable=true
 *.md linguist-detectable=true
 README.md inguist-detectable=false
+/README.md inguist-detectable=false
