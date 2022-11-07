@@ -4,9 +4,8 @@ if (parts.length > 1) {
     image = decodeURI(parts[parts.length -1]);
     console.log(image);
     document.addEventListener('DOMContentLoaded', (event) => {
-        //the event occurred
+        //page loaded
+        document.getElementById(image).scrollIntoView()
         document.getElementById(image).focus()
-        console.log(document.getElementById(image).outerHTML)
-        console.log("focus");
     })
 }

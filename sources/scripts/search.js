@@ -33,7 +33,7 @@ function search(event) {
                                     document.getElementById('results').innerHTML += '<p><a href="/project/' + tag +'/">' + id[2] + '</a></p>';
                                 }
                                 else if (id[1] == 'ART'){
-                                    document.getElementById('results').innerHTML += '<p>' + id[2] + '</p>';
+                                    document.getElementById('results').innerHTML += '<p><a href="/gallery? ' + id[2] +'">' + id[2] + '</a></p>';
                                 }
                                 else {
                                     document.getElementById('results').innerHTML += '<p>' + id[2] + '</p>';
