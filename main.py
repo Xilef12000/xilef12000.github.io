@@ -60,7 +60,23 @@ def buildFooter(footer):
     ''')
 
 
-
+# Database ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+with con: # tags.db
+    content = con.execute('SELECT * FROM "TAGS"')
+os.system("touch docs/tags.db")
+with open("docs/tags.db", "a") as file:
+    for row in content:
+        file.write(str(row).replace('(','').replace(')','').replace("'", '') + ';\n')
+        print(str(row))
+    file.write("null, null")
+with con: # id.db
+    content = con.execute('SELECT * FROM "ID"')
+os.system("touch docs/id.db")
+with open("docs/id.db", "a") as file:
+    for row in content:
+        file.write(str(row).replace('(','').replace(')','').replace("'", '') + ';\n')
+        print(str(row))
+    file.write("null, null, null")
 # Projects ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 projects = []
 with con:
