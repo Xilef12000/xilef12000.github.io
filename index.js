@@ -22,11 +22,11 @@ app.get('*', async (req, res) => {
         }
         else if (assets.includes(url.split('/')[1]) && existsSync('.' + url)){
             //console.log(url);
-            if (url.includes('style-sheets/Fonts/Fontfiles/')) {
-                res.contentType(mime.getType(url.split('.').at(-1))).send( await readFile('.' + url) );
+            if (mime.getType(url.split('.').at(-1)).split('/')[0] == 'text') {
+                res.contentType(mime.getType(url.split('.').at(-1))).send( await readFile('.' + url, 'utf8') );
             }
             else {
-                res.contentType(mime.getType(url.split('.').at(-1))).send( await readFile('.' + url, 'utf8') );
+                res.contentType(mime.getType(url.split('.').at(-1))).send( await readFile('.' + url) );
             }
         }
         else {
