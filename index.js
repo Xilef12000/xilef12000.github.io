@@ -24,7 +24,12 @@ app.get('*', async (req, res) => {
     
     if (assets.includes(url.split('/')[1]) && existsSync('.' + url)){
         //console.log(url);
-        res.contentType(mime.getType(url.split('.').at(-1))).send( await readFile('.' + url, 'utf8') );
+        if (url.includes('style-sheets/Fonts/Fontfiles/')) {
+            res.contentType(mime.getType(url.split('.').at(-1))).send( await readFile('.' + url) );
+        }
+        else {
+            res.contentType(mime.getType(url.split('.').at(-1))).send( await readFile('.' + url, 'utf8') );
+        }
     }
     else {
         res.status(404).send( await readFile('./404.html', 'utf8') );
