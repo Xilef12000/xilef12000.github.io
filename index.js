@@ -7,7 +7,7 @@ const { readFile } = require('fs').promises;
 const { existsSync } = require('fs');
 const mime = require('mime');
 
-const assets = ['style-sheets', 'scripts', 'assets'];
+const assets = ['style-sheets', 'scripts', 'assets', 'robots.txt', 'sitemap.txt'];
 
 app.get('/', function(req, res) {
     res.render('pages/index');
@@ -15,6 +15,9 @@ app.get('/', function(req, res) {
 
 app.get('/about', function(req, res) {
     res.render('pages/about');
+});
+app.get('/404', function(req, res) {
+    res.render('pages/404');
 });
 
 
@@ -32,7 +35,7 @@ app.get('*', async (req, res) => {
         }
     }
     else {
-        res.status(404).send( await readFile('./404.html', 'utf8') );
+        res.status(404).render('pages/404');;
     }
 });
 
