@@ -7,7 +7,7 @@ const { readFile } = require('fs').promises;
 const { existsSync } = require('fs');
 const mime = require('mime');
 
-const assets = ['style-sheets', 'scripts', 'assets', 'robots.txt', 'sitemap.txt', 'art'];
+const assets = ['style-sheets', 'scripts', 'assets', 'robots.txt', 'sitemap.txt', 'art', 'project'];
 const ejs = ['', '/', '/index', '/about', '/projects', '/gallery']
 
 app.get('*', async (req, res) => {
@@ -30,7 +30,7 @@ app.get('*', async (req, res) => {
             }
         }
         else {
-            res.status(404).render('pages/404');;
+            res.status(404).render('pages/404');
         }
     }
     catch (e) {
