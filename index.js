@@ -7,7 +7,7 @@ const { readFile } = require('fs').promises;
 const { existsSync } = require('fs');
 const mime = require('mime');
 
-const assets = ['style-sheets', 'scripts', 'assets', 'robots.txt', 'sitemap.txt', 'art', 'project'];
+const assets = ['style-sheets', 'scripts', 'assets', 'robots.txt', 'sitemap.txt', 'project'];
 const ejs = ['', '/', '/index', '/about', '/projects', '/gallery']
 
 app.get('*', async (req, res) => {
