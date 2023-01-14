@@ -22,21 +22,27 @@ app.get('/404', function(req, res) {
 
 
 app.get('*', async (req, res) => {
-    const url = req.originalUrl;
-    //console.log(url.split('/')[1]);
-    
-    if (assets.includes(url.split('/')[1]) && existsSync('.' + url)){
-        //console.log(url);
-        if (url.includes('style-sheets/Fonts/Fontfiles/')) {
-            res.contentType(mime.getType(url.split('.').at(-1))).send( await readFile('.' + url) );
+    try {
+        const url = req.originalUrl;
+        //console.log(url.split('/')[1]);
+        
+        if (assets.includes(url.split('/')[1]) && existsSync('.' + url)){
+            //console.log(url);
+            if (url.includes('style-sheets/Fonts/Fontfiles/')) {
+                res.contentType(mime.getType(url.split('.').at(-1))).send( await readFile('.' + url) );
+            }
+            else {
+                res.contentType(mime.getType(url.split('.').at(-1))).send( await readFile('.' + url, 'utf8') );
+            }
         }
         else {
-            res.contentType(mime.getType(url.split('.').at(-1))).send( await readFile('.' + url, 'utf8') );
+            res.status(404).render('pages/404');;
         }
     }
-    else {
-        res.status(404).render('pages/404');;
-    }
+    catch (e) {
+        console.error(e);
+        res.status(500);
+    };
 });
 
 app.listen(process.env.PORT || 3000, () => console.log(`App available on http://localhost:3000`))
