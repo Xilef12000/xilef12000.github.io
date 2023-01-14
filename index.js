@@ -8,25 +8,19 @@ const { existsSync } = require('fs');
 const mime = require('mime');
 
 const assets = ['style-sheets', 'scripts', 'assets', 'robots.txt', 'sitemap.txt'];
-
-app.get('/', function(req, res) {
-    res.render('pages/index');
-});
-
-app.get('/about', function(req, res) {
-    res.render('pages/about');
-});
-app.get('/404', function(req, res) {
-    res.render('pages/404');
-});
-
+const ejs = ['', '/', '/index', '/about']
 
 app.get('*', async (req, res) => {
     try {
-        const url = req.originalUrl;
-        //console.log(url.split('/')[1]);
-        
-        if (assets.includes(url.split('/')[1]) && existsSync('.' + url)){
+        var url = req.originalUrl;
+        //console.log(url);
+        if (ejs.includes(url)){
+            if (url == '/' || url == '') {
+                url = 'index';
+            }
+            res.render('pages/' + url);
+        }
+        else if (assets.includes(url.split('/')[1]) && existsSync('.' + url)){
             //console.log(url);
             if (url.includes('style-sheets/Fonts/Fontfiles/')) {
                 res.contentType(mime.getType(url.split('.').at(-1))).send( await readFile('.' + url) );
