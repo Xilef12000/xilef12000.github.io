@@ -8,16 +8,17 @@ const { existsSync } = require('fs');
 const mime = require('mime');
 
 const assets = ['style-sheets', 'scripts', 'assets', 'robots.txt', 'sitemap.txt', 'project'];
-const ejs = ['', '/', '/index', '/about', '/projects', '/gallery']
+const ejs = ['', '/', '/index', '/about', '/projects', '/gallery', 'project']
 
 app.get('*', async (req, res) => {
     try {
         var url = req.originalUrl;
         //console.log(url);
-        if (ejs.includes(url)){
+        if (ejs.includes(url) || ejs.includes(url.split('/')[1])) {
             if (url == '/' || url == '') {
                 url = 'index';
             }
+            console.log('pages/' + url)
             res.render('pages/' + url);
         }
         else if (assets.includes(url.split('/')[1]) && existsSync('.' + url)){
