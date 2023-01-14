@@ -8,7 +8,7 @@ const { existsSync } = require('fs');
 const mime = require('mime');
 
 const assets = ['style-sheets', 'scripts', 'assets', 'robots.txt', 'sitemap.txt'];
-const ejs = ['', '/', '/index', '/about']
+const ejs = ['', '/', '/index', '/about', '/projects', '/gallery']
 
 app.get('*', async (req, res) => {
     try {
