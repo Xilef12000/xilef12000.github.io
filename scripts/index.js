@@ -1,3 +1,5 @@
+//http://jragon.herokuapp.com/
+//https://jragon.pages.dev/
 
 var i = 0;
 var n = 0;
