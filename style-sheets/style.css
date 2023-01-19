@@ -1,3 +1,6 @@
+@import "Fonts/major_shift-webfont.css";
+@import "Fonts/FiraCode-Retina.css";
+@import "Fonts/Poppins.css";
 :root {
     --color-bg: #181a1b;
     --color-text: #e8e6e3;
@@ -6,8 +9,9 @@
     --color-menue: #000000;
     --color-menue-light: #3c3c3c;
     --color-code: #A4EC01;
-    --font-family: Verdana, sans-serif, sans;
-    --font-code: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+    --font-family: Poppins, Verdana, sans-serif, sans;
+    --font-code: FiraCode-Retina, SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+    --font-x: major_snafuregular;
     --transition: 0.25s;
     color-scheme: dark !important;
 }
