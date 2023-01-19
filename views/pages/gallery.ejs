@@ -2,92 +2,75 @@
 <html lang="en">
 <head>
   <%- include('../partials/head'); %>
+  <title>Xilef12000 | Gallery</title>
 </head>
-
 <body>
   <header>
-    <%- include('../partials/header_plus'); %>
+    <%- include('../partials/header'); %>
   </header>
-  
   <div class="content-wrapper">
-    <h2>Gallery</h2>
-    <table class="image_table">
-      
-      <tbody><tr>
-        <td>
-          <div tabindex="0" class="image_table_div" id="Meerkat Base White Background">
-            <h3>Meerkat Base White Background</h3>
-            
-            <img src="/assets/art/8f59.png">
-            
+    <h1>Gallery:</h1>
+    
+    <!--
+      //https://codepen.io/desandro/pen/LmWoWe
+      //https://3dtransforms.desandro.com/card-flip
+    -->
+    <div class="scene-wrapper">
+      <div class="scene scene--card">
+        <div class="card">
+          <div class="card__face card__face--front">loading...</div>
+          <div class="card__face card__face--back">
+            <img class="card__image modal-image" src="/assets/art/8f59.png" alt="Free to use Meerkat base by Xilef12000" draggable="false" />
           </div>
-        </td>
-        <td>
-          <div tabindex="0" class="image_table_div" id="Meerkat Base">
-            <h3>Meerkat Base</h3>
-            
-            <img src="/assets/art/8f58.png">
-            
+        </div>
+      </div>
+      <div class="scene scene--card">
+        <div class="card">
+          <div class="card__face card__face--front">loading...</div>
+          <div class="card__face card__face--back">
+            <img class="card__image modal-image" src="/assets/art/8f58.png" alt="Transparent Free to use Meerkat base by Xilef12000" draggable="false" />
           </div>
-        </td>
-      </tr>
-      
-      <tr>
-        <td>
-          <div tabindex="0" class="image_table_div" id="garden seating area">
-            <h3>garden seating area</h3>
-            
-            <img src="/assets/art/d72c.png">
-            
+        </div>
+      </div>
+      <div class="scene scene--card">
+        <div class="card">
+          <div class="card__face card__face--front">loading...</div>
+          <div class="card__face card__face--back">
+            <img class="card__image modal-image" src="/assets/art/d72c.png" alt="Garden seating area" draggable="false" />
           </div>
-        </td>
-        <td>
-          <div tabindex="0" class="image_table_div" id="garden seating area daycycle">
-            <h3>garden seating area daycycle</h3>
-            <div class="Bgray rounded NoHide">
-              <p class="small">This is a embedded page. The content is not displayed right now, because it might set its own cookies.</p>
-              <p class="small">By clicking "Accept, and load" the content will be loaded from the external server.</p>
-              <p>
-                <button onclick="loadExternal('<iframe width=&quot;90%&quot; height=&quot;80%&quot; src=&quot;https://www.youtube.com/embed/T2v26MZoNVM&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen></iframe>')">
-                  Accept, and load
-                </button>
-              </p>
-              <p>
-                <a href="https://www.youtube.com/embed/T2v26MZoNVM">https://www.youtube.com/embed/T2v26MZoNVM</a>
-              </p>
-            </div>
-            
-            
+        </div>
+      </div>
+      <div class="scene scene--card">
+        <div class="card">
+          <div class="card__face card__face--front">loading...</div>
+          <div class="card__face card__face--back">
+            <img class="card__image modal-image" src="/assets/art/b62e.png" alt="Canine Refsheet" draggable="false" />
           </div>
-        </td>
-      </tr>
-      
-      <tr>
-        <td>
-          <div tabindex="0" class="image_table_div" id="Canine Refsheet">
-            <h3>Canine Refsheet</h3>
-            
-            <img src="/assets/art/b62e.png">
-            
+        </div>
+      </div>
+      <div class="scene scene--card">
+        <div class="card">
+          <div class="card__face card__face--front">loading...</div>
+          <div class="card__face card__face--back">
+            <img class="card__image modal-image" src="/assets/art/4f35.png" alt="Rexouium Head" draggable="false" />
           </div>
-        </td>
-        <td>
-          <div tabindex="0" class="image_table_div" id="Rexouium Head">
-            <h3>Rexouium Head</h3>
-            
-            <img src="/assets/art/4f35.png">
-            
-          </div>
-        </td>
-      </tr>
-      
-    </tbody></table>
-  </div>
-  
+        </div>
+      </div>
+    </div>
+    <script src="scripts/imageflip.js"></script>
+    
+    <!--
+      //https://www.w3schools.com/howto/howto_css_modal_images.asp
+    -->        
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div> 
+    <script src="scripts/imagemodal.js"></script>
+    
+  </div>   
   <footer>
     <%- include('../partials/footer'); %>
   </footer>
-  
-  
 </body>
-</html>

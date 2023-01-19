@@ -1,0 +1,54 @@
+.navbar {
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--color-menue);
+    height: 3em;
+}
+.navbar-x {
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--color-menue-light);
+    height: 4em;
+}
+.navbar-selected {
+    background-color: var(--color-a) !important;
+}
+.navbar a {
+    height: 100%;
+    text-decoration: none;
+    color: var(--color-text);
+    padding-left: 1em;
+    padding-right: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-property: background-color;
+    transition-duration: var(--transition);
+}
+.navbar :is(.nav-svg-text , .nav-text ):is(:hover, :focus) {
+    background-color: var(--color-a-hover) !important;
+}
+.navbar a svg {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}       
+.navbar .nav-svg-text svg path {
+    fill: var(--color-text);
+}
+.navbar .nav-svg svg path {
+    transition-property: fill;
+    transition-duration: var(--transition);
+    fill: var(--color-a);
+}
+.navbar .nav-svg:is(:hover, :focus) svg path {
+    fill: var(--color-text);
+}
+.navbar .nav-svg-text p::before {
+    content: "\00a0 ";
+}
+.navbar .navbar-placeholder {
+    margin-left: auto;
+}
