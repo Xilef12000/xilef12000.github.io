@@ -1,11 +1,4 @@
-.navbar {
-    width:100%;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: var(--color-menue);
-    height: 3em;
-}
-.navbar-x {
+.x-bar {
     font-family: var(--font-x);
     font-size: 2rem;
     width:100%;
@@ -16,52 +9,97 @@
     background-color: var(--color-menue-light);
     
 }
-.navbar-x a {
+.x-bar a {
     transition-property: color;
     transition-duration: var(--transition);
     text-decoration: none;
     color: var(--color-text);
 }
-.navbar-x a:hover {
+.x-bar a:hover {
     color: var(--color-a);
 }
-.navbar-selected {
-    background-color: var(--color-a) !important;
+.navbar {
+    background-color: var(--color-menue);
+    overflow: hidden;
+    display: grid;
+    /*grid-template-columns: repeat(21, 1fr);*/
+    grid-template-columns: repeat(auto-fill, minmax(55px, 1fr) );
+    grid-template-rows: 1fr;
+    grid-auto-flow: dense;
+    gap: 0px;
+}
+.navbar a:nth-child(-n+3) {
+    grid-column: span 3;
+}
+.navbar a:nth-last-child(-n+4) {
+    grid-column-end: -4;
+}
+.navbar a:nth-last-child(-n+3) {
+    grid-column-end: -3;
+}
+.navbar a:nth-last-child(-n+2) {
+    grid-column-end: -2;
+}
+.navbar a:nth-last-child(-n+1) {
+    grid-column-end: -1;
+}
+@media screen and (max-width: 570px){
+    .navbar a:nth-last-child(-n+4) {
+        grid-row: 2;
+        grid-column: auto;
+    }
+}
+@media screen and (max-width: 350px){
+    .navbar {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .navbar a:nth-child(-n+3) {
+        grid-column: span 4;
+    }
+    .navbar a:nth-last-child(-n+4) {
+        grid-row: 4;
+        grid-column: auto;
+    }
 }
 .navbar a {
-    height: 100%;
+    color: #f2f2f2;
+    text-align: center;
     text-decoration: none;
-    color: var(--color-text);
-    padding-left: 1em;
-    padding-right: 1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition-property: background-color;
-    transition-duration: var(--transition);
+    font-size: 17px;
 }
-.navbar :is(.nav-svg-text , .nav-text ):is(:hover, :focus) {
-    background-color: var(--color-a-hover) !important;
+@media screen and (max-width: 730px){
+    .navbar a.nav-svg-text {
+        padding: 14px 16px;
+    }
+    .navbar a:nth-child(-n+3) {
+        grid-column: span 2;
+    }
+}
+.navbar a.nav-svg-text {
+    padding: 14px 8px;
+}
+.navbar a.nav-text {
+    padding: 14px 16px;
+}
+.navbar a.nav-svg {
+    padding: 14px 16px;
 }
 .navbar a svg {
     width: 22px;
     height: 22px;
     display: inline-block;
-}       
-.navbar .nav-svg-text svg path {
-    fill: var(--color-text);
+    vertical-align: middle;
+}   
+.navbar a p {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
 }
-.navbar .nav-svg svg path {
-    transition-property: fill;
-    transition-duration: var(--transition);
-    fill: var(--color-a);
+.navbar a:is(:hover, :focus) {
+    background-color: var(--color-a-hover)
 }
-.navbar .nav-svg:is(:hover, :focus) svg path {
-    fill: var(--color-text);
+.navbar a.selected {
+    background-color: var(--color-a)
 }
-.navbar .nav-svg-text p::before {
-    content: "\00a0 ";
-}
-.navbar .navbar-placeholder {
-    margin-left: auto;
-}
+ 
