@@ -7,7 +7,6 @@
     align-items: center;
     justify-content: center;
     background-color: var(--color-menue-light);
-    
 }
 .x-bar a {
     transition-property: color;
@@ -22,48 +21,51 @@
     background-color: var(--color-menue);
     overflow: hidden;
     display: grid;
+}
+.head-bar {
+    display: grid;
     /*grid-template-columns: repeat(21, 1fr);*/
     grid-template-columns: repeat(auto-fill, minmax(55px, 1fr) );
     grid-template-rows: 1fr;
     grid-auto-flow: dense;
     gap: 0px;
 }
-.navbar a:nth-child(-n+3) {
+.head-bar a:nth-child(-n+3) {
     grid-column: span 3;
 }
-.navbar a:nth-last-child(-n+4) {
+.head-bar a:nth-last-child(-n+4) {
     grid-column-end: -4;
 }
-.navbar a:nth-last-child(-n+3) {
+.head-bar a:nth-last-child(-n+3) {
     grid-column-end: -3;
 }
-.navbar a:nth-last-child(-n+2) {
+.head-bar a:nth-last-child(-n+2) {
     grid-column-end: -2;
 }
-.navbar a:nth-last-child(-n+1) {
+.head-bar a:nth-last-child(-n+1) {
     grid-column-end: -1;
 }
 @media screen and (max-width: 570px){
-    .navbar a:nth-last-child(-n+4) {
+    .head-bar a:nth-last-child(-n+4) {
         grid-row: 2;
         grid-column: auto;
     }
 }
 @media screen and (max-width: 350px){
-    .navbar {
+    .head-bar {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(4, 1fr);
     }
-    .navbar a:nth-child(-n+3) {
+    .head-bar a:nth-child(-n+3) {
         grid-column: span 4 !important;
         grid-row: auto;
     }
-    .navbar a:nth-last-child(-n+4) {
+    .head-bar a:nth-last-child(-n+4) {
         grid-row: 4;
         grid-column: auto;
     }
 }
-.navbar a {
+.head-bar a {
     color: #f2f2f2;
     text-align: center;
     text-decoration: none;
@@ -72,45 +74,45 @@
     transition-duration: var(--transition);
 }
 @media screen and (max-width: 730px){
-    .navbar a.nav-svg-text {
+    .head-bar a.nav-svg-text {
         padding: 14px 16px;
     }
-    .navbar a:nth-child(-n+3) {
+    .head-bar a:nth-child(-n+3) {
         grid-column: span 2;
     }
 }
-.navbar a.nav-svg-text {
+.head-bar a.nav-svg-text {
     padding: 14px 8px;
 }
-.navbar a.nav-text {
+.head-bar a.nav-text {
     padding: 14px 16px;
 }
-.navbar a.nav-svg {
+.head-bar a.nav-svg {
     padding: 14px 16px;
 }
-.navbar a svg {
+.head-bar a svg {
     width: 22px;
     height: 22px;
     display: inline-block;
     vertical-align: middle;
 }   
-.navbar a p {
+.head-bar a p {
     display: inline-block;
     vertical-align: middle;
     padding: 0;
     margin: 0;
 }
-.navbar a:is(.nav-svg-text , .nav-text ):is(:hover, :focus) {
+.head-bar a:is(.nav-svg-text , .nav-text ):is(:hover, :focus) {
     background-color: var(--color-a-hover)
 }
-.navbar a.selected {
+.head-bar a.selected {
     background-color: var(--color-a)
 }
-.navbar a.nav-svg svg path {
+.head-bar a.nav-svg svg path {
     transition-property: fill;
     transition-duration: var(--transition);
     fill: var(--color-a);
 }
-.navbar a.nav-svg:is(:hover, :focus) svg path {
+.head-bar a.nav-svg:is(:hover, :focus) svg path {
     fill: var(--color-text);
 }
