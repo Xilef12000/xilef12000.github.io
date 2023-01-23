@@ -5,6 +5,8 @@
 .scene-wrapper, .scene-wrapper-project {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     gap: 4vmin;
     padding: 4vmin;
     page-break-after: always;
