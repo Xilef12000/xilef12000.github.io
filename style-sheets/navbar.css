@@ -52,9 +52,11 @@
 @media screen and (max-width: 350px){
     .navbar {
         grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
     }
     .navbar a:nth-child(-n+3) {
-        grid-column: span 4;
+        grid-column: span 4 !important;
+        grid-row: auto;
     }
     .navbar a:nth-last-child(-n+4) {
         grid-row: 4;
@@ -66,6 +68,8 @@
     text-align: center;
     text-decoration: none;
     font-size: 17px;
+    transition-property: background-color;
+    transition-duration: var(--transition);
 }
 @media screen and (max-width: 730px){
     .navbar a.nav-svg-text {
@@ -96,10 +100,17 @@
     padding: 0;
     margin: 0;
 }
-.navbar a:is(:hover, :focus) {
+.navbar a:is(.nav-svg-text , .nav-text ):is(:hover, :focus) {
     background-color: var(--color-a-hover)
 }
 .navbar a.selected {
     background-color: var(--color-a)
 }
- 
+.navbar a.nav-svg svg path {
+    transition-property: fill;
+    transition-duration: var(--transition);
+    fill: var(--color-a);
+}
+.navbar a.nav-svg:is(:hover, :focus) svg path {
+    fill: var(--color-text);
+}
