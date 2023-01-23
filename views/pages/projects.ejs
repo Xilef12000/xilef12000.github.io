@@ -5,7 +5,7 @@
 </head>
 <body>
   <header>
-    <%- include('../partials/header'); %>
+    <%- include('../partials/header', {selected:["", "selected", ""]}); %>
   </header>
   <div class="content-wrapper">
     <h1>Projects:</h1>
@@ -61,6 +61,6 @@
     
   </div>   
   <footer>
-    <%- include('../partials/footer'); %>
+    <%- include('../partials/footer', {selected:[]}); %>
   </footer>
 </body>
