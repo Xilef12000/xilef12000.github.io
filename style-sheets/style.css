@@ -27,6 +27,7 @@ body {
     overflow-x: hidden;
 }
 .center-contents {
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -46,4 +47,11 @@ img {
 code {
     font-family: var(--font-code);
     color: var(--color-code);
+}
+.no-decoration {
+    text-decoration: none;
+}
+.no-space-around {
+    padding: 0;
+    margin: 0;
 }
