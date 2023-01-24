@@ -31,7 +31,8 @@ app.get('*', async (req, res) => {
             }
         }
         else {
-            res.status(404).render('pages/404');
+            //res.status(404).render('pages/404');
+            res.status(200).render('pages/404');
         }
     }
     catch (e) {
