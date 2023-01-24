@@ -8,6 +8,8 @@ from time import sleep
 import os
 
 os.system("rm -r docs/")
+sleep(2)
+os.system("cp CNAME docs/CNAME")
 elements_href = ['a', 'link']
 elements_src = ['img', 'script']
 
