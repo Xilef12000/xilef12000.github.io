@@ -11,7 +11,7 @@ os.system("rm -r docs/")
 elements_href = ['a', 'link']
 elements_src = ['img', 'script']
 
-urls = ['http://localhost:3000/', 'http://localhost:3000/404', 'http://localhost:3000/style-sheets/Fonts/major_shift-webfont.css']
+urls = ['http://localhost:3000/', 'http://localhost:3000/404']
 server = 'http://localhost:3000'
 parsed = []
 while True:
