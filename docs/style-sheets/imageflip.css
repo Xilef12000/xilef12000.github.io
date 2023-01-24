@@ -1,0 +1,81 @@
+/*
+//https://codepen.io/desandro/pen/LmWoWe
+//https://3dtransforms.desandro.com/card-flip
+*/
+.scene-wrapper, .scene-wrapper-project {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 4vmin;
+    padding: 4vmin;
+    page-break-after: always;
+    break-after: always;
+}
+
+.scene-wrapper  .scene {
+    width: 40vmin;
+    height: 56vmin;
+    /*border: 1px solid #CCC;*/
+    perspective: 120vmin;
+}
+.scene-wrapper-project  .scene {
+    width: 40vmin;
+    height: 20vmin;
+    /*border: 1px solid #CCC;*/
+    perspective: 120vmin;
+}
+.card {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.card.is-flipped {
+    transform: rotateX(180deg);
+}
+
+.scene-wrapper .scene .card .card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 56vmin;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 4vmin;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.scene-wrapper-project .scene .card .card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 20vmin;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 4vmin;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.card__image {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.card__face--front {
+    border-radius: 5px;
+    background: #3c3c3c;
+}
+
+.card__face--back {
+    border-radius: 5px;
+    background: #3c3c3c;
+    transform: rotateX(180deg);
+}
