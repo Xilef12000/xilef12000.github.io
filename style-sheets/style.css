@@ -87,3 +87,26 @@ code {
 .about-me .about-pp {
     border-radius: 50%;
 }
+.purple {
+    color: var(--color-a);
+    fill: var(--color-a);
+}
+.purple_dark {
+    color: var(--color-a-hover);
+    fill: var(--color-a-hover);
+}
+.green {
+    color: var(--color-code);
+    fill: var(--color-code);
+}
+.zero {
+	font-size: 0px;
+}
+.typing {
+	font-size: 2rem !important;
+}
+.cursor {
+	font-size: 2.5rem !important;
+	transition-property: opacity;
+  	transition-duration: 0.25s;
+}
