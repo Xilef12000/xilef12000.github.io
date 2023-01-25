@@ -15,6 +15,9 @@
     --transition: 0.25s;
     color-scheme: dark !important;
 }
+html {
+    scroll-behavior:smooth
+}
 body {
     background-color: var(--color-bg);
     color: var(--color-text);
@@ -31,8 +34,17 @@ body {
     align-items: center;
     justify-content: center;
 }
+.right-contents {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.extra-padding {
+    padding: 1rem;
+}
 .content-wrapper {
     margin-bottom: min(30vh, 10%);
+    padding: 0.5rem;
 }
 a {
     color: var(--color-a);
@@ -47,6 +59,7 @@ img {
 code {
     font-family: var(--font-code);
     color: var(--color-code);
+    white-space: pre-line;
 }
 .no-decoration {
     text-decoration: none;
@@ -54,4 +67,46 @@ code {
 .no-space-around {
     padding: 0;
     margin: 0;
+}
+.about-me{
+    display: grid;
+    grid-template-columns: 3fr 12fr;
+    grid-template-rows: 1fr;
+    grid-auto-flow: dense;
+    gap: 1rem;
+}
+.about-me > div:first-child{
+    background-color: var(--color-menue-light);
+    border-right: 0.5rem solid var(--color-menue);
+    border-radius: 0.5rem;
+    height: 100%;
+}
+.about-me > div:first-child > div {
+    padding: 0.5rem;
+}
+.about-me .about-pp {
+    border-radius: 50%;
+}
+.purple {
+    color: var(--color-a);
+    fill: var(--color-a);
+}
+.purple_dark {
+    color: var(--color-a-hover);
+    fill: var(--color-a-hover);
+}
+.green {
+    color: var(--color-code);
+    fill: var(--color-code);
+}
+.zero {
+	font-size: 0px;
+}
+.typing {
+	font-size: 2rem !important;
+}
+.cursor {
+	font-size: 2.5rem !important;
+	transition-property: opacity;
+  	transition-duration: 0.25s;
 }

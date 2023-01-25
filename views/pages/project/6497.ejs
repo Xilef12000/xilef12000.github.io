@@ -37,18 +37,12 @@
 					2. This is an optional step to improve the communication with the ws2812 LED-Strip<br>
 					(This step is not necessary, and can also be done later)<br>
 					1. open the file:<br>
-					<code>bash
-						sudo nano /etc/modprobe.d/snd-blacklist.conf
-					</code>
+					<code>sudo nano /etc/modprobe.d/snd-blacklist.conf</code><br>
 					2. and add:<br>
-					<code>blacklist snd_bcm2835
-						
-					</code>
+					<code>blacklist snd_bcm2835</code><br>
 					save and exit with Ctrl + O and Enter, and the Ctrl + X<br>
 					3. open the next file:<br>
-					<code>bash
-						sudo nano /boot/config.txt
-					</code>
+					<code>sudo nano /boot/config.txt</code>
 					4. and change:<br>
 					<code># Enable audio (loads snd_bcm2835)
 						dtparam=audio=on
@@ -59,20 +53,15 @@
 					</code>
 					save and exit with Ctrl + O and Enter, and the Ctrl + X<br>
 					5. reboot the Raspberry pi using:<br>
-					<code>bash
-						sudo reboot
-					</code>
+					<code>sudo reboot</code>
 				</p>
 			</li>
 			<li>
 				<p>Installing ws-2812-over-artnet<br>
 					download the script:<br>
-					<code>bash
-						wget https://xilef12000.github.io/demo/ws2812-over-artnet/installws2812-over-artnet.sh
-					</code>
+					<code>wget https://xilef12000.github.io/demo/ws2812-over-artnet/installws2812-over-artnet.sh</code><br>
 					make the file executable and run it with sudo privileges:<br>
-					<code>bash
-						chmod u+x installws2812-over-artnet.sh
+					<code>chmod u+x installws2812-over-artnet.sh
 						sudo ./installws2812-over-artnet.sh
 					</code>
 					(for a manual installation go <a href="#manual-installation">here</a>)
@@ -81,18 +70,14 @@
 			<li>
 				<p>Change the settings:<br>
 					open the config.json file:<br>
-					<code>bash
-						sudo nano config.json
-					</code>
+					<code>sudo nano config.json</code><br>
 					and set the desired Artnet Universe Id (artnet starts counting from 0)<br>
 					As well as the number of pixels used.
 				</p>
 			</li>
 			<li>
-				<p>Test the ws2812-Strip:
-					<code>bash
-						sudo python3 ws2812.py
-					</code>
+				<p>Test the ws2812-Strip:<br>
+					<code>sudo python3 ws2812.py</code><br>
 					(It is important to run the script with Root-privileges, so that it can access the pwm-function)<br>
 					The first LED should light up in red, and the last one in blue, all in between should light up in green.
 				</p>
@@ -107,16 +92,12 @@
 				<ol>
 					<li>Setup your DMX software.<br>
 						(I used QLC+, for a tutorial how to set up QLC+ go <a href="#qlc-artnet-setup">here</a>)<br>
-						If you need the IP-Address of the Raspberry pi use:
-						<code>bash
-							hostname -I
-						</code>
+						If you need the IP-Address of the Raspberry pi use:<br>
+						<code>hostname -I</code>
 					</li>
 					<li>
-						<p>start the Artnet-test-script:
-							<code>bash
-								sudo python3 artnet.py
-							</code>
+						<p>start the Artnet-test-script:<br>
+							<code>sudo python3 artnet.py</code><br>
 							(Sudo must be used, because the library is installed in the Root-directory, to later function in combination with the ws2812-module)
 						</p>
 					</li>
@@ -127,11 +108,10 @@
 			</li>
 			<li>
 				<p>Test the ws2818 over Artnet script:<br>
-					```bash
-					sudo python3 ws2812Artnet.py
+					<code>sudo python3 ws2812Artnet.py</code>
 				</p>
-				<p>```
-					stop it with Ctrl + C (the script will then crash with an error message, which can be ignored)
+				<p>
+					<code>stop it with Ctrl + C (the script will then crash with an error message, which can be ignored)</code>
 				</p>
 			</li>
 			<li>
@@ -151,16 +131,14 @@
 		<h3>manual installation:</h3>
 		<ol>
 			<li>Update apt-get and install python3 and pip3:<br>
-				<code>bash
-					sudo apt-get update
+				<code>sudo apt-get update
 					sudo apt-get install python3
 					sudo apt-get install python3-pip
 				</code>
 				confirm if necessary with y (yes)
 			</li>
 			<li>Install the following python modules:<br>
-				<code>bash
-					sudo pip3 install rpi_ws281x adafruit-circuitpython-neopixel
+				<code>sudo pip3 install rpi_ws281x adafruit-circuitpython-neopixel
 					sudo python3 -m pip install --force-reinstall adafruit-blinka
 					sudo pip3 install stupidArtnet
 				</code>
