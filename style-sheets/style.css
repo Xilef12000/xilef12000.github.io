@@ -33,6 +33,7 @@ body {
 }
 .content-wrapper {
     margin-bottom: min(30vh, 10%);
+    padding: 0.5rem;
 }
 a {
     color: var(--color-a);
