@@ -15,6 +15,9 @@
     --transition: 0.25s;
     color-scheme: dark !important;
 }
+html {
+    scroll-behavior:smooth
+}
 body {
     background-color: var(--color-bg);
     color: var(--color-text);
@@ -30,6 +33,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.right-contents {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.extra-padding {
+    padding: 1rem;
 }
 .content-wrapper {
     margin-bottom: min(30vh, 10%);
@@ -56,4 +67,23 @@ code {
 .no-space-around {
     padding: 0;
     margin: 0;
+}
+.about-me{
+    display: grid;
+    grid-template-columns: 3fr 12fr;
+    grid-template-rows: 1fr;
+    grid-auto-flow: dense;
+    gap: 1rem;
+}
+.about-me > div:first-child{
+    background-color: var(--color-menue-light);
+    border-right: 0.5rem solid var(--color-menue);
+    border-radius: 0.5rem;
+    height: 100%;
+}
+.about-me > div:first-child > div {
+    padding: 0.5rem;
+}
+.about-me .about-pp {
+    border-radius: 50%;
 }

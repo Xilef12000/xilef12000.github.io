@@ -8,7 +8,7 @@ const { existsSync } = require('fs');
 const mime = require('mime');
 
 const assets = ['style-sheets', 'scripts', 'assets', 'robots.txt', 'sitemap.txt', 'project'];
-const ejs = ['', '/', '/index', '/about', '/projects', '/gallery', 'project']
+const ejs = ['', '/', '/index', '/about', '/projects', '/gallery', 'project', '/xilef12000']
 
 app.get('*', async (req, res) => {
     try {
@@ -22,7 +22,7 @@ app.get('*', async (req, res) => {
             res.render('pages/' + url);
         }
         else if (assets.includes(url.split('/')[1]) && existsSync('.' + url)){
-            //console.log(url);
+            console.log(url);
             if (mime.getType(url.split('.').at(-1)).split('/')[0] == 'text') {
                 res.contentType(mime.getType(url.split('.').at(-1))).send( await readFile('.' + url, 'utf8') );
             }
