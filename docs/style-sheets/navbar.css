@@ -123,7 +123,7 @@
     grid-auto-flow: dense;
     gap: 0px;
 }
-.foot-bar a:nth-child(-n+1) {
+.foot-bar a:nth-child(-n+2) {
     grid-column: span 3;
 }
 .foot-bar a:nth-last-child(-n+2) {
@@ -136,12 +136,15 @@
     .foot-bar a:is(.nav-svg-text, .nav-text ) {
         padding: 14px 8px;
     }
-    .foot-bar a:nth-child(-n+1) {
+    .foot-bar a:nth-child(-n+2) {
         grid-column: span 2;
-    }
+    } 
 }
 @media screen and (max-width: 350px){
     .foot-bar {
         grid-template-columns: repeat(4, 1fr);
+    }
+    .foot-bar a:nth-last-child(-n+2) {
+        grid-column: span 2;
     }
 }
