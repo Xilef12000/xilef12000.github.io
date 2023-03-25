@@ -5,6 +5,11 @@ Xilef12000's Github Repository for his Github Pages website
 
 the actual webpage lives in the [/docs](https://github.com/Xilef12000/xilef12000.github.io/tree/main/docs) folder
 
+run to render node.js/EJS into static files:
+```bash
+sh render_webpage.sh
+```
+
 MIT License
 
 Copyright (c) 2022 Xilef12000
