@@ -1,3 +1,4 @@
+[Random Hex Generator](https://www.browserling.com/tools/random-hex)
 # Projects
 - 29b7 Custom Browser Start Page
 - 6497 WS2821 over Artnet
