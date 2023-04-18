@@ -10,3 +10,4 @@
 - d72c Garden seating area
 - 8f58 Transparent Free to use Meerkat base by Xilef12000
 - 8f59 Free to use Meerkat base by Xilef12000
+- 7d37 proto head
