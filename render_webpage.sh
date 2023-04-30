@@ -1,3 +1,4 @@
+#!/bin/sh
 # run: sh render_webpage.sh
 echo "\e[1;35m Preparing dir ... \e[0m"
 rm -r -f $(pwd)/docs/
