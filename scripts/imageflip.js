@@ -3,7 +3,6 @@
 
 document.querySelectorAll(".card__image").forEach(function(element) {
     element.addEventListener('load', function() {
-        console.log("loaded");
         element.parentNode.parentNode.classList.add('is-flipped'); //for gallery
         element.parentNode.parentNode.parentNode.classList.add('is-flipped'); //for projects
     });
