@@ -1,0 +1,7 @@
+{
+    "server":"http://localhost:3000",
+    "out_dir":"docs/",
+    "start_urls":["http://localhost:3000/", "http://localhost:3000/404", "http://localhost:3000/sitemap.txt", "http://localhost:3000/robots.txt"],
+    "elements_href":["a", "link"],
+    "elements_src":["img", "script"]
+}

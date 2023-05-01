@@ -6,12 +6,29 @@ from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 from time import sleep
 import os
+import argparse
+import json
 
-elements_href = ['a', 'link']
-elements_src = ['img', 'script']
+script_dir = os.path.dirname(__file__)
 
-urls = ['http://localhost:3000/', 'http://localhost:3000/404', 'http://localhost:3000/sitemap.txt', 'http://localhost:3000/robots.txt']
-server = 'http://localhost:3000'
+parser = argparse.ArgumentParser(
+                    prog='save-webpage.py',
+                    description='render any webpage into a static webpage',
+                    epilog='or see the README.md file')
+parser.add_argument("-c", "--configfile", required=True, help="relative path to condig .json file")
+
+args = parser.parse_args()
+
+print(os.path.join(script_dir, args.configfile))
+f = open(os.path.join(script_dir, args.configfile))
+config = json.load(f)
+f.close()
+
+elements_href = config["elements_href"]
+elements_src = config["elements_src"]
+
+urls = config["start_urls"]
+server = config["server"]
 parsed = []
 while True:
     br = True
@@ -56,9 +73,9 @@ while True:
                             #print(font.split(')')[0].replace('(', '').replace("'", ''))
                             urls.append(urljoin(url,font.split(')')[0].replace('(', '').replace("'", '')))
             if path.find('.') != -1:
-                file = "docs/{}".format(path)
+                file = "{}{}".format(config["out_dir"],path)
             else:
-                file = "docs/{}.html".format(path)
+                file = "{}{}.html".format(config["out_dir"],path)
             print("        "+file)
 
             os.makedirs(os.path.dirname(file), exist_ok=True)
