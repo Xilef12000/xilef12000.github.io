@@ -100,30 +100,9 @@
         //https://3dtransforms.desandro.com/card-flip
       -->
       <div class="scene-wrapper">
-        <div class="scene scene--card">
-          <div class="card">
-            <div class="card__face card__face--front">loading...</div>
-            <div class="card__face card__face--back">
-              <img class="card__image modal-image" src="/assets/art/7d37.png" alt="proto head" draggable="false" />
-            </div>
-          </div>
-        </div>
-        <div class="scene scene--card">
-          <div class="card">
-            <div class="card__face card__face--front">loading...</div>
-            <div class="card__face card__face--back">
-              <img class="card__image modal-image" src="/assets/art/b62e.png" alt="Canine Refsheet" draggable="false" />
-            </div>
-          </div>
-        </div>
-        <div class="scene scene--card">
-          <div class="card">
-            <div class="card__face card__face--front">loading...</div>
-            <div class="card__face card__face--back">
-              <img class="card__image modal-image" src="/assets/art/4f35.png" alt="Rexouium Head" draggable="false" />
-            </div>
-          </div>
-        </div>
+        <%- include('../partials/frame_gallery', {src:"/assets/art/7d37.png", alt:"proto head"}); %>
+        <%- include('../partials/frame_gallery', {src:"/assets/art/b62e.png", alt:"Canine Refsheet"}); %>
+        <%- include('../partials/frame_gallery', {src:"/assets/art/4f35.png", alt:"Rexouium Head"}); %>
       </div>
       <script src="scripts/imageflip.js"></script>
     </div>
