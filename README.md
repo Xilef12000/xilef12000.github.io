@@ -13,6 +13,10 @@ use fast mode (i.e. only files in db will be rendered):
 ```bash
 sh render_webpage.sh -f
 ```
+run without test server being started at the end:
+```bash
+sh render_webpage.sh -n
+```
 
 MIT License
 
