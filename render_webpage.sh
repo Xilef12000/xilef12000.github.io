@@ -3,14 +3,18 @@
 # run: "sh render_webpage.sh -f" for fast render
 
 fast=false
+web_server=true
 
 echo_help() {
-  echo "HELP: use -f for fast render mode"
+  echo "HELP:"
+  echo "use -f for fast render mode"
+  echo "use -n if you dont wnat to start the test server to see results"
 }
 
-while getopts 'fh?' flag; do
+while getopts 'fnh?' flag; do
   case "${flag}" in
     f) fast=true ;;
+    n) web_server=false ;;
     *) echo_help
        exit 1 ;;
   esac
@@ -34,5 +38,7 @@ else
 fi
 echo "\e[1;35m cleaning up ... \e[0m"
 fuser -k 3000/tcp
-echo "\e[1;35m Starting HTTP.Server on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ... \e[0m"
-/bin/python3 $(pwd)/webserver.py > log_webserver.log
+if $web_server ; then
+    echo "\e[1;35m Starting HTTP.Server on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ... \e[0m"
+    /bin/python3 $(pwd)/webserver.py > log_webserver.log
+fi
