@@ -24,26 +24,8 @@
       //https://3dtransforms.desandro.com/card-flip
     -->
     <div class="scene-wrapper-project">
-      <div class="scene scene--card">
-        <div class="card">
-          <div class="card__face card__face--front">loading...</div>
-          <div class="card__face card__face--back">
-            <a href="/project/10a2">
-              <img class="card__image" src="/assets/project/10a2/thumbnail.png" alt="QLC+ Dark Theme" draggable="false" />
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="scene scene--card">
-        <div class="card">
-          <div class="card__face card__face--front">loading...</div>
-          <div class="card__face card__face--back">
-            <a href="/project/6497">
-              <img class="card__image" src="/assets/project/6497/thumbnail.png" alt="WS2821 over Artnet" draggable="false" />
-            </a>
-          </div>
-        </div>
-      </div>
+      <%- include('../partials/frame_projects', {href:"/project/10a2",src:"/assets/project/10a2/thumbnail.png", alt:"QLC+ Dark Theme"}); %>
+      <%- include('../partials/frame_projects', {href:"/project/6497",src:"/assets/project/6497/thumbnail.png", alt:"WS2821 over Artnet"}); %>
     </div>
     <div class="center-contents">
       <h3 class="no-space-around">
@@ -51,22 +33,8 @@
       </h3>
     </div>
     <div class="scene-wrapper">
-      <div class="scene scene--card">
-        <div class="card">
-          <div class="card__face card__face--front">loading...</div>
-          <div class="card__face card__face--back">
-            <img class="card__image modal-image" src="/assets/art/7d37.png" alt="proto head" draggable="false" />
-          </div>
-        </div>
-      </div>
-      <div class="scene scene--card">
-        <div class="card">
-          <div class="card__face card__face--front">loading...</div>
-          <div class="card__face card__face--back">
-            <img class="card__image modal-image" src="/assets/art/8f59.png" alt="Free to use Meerkat base by Xilef12000" draggable="false" />
-          </div>
-        </div>
-      </div>
+      <%- include('../partials/frame_gallery', {src:"/assets/art/7d37.png", alt:"proto head"}); %>
+      <%- include('../partials/frame_gallery', {src:"/assets/art/8f59.png", alt:"Free to use Meerkat base by Xilef12000"}); %>
     </div>
     <div class="center-contents">
       <h3 class="no-space-around">
