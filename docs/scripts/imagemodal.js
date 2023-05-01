@@ -16,3 +16,10 @@ const span = document.getElementsByClassName("close")[0];
 span.onclick = function() {
     modal.style.display = "none";
 } 
+
+document.addEventListener("keydown", (event) => {
+    const keys = ['Escape', 'Space', 'Enter', 'Backspace', 'Delete', 'Home', 'End', 'KeyX', 'NumpadMultiply', 'PageUp', 'PageDown', 'ArrowUp', 'ArrowDown'];
+    if (keys.includes(event.code)) {
+        modal.style.display = "none";
+    }
+});
