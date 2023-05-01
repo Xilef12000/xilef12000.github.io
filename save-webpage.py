@@ -85,6 +85,11 @@ while True:
     if br == True:
         break
 
-sleep(5)
-#print(urls)
-#print(parsed)
+sleep(1)
+
+db_out = {
+    "parse":parsed
+}
+db_out_obj = json.dumps(db_out, indent=4)
+with open(config["db"], "w") as outfile:
+    outfile.write(db_out_obj)
