@@ -1,6 +1,8 @@
 //https://www.digitalocean.com/community/tutorials/how-to-use-ejs-to-template-your-node-application
 //https://fireship.io/courses/javascript/node-basics/
 const express = require('express');
+const marked = require ('marked');
+const fs = require ('fs');
 const app = express();
 app.set('view engine', 'ejs');
 const { readFile } = require('fs').promises;
@@ -9,6 +11,13 @@ const mime = require('mime');
 
 const assets = ['style-sheets', 'scripts', 'assets', 'robots.txt', 'sitemap.txt', 'project'];
 const ejs = ['', '/', '/index', '/about', '/projects', '/gallery', 'project', '/xilef12000']
+
+var md = function (filename) {
+    var path = __dirname +"/views/" + filename;
+    var include = fs.readFileSync (path, 'utf8');
+    var html = marked.parse(include);
+    return html;
+ };
 
 app.get('*', async (req, res) => {
     try {
@@ -19,7 +28,7 @@ app.get('*', async (req, res) => {
                 url = 'index';
             }
             console.log('pages/' + url)
-            res.render('pages/' + url);
+            res.render('pages/' + url, {"md": md});
         }
         else if (assets.includes(url.split('/')[1]) && existsSync('.' + url)){
             console.log(url);
