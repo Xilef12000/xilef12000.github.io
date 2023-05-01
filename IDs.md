@@ -3,6 +3,7 @@
 - 29b7 Custom Browser Start Page
 - 6497 WS2821 over Artnet
 - 10a2 QLC+ Dark Theme
+- f24d scripts
 
 # Art
 - 4f23 Rexouium Head
