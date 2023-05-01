@@ -79,3 +79,11 @@
     background: #3c3c3c;
     transform: rotateX(180deg);
 }
+
+.card__text__small {
+    line-height: 1.2rem;
+    text-align: justify;
+    font-weight: normal;
+    padding: 2rem;
+    font-size: 1rem;
+}
