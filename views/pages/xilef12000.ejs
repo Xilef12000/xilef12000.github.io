@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <%- include('../partials/head', {title:"About Me"}); %>
+  <script src="/scripts/externalContent.js" type="text/javascript"></script>
 </head>
 <body>
   <header>
@@ -25,7 +26,18 @@
       <%- include('../html/typewriter.html'); %>
       
       <h2 id="github">Github:</h2>
-      <%- md('md/about_me_github.md'); %>
+      <div class="external_content" external='<%- md("md/about_me_github.md"); %>'>
+        <p>This is a embedded page. The content is not displayed right now, because it might set its own cookies.</p>
+        <p>By clicking one of the buttons below the content will be loaded from the external server.</p>
+        <button onclick="loadExternal(this)">
+          load this embedded element
+        </button>
+        <br>
+        <br>
+        <button onclick="loadExternalAll()">
+          load all embedded elements
+        </button>
+      </div>
       <br/>
       <h2 id="furry">Furry:</h2>
       <!--
