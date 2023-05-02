@@ -13,9 +13,16 @@ use fast mode (i.e. only files in db will be rendered):
 ```bash
 sh render_webpage.sh -f
 ```
-run without test server being started at the end:
+see help:
 ```bash
-sh render_webpage.sh -n
+sh render_webpage.sh -h
+```
+```
+HELP:  
+use -f for fast render mode  
+use -w to run without running test web server at the end  
+use -n start only the node server in the background  
+use -c to stop the node server running in the background  
 ```
 
 MIT License
