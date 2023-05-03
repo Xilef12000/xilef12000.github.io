@@ -1,4 +1,4 @@
-*.md linguist-detectable=true
-README.md inguist-detectable=false
-views/md/about_me_github.md inguist-detectable=false
-views/md/project/6497.md inguist-detectable=false
+*.md linguist-detectable
+README.md -inguist-detectable
+views/md/about_me_github.md -inguist-detectable
+views/md/project/6497.md -inguist-detectable
