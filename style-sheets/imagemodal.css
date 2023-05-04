@@ -7,7 +7,9 @@
     transition: 0.3s;
 }
 
-.modal-image:hover {opacity: 0.5;}
+.modal-image:hover {
+    opacity: 0.5;
+}
 
 .modal {
     display: none;

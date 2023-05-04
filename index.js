@@ -17,7 +17,7 @@ var md = function (filename) {
     var include = fs.readFileSync (path, 'utf8');
     var html = marked.parse(include);
     return html;
- };
+};
 
 app.get('*', async (req, res) => {
     try {
