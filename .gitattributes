@@ -2,3 +2,5 @@
 README.md -linguist-detectable
 views/md/about_me_github.md -linguist-detectable
 views/md/project/6497.md -linguist-detectable
+assets/project/* -linguist-detectable
+docs/style-sheets/Fonts/* -linguist-detectable
