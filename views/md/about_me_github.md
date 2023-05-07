@@ -15,8 +15,8 @@
 | [custom-browser-start-page](https://github.com/Xilef12000/custom-browser-start-page) | [![Firefox](https://img.shields.io/badge/Firefox-FF9500?style=for-the-badge&logo=firefox&logoColor=00539F)](#) | custom browser start page with plenty shortcuts | [![Java Script](https://img.shields.io/badge/JS-f0db4f?style=for-the-badge&logo=javascript&logoColor=323330)](#) | [![Stars](https://img.shields.io/github/stars/Xilef12000/custom-browser-start-page?style=for-the-badge)](https://github.com/Xilef12000/custom-browser-start-page/stargazers) |
 | [ xilef12000.github.io](https://github.com/Xilef12000/xilef12000.github.io) | [![Firefox](https://img.shields.io/badge/Firefox-FF9500?style=for-the-badge&logo=firefox&logoColor=00539F)](#) | Xilef12000's Github Repository for his Github Pages website | [![Node.js](https://img.shields.io/badge/Node.js-3c873a?style=for-the-badge&logo=Node.js&logoColor=303030)](#) | [![Stars](https://img.shields.io/github/stars/Xilef12000/xilef12000.github.io?style=for-the-badge)](https://github.com/Xilef12000/xilef12000.github.io/stargazers) |
 
-[![My GitHub Stats](https://github-readme-stats-sigma-five.vercel.app/api?username=Xilef12000&show_icons=true&theme=tokyonight)](https://github.com/Xilef12000)  
-[![My GitHub Streak Stats](https://github-readme-streak-stats.herokuapp.com/?user=Xilef12000&theme=tokyonight)](https://github.com/Xilef12000)  
-[![My GitHub Language Stats](https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Xilef12000&langs_count=8&layout=compact&theme=tokyonight)](https://github.com/Xilef12000)  
+[![My GitHub Stats](https://github-readme-stats-x12.vercel.app/api?username=Xilef12000&show_icons=true&theme=tokyonight)](https://github.com/Xilef12000)  
+[![My GitHub Streak Stats](https://github-readme-streak-stats-x12.vercel.app/?user=Xilef12000&theme=tokyonight)](https://github.com/Xilef12000)  
+[![My GitHub Language Stats](https://github-readme-stats-x12.vercel.app/api/top-langs/?username=Xilef12000&langs_count=6&layout=compact&theme=tokyonight)](https://github.com/Xilef12000)  
 
-[![My GitHub Trophy Stats](https://github-profile-trophy.vercel.app/?username=Xilef12000&margin-w=8&theme=tokyonight)](https://github.com/Xilef12000)  
+[![My GitHub Trophy Stats](https://github-profile-trophy.vercel.app/?username=Xilef12000&margin-w=8&theme=tokyonight)](https://github.com/Xilef12000)
