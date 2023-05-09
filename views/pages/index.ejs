@@ -26,25 +26,7 @@
       </h3>
     </div>
     <div class="scene-wrapper">
-      <div class="scene scene--card">
-        <div class="card">
-          <div class="card__face card__face--front">loading...</div>
-          <div class="card__face card__face--back">
-            <div class="card__image__instant card__text__small external_content" draggable="false" external='<iframe class="card__image" width="560" height="315" src="https://www.youtube-nocookie.com/embed/0Ntyz9nkGYc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'>
-              <p>This is a embedded page. The content is not displayed right now, because it might set its own cookies.</p>
-              <p>By clicking one of the buttons below the content will be loaded from the external server.</p>
-              <button onclick="loadExternal(this)">
-                load this embedded element
-              </button>
-              <br>
-              <br>
-              <button onclick="loadExternalAll()">
-                load all embedded elements
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <%- include('../partials/external_content_card', {content:'<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0Ntyz9nkGYc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'}); %>
       <%- include('../partials/frame_gallery', {src:"/assets/art/7d37.png", alt:"proto head"}); %>
     </div>
     <div class="center-contents">
