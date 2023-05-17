@@ -56,6 +56,11 @@ img {
     max-width: 100%;
     border-radius: 5px;
 }
+code {
+    font-family: var(--font-code);
+    color: var(--color-code);
+    white-space: pre-line;
+}
 .no-decoration {
     text-decoration: none;
 }
