@@ -6,10 +6,14 @@
 - f24d scripts
 
 # Art
-- 4f23 Rexouium Head
+- 4f35 Rexouium Head
 - b62e Canine Refsheet
 - d72c Garden seating area
 - 8f58 Transparent Free to use Meerkat base by Xilef12000
 - 8f59 Free to use Meerkat base by Xilef12000
 - 7d37 proto head
 - 5059 sabertooth head
+
+# Other Gallery
+- d72d garden seating area daycycle
+- 9903 scary tunnel hallway
