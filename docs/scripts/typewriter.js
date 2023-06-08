@@ -9,7 +9,7 @@ var current = 0;
 const speed = 100;
 var cursor = true;
 const speed_divisor = 4;
-const text = ["XILEF12000", " AN ANIMATOR", "A RENDERER", "A PROGRAMMER", "A DEVELOPER", "A Artist", ""]
+const text = ["XILEF12000", " AN ANIMATOR", "A RENDERER", "A PROGRAMMER", "A DEVELOPER", "A Artist", ""];
 
 
 setInterval(typeWriter, speed);
@@ -26,9 +26,9 @@ function typeWriter() {
         i--
         if (i <= 0) {
             n = 0;
-            current = Math.floor(Math.random()* text.length)
+            current = Math.floor(Math.random()* text.length);
             while (current == last){
-                current = Math.floor(Math.random()* text.length)
+                current = Math.floor(Math.random()* text.length);
             }
             txt = text[current];
             last = current;
