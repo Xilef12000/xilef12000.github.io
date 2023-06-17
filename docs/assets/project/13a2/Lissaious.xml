@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.9.60/MA.xsd" major_vers="3" minor_vers="9" stream_vers="60">
+	<Info datetime="2023-06-17T11:11:46" showfile="new show 2023-06-16" />
+	<Form index="24" name="Lissaious Xilef12000.com"display_2d="true">
+		<!--grandMA2 Lissaious Form by Manuel Koenig aka. Xilef12000 see Xilef12000.com-->
+		<SubForm index="0" display_spec_index="0" graph_color="c0c0c0">
+			<SubFormPoint index="0" x="0.0625" y="0.84649998" mode="spline" />
+			<SubFormPoint index="1" x="0.125" y="0.99000001" mode="spline" />
+			<SubFormPoint index="2" x="0.1875" y="0.84649998" mode="spline" />
+			<SubFormPoint index="3" x="0.25" y="0.5" mode="spline" />
+			<SubFormPoint index="4" x="0.3125" y="0.15350001" mode="spline" />
+			<SubFormPoint index="5" x="0.375" y="0.0099999998" mode="spline" />
+			<SubFormPoint index="6" x="0.4375" y="0.15350001" mode="spline" />
+			<SubFormPoint index="7" x="0.5" y="0.5" mode="spline" />
+			<SubFormPoint index="8" x="0.5625" y="0.84649998" mode="spline" />
+			<SubFormPoint index="9" x="0.625" y="0.99000001" mode="spline" />
+			<SubFormPoint index="10" x="0.6875" y="0.84649998" mode="spline" />
+			<SubFormPoint index="11" x="0.75" y="0.5" mode="spline" />
+			<SubFormPoint index="12" x="0.8125" y="0.15350001" mode="spline" />
+			<SubFormPoint index="13" x="0.875" y="0.0099999998" mode="spline" />
+			<SubFormPoint index="14" x="0.9375" y="0.15350001" mode="spline" />
+			<SubFormPoint index="15" x="0.041700002" y="0.7612173" mode="spline" />
+			<SubFormPoint index="16" x="0.083300002" y="0.93085742" mode="spline" />
+			<SubFormPoint index="17" x="0.16670001" y="0.92643827" mode="spline" />
+			<SubFormPoint index="18" x="0.20829999" y="0.74145085" mode="spline" />
+			<SubFormPoint index="19" x="0.29170001" y="0.24722931" mode="spline" />
+			<SubFormPoint index="20" x="0.33329999" y="0.069164254" mode="spline" />
+			<SubFormPoint index="21" x="0.41670001" y="0.074476495" mode="spline" />
+			<SubFormPoint index="22" x="0.45829999" y="0.25854912" mode="spline" />
+			<SubFormPoint index="23" x="0.54170001" y="0.75277066" mode="spline" />
+			<SubFormPoint index="24" x="0.58329999" y="0.93083572" mode="spline" />
+			<SubFormPoint index="25" x="0.66670001" y="0.92552346" mode="spline" />
+			<SubFormPoint index="26" x="0.70829999" y="0.74145085" mode="spline" />
+			<SubFormPoint index="27" x="0.79170001" y="0.24722931" mode="spline" />
+			<SubFormPoint index="28" x="0.83329999" y="0.069164254" mode="spline" />
+			<SubFormPoint index="29" x="0.91829997" y="0.082154572" mode="spline" />
+			<SubFormPoint index="30" x="0.95829999" y="0.2705304" mode="spline" />
+		</SubForm>
+		<SubForm index="1" display_spec_index="0" graph_color="30c0c0">
+			<SubFormPoint index="0" x="0.041700002" y="0.84649998" mode="spline" />
+			<SubFormPoint index="1" x="0.083300002" y="0.99000001" mode="spline" />
+			<SubFormPoint index="2" x="0.125" y="0.84649998" mode="spline" />
+			<SubFormPoint index="3" x="0.16670001" y="0.5" mode="spline" />
+			<SubFormPoint index="4" x="0.20829999" y="0.15350001" mode="spline" />
+			<SubFormPoint index="5" x="0.25" y="0.0099999998" mode="spline" />
+			<SubFormPoint index="6" x="0.29170001" y="0.15350001" mode="spline" />
+			<SubFormPoint index="7" x="0.33329999" y="0.5" mode="spline" />
+			<SubFormPoint index="8" x="0.375" y="0.84649998" mode="spline" />
+			<SubFormPoint index="9" x="0.41670001" y="0.99000001" mode="spline" />
+			<SubFormPoint index="10" x="0.45829999" y="0.84649998" mode="spline" />
+			<SubFormPoint index="11" x="0.5" y="0.5" mode="spline" />
+			<SubFormPoint index="12" x="0.54170001" y="0.15350001" mode="spline" />
+			<SubFormPoint index="13" x="0.58329999" y="0.0099999998" mode="spline" />
+			<SubFormPoint index="14" x="0.625" y="0.15350001" mode="spline" />
+			<SubFormPoint index="15" x="0.66670001" y="0.5" mode="spline" />
+			<SubFormPoint index="16" x="0.70829999" y="0.84649998" mode="spline" />
+			<SubFormPoint index="17" x="0.75" y="0.99000001" mode="spline" />
+			<SubFormPoint index="18" x="0.79170001" y="0.84649998" mode="spline" />
+			<SubFormPoint index="19" x="0.83329999" y="0.5" mode="spline" />
+			<SubFormPoint index="20" x="0.875" y="0.15350001" mode="spline" />
+			<SubFormPoint index="21" x="0.91829997" y="0.0099999998" mode="spline" />
+			<SubFormPoint index="22" x="0.95829999" y="0.15350001" mode="spline" />
+			<SubFormPoint index="23" x="0.0625" y="0.96058226" mode="spline" />
+			<SubFormPoint index="24" x="0.1875" y="0.30327457" mode="spline" />
+			<SubFormPoint index="25" x="0.3125" y="0.31768483" mode="spline" />
+			<SubFormPoint index="26" x="0.4375" y="0.95453572" mode="spline" />
+			<SubFormPoint index="27" x="0.5625" y="0.039496399" mode="spline" />
+			<SubFormPoint index="28" x="0.6875" y="0.69672543" mode="spline" />
+			<SubFormPoint index="29" x="0.8125" y="0.68233716" mode="spline" />
+			<SubFormPoint index="30" x="0.9375" y="0.048414856" mode="spline" />
+		</SubForm>
+	</Form>
+</MA>

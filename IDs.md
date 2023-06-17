@@ -4,6 +4,7 @@
 - 6497 WS2821 over Artnet
 - 10a2 QLC+ Dark Theme
 - f24d scripts
+- 13a2 Lissaious Form for MA2 Effects
 
 # Art
 - 4f35 Rexouium Head
