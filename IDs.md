@@ -18,3 +18,7 @@
 # Other Gallery
 - d72d garden seating area daycycle
 - 9903 scary tunnel hallway
+- 5cd2 Blender 3D Logo Animation
+- 5cd3 Blender 3D Logo Animation - cherry (1/3)
+- 5cd4 Blender 3D Logo Animation - dune (2/3)
+- 5cd5 Blender 3D Logo Animation - diamond (3/3)
