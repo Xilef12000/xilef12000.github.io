@@ -47,7 +47,6 @@
         "http://localhost:3000/assets/highlightjs/styles/monokai-sublime.min.css",
         "http://localhost:3000/assets/project/6497/wiring_diagramm_bb.png",
         "http://localhost:3000/assets/highlightjs/highlight.min.js",
-        "http://localhost:3000/assets/project/29b7/startpage.html",
         "http://localhost:3000/style-sheets/Fonts/Fontfiles/major_shift-webfont.woff",
         "http://localhost:3000/style-sheets/Fonts/Fontfiles/major_shift-webfont.ttf",
         "http://localhost:3000/style-sheets/Fonts/Fontfiles/FiraCode-Retina.woff2",
@@ -71,10 +70,6 @@
         "http://localhost:3000/style-sheets/Fonts/Fontfiles/Poppins/pxiByp8kv8JHgFVrLEj6Z1JlFc-K.woff2",
         "http://localhost:3000/style-sheets/Fonts/Fontfiles/Poppins/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2",
         "http://localhost:3000/style-sheets/Fonts/Fontfiles/Poppins/pxiByp8kv8JHgFVrLCz7Z1JlFc-K.woff2",
-        "http://localhost:3000/style-sheets/Fonts/Fontfiles/Poppins/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2",
-        "http://localhost:3000/assets/project/29b7/style.css",
-        "http://localhost:3000/assets/project/29b7/pages.json",
-        "http://localhost:3000/assets/project/29b7/logo_dark.svg",
-        "http://localhost:3000/assets/project/29b7/script.js"
+        "http://localhost:3000/style-sheets/Fonts/Fontfiles/Poppins/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2"
     ]
 }
