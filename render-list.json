@@ -73,9 +73,8 @@
         "http://localhost:3000/style-sheets/Fonts/Fontfiles/Poppins/pxiByp8kv8JHgFVrLCz7Z1JlFc-K.woff2",
         "http://localhost:3000/style-sheets/Fonts/Fontfiles/Poppins/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2",
         "http://localhost:3000/assets/project/29b7/style.css",
-        "http://localhost:3000/assets/project/29b7/pages.css",
+        "http://localhost:3000/assets/project/29b7/pages.json",
         "http://localhost:3000/assets/project/29b7/logo_dark.svg",
-        "http://localhost:3000/assets/project/29b7/version.js",
         "http://localhost:3000/assets/project/29b7/script.js"
     ]
 }
