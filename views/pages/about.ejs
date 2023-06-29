@@ -8,7 +8,9 @@
     <%- include('../partials/header', {selected:[]}); %>
   </header>
   <div class="content-wrapper">
-    <%- md('md/about.md'); %>    
+    <%- md('md/about.md'); %>
+    <%- include('../html/about_settings.html'); %>
+    <%- include('../html/about.html'); %>
   </div> 
   <footer>
     <%- include('../partials/footer', {selected:["selected"]}); %>

@@ -126,6 +126,9 @@
 .foot-bar a:nth-child(-n+2) {
     grid-column: span 3;
 }
+.foot-bar a:nth-last-child(-n+3) {
+    grid-column-end: -3;
+}
 .foot-bar a:nth-last-child(-n+2) {
     grid-column-end: -2;
 }
