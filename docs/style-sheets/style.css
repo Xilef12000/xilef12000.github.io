@@ -91,6 +91,8 @@ code, pre {
 }
 .about-me .about-pp {
     border-radius: 50%;
+    aspect-ratio: 1/1;
+    width: 100%;
 }
 .purple {
     color: var(--color-a);
