@@ -75,11 +75,16 @@ code, pre {
     grid-auto-flow: dense;
     gap: 1rem;
 }
-.about-me > div:first-child{
+.about-me > div:first-child > div {
     background-color: var(--color-menue-light);
     border-right: 0.5rem solid var(--color-menue);
-    border-radius: 0.5rem;
-    height: 100%;
+    border-radius: 0.5rem;  
+    height: 100vh;
+}
+.sticky_8 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 8px; 
 }
 .about-me > div:first-child > div {
     padding: 0.5rem;
