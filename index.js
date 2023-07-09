@@ -10,7 +10,7 @@ const { existsSync } = require('fs');
 const mime = require('mime');
 
 const assets = ['style-sheets', 'scripts', 'assets', 'robots.txt', 'sitemap.txt', 'project'];
-const ejs = ['', '/', '/index', '/about', '/projects', '/gallery', 'project', '/xilef12000']
+const ejs = ['', '/', '/index', '/about', '/projects', '/gallery', 'project', '/aboutme']
 
 var md = function (filename) {
     var path = __dirname +"/views/" + filename;
