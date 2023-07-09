@@ -4,11 +4,11 @@
 :root {
     --color-bg: #181a1b;
     --color-text: #e8e6e3;
-    --color-a: #D717F0;
-    --color-a-hover: #8416F2;
+    --color-a: #d717f0;
+    --color-a-hover: #8416f2;
     --color-menue: #000000;
     --color-menue-light: #3c3c3c;
-    --color-code: #A4EC01;
+    --color-code: #a4ec01;
     --font-family: Poppins, Verdana, sans-serif, sans;
     --font-code: FiraCode-Retina, SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
     --font-x: major_snafuregular;
