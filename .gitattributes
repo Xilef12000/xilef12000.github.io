@@ -4,4 +4,5 @@ views/md/about_me_github.md linguist-vendored
 views/md/project/6497.md linguist-vendored
 assets/project/** linguist-vendored
 docs/style-sheets/Fonts/* linguist-vendored
+docs/** linguist-generated
 assets/highlightjs/** linguist-vendored
