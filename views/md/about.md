@@ -19,16 +19,14 @@ webmaster [at] xilef12000.com
 <br>
 
 ### Our Domains:
-[https://www.Xilef12000.com/](https://www.Xilef12000.com/)  
+[https://Xilef12000.com/](https://Xilef12000.com/) (incl. all subdomains)  
+[https://Xilef12000.de/](https://Xilef12000.de/) (incl. all subdomains)  
+[https://manuel-koenig.de/](https://manuel-koenig.de/) (incl. all subdomains)  
+[https://x42.space/](https://x42.space/) (incl. all subdomains)  
 [https://Xilef12000.github.io/](https://Xilef12000.github.io/)  
-[https://Xilef12000.com/](https://Xilef12000.com/)  
-[https://Xilef12000.de/](https://Xilef12000.de/)  
-[https://www.Xilef12000.de/](https://www.Xilef12000.de/)  
-[https://manuel-koenig.de/](https://manuel-koenig.de/)  
-[https://www.manuel-koenig.de/](https://www.manuel-koenig.de/)  
 <br>
 
 ### Hosting:
-All static elements are hosted using a [Github Pages](https://pages.github.com/) server.  
-Domain redirects and E-mail servers are running on [Strato](https://www.strato.de/) servers.  
+All static elements are hosted using [Github Pages](https://pages.github.com/).  
+Domain redirects and E-mail services are running on [Strato](https://www.strato.de/) servers.  
 <br>
