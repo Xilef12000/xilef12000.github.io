@@ -12,7 +12,6 @@
     page-break-after: always;
     break-after: always;
 }
-
 .scene-wrapper  .scene {
     width: max(40vmin, 320px);
     max-width: 80vw;
@@ -34,11 +33,9 @@
     transform-style: preserve-3d;
     position: relative;
 }
-
 .card.is-flipped {
     transform: rotateX(180deg);
 }
-
 .scene-wrapper .scene .card .card__face {
     position: absolute;
     width: 100%;
@@ -75,13 +72,11 @@
     border-radius: 5px;
     background: #3c3c3c;
 }
-
 .card__face--back {
     border-radius: 5px;
     background: #3c3c3c;
     transform: rotateX(180deg);
 }
-
 .card__text__small {
     line-height: 1.2rem;
     text-align: justify;

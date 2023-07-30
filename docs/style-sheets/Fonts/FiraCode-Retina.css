@@ -1,9 +1,8 @@
 @font-face {
     font-family: 'FiraCode-Retina';
     src: url('Fontfiles/FiraCode-Retina.woff2') format('woff2'),
-        url('Fontfiles/FiraCode-Retina.woff') format('woff');
+    url('Fontfiles/FiraCode-Retina.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-
 }

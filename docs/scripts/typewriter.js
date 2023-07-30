@@ -1,6 +1,5 @@
 //http://jragon.herokuapp.com/
 //https://jragon.pages.dev/
-
 var i = 0;
 var n = 0;
 var txt = 'XILEF12000';
@@ -10,10 +9,7 @@ const speed = 100;
 var cursor = true;
 const speed_divisor = 4;
 const text = ["XILEF12000", " AN ANIMATOR", "A RENDERER", "A PROGRAMMER", "A DEVELOPER", "A Artist", ""];
-
-
 setInterval(typeWriter, speed);
-
 function typeWriter() {
     if (i < txt.length && n == 20) {
         document.getElementById('cursor').style.opacity = 1;

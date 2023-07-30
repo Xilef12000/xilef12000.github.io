@@ -1,8 +1,7 @@
 @font-face {
     font-family: 'major_snafuregular';
     src: url('Fontfiles/major_shift-webfont.woff') format('woff'),
-        url('Fontfiles/major_shift-webfont.ttf') format('truetype');
+    url('Fontfiles/major_shift-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-    
 }
