@@ -14,14 +14,16 @@
 }
 
 .scene-wrapper  .scene {
-    width: 40vmin;
-    height: 56vmin;
+    width: max(40vmin, 320px);
+    max-width: 80vw;
+    aspect-ratio: calc(40 / 56);
     /*border: 1px solid #CCC;*/
     perspective: 120vmin;
 }
 .scene-wrapper-project  .scene {
-    width: 40vmin;
-    height: 20vmin;
+    width: max(40vmin, 320px);
+    max-width: 80vw;
+    aspect-ratio: calc(40 / 20);
     /*border: 1px solid #CCC;*/
     perspective: 120vmin;
 }
@@ -84,6 +86,12 @@
     line-height: 1.2rem;
     text-align: justify;
     font-weight: normal;
-    padding: 2rem;
+    margin: 2rem;
     font-size: 1rem;
+    height: calc(100% - 4rem);
+    overflow: scroll;
+}
+.card__text__small button{
+    max-width: 100%;
+    padding: 0.4rem;
 }
