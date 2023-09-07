@@ -54,6 +54,10 @@
 .navbar a:is(.nav-svg-text, .nav-text ):is(:hover, :focus) {
     background-color: var(--color-a-hover)
 }
+.head-bar a:nth-last-child(-n+5):is(.nav-svg-text, .nav-text ):is(:hover, :focus) {
+    background-color: #0950cd;
+    text-shadow: 0 0 1em #ffffff;
+}
 .navbar a.selected {
     background-color: var(--color-a)
 }
@@ -73,7 +77,7 @@
     grid-auto-flow: dense;
     gap: 0px;
 }
-.head-bar a:nth-child(-n+3) {
+.head-bar a:nth-child(-n+4) {
     grid-column: span 3;
 }
 .head-bar a:nth-last-child(-n+4) {
