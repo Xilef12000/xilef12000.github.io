@@ -33,16 +33,16 @@ urls = config["start_urls"]
 if args.fast:
     print("fast mode")
     Path(os.path.join(script_dir, config["db"])).touch()
-    print(os.stat(os.path.join(script_dir, config["db"])).st_size)
+    #print(os.stat(os.path.join(script_dir, config["db"])).st_size)
     if os.stat(os.path.join(script_dir, config["db"])).st_size != 0:
-        print("not emty")
+        #print("not emty")
         f = open(os.path.join(script_dir, config["db"]))
         db_in = json.load(f)
         f.close()
-        print(db_in)
+        #print(db_in)
         for url in db_in["parse"]:
                 urls.append(url)
-        print(urls)
+        #print(urls)
 
 server = config["server"]
 parsed = []
@@ -51,7 +51,7 @@ while True:
     #print(urls)
     for url in urls:
         if url not in parsed:
-            print(url)
+            #print(url)
             br = False
             parsed.append(url)
             if url.endswith("/"):
@@ -93,7 +93,7 @@ while True:
                 file = "{}{}".format(config["out_dir"],path)
             else:
                 file = "{}{}.html".format(config["out_dir"],path)
-            print("        "+file)
+            #print("        "+file)
 
             os.makedirs(os.path.dirname(file), exist_ok=True)
             f = open(file, 'wb')

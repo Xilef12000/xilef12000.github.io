@@ -27,11 +27,11 @@ app.get('*', async (req, res) => {
             if (url == '/' || url == '') {
                 url = 'index';
             }
-            console.log('pages/' + url)
+            //console.log('pages/' + url)
             res.render('pages/' + url, {"md": md});
         }
         else if (assets.includes(url.split('/')[1]) && existsSync('.' + url)){
-            console.log(url);
+            //console.log(url);
             if (mime.getType(url.split('.').at(-1)).split('/')[0] == 'text') {
                 res.contentType(mime.getType(url.split('.').at(-1))).send( await readFile('.' + url, 'utf8') );
             }
