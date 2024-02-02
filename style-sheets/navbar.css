@@ -80,6 +80,12 @@
 .head-bar a:nth-child(-n+4) {
     grid-column: span 3;
 }
+.head-bar a:nth-last-child(-n+6) {
+    grid-column-end: -6;
+}
+.head-bar a:nth-last-child(-n+5) {
+    grid-column-end: -5;
+}
 .head-bar a:nth-last-child(-n+4) {
     grid-column-end: -4;
 }
