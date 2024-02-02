@@ -28,16 +28,14 @@
       <div id="irl">
         <h2 id="github">Github:</h2>
         <div class="external_content" external='<%- md("md/about_me_github.md"); %>'>
-          <p>This is a embedded page. The content is not displayed right now, because it might set its own cookies.</p>
-          <p>By clicking one of the buttons below the content will be loaded from the external server.</p>
-          <button onclick="loadExternal(this)">
-            load this embedded element
-          </button>
           <br>
+          <a onclick="loadExternalAll()">
+              load external content
+          </a>
+          <span title="This embedded content is currently deactivated. When loaded, data will be transmitted to external servers and cookies might be set. By clicking one the text the content will be loaded from the external site." alt=" ? ">
+              <%- include('../svg/questionmark.svg'); %>
+          </span>
           <br>
-          <button onclick="loadExternalAll()">
-            load all embedded elements
-          </button>
         </div>
         <br/>
         <h2 id="blender">Blender:</h2>

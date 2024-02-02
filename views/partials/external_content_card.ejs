@@ -3,16 +3,14 @@
         <div class="card__face card__face--front">loading...</div>
         <div id="<%= typeof id != 'undefined' ? id : '' %>" class="card__face card__face--back">
             <div class="card__image__instant card__text__small external_content" draggable="false" external='<%= typeof content != 'undefined' ? content : '' %>'>
-                <p>This is a embedded page. The content is not displayed right now, because it might set its own cookies.</p>
-                <p>By clicking one of the buttons below the content will be loaded from the external server.</p>
-                <button onclick="loadExternal(this)">
-                    load this embedded element
-                </button>
                 <br>
+                <a onclick="loadExternalAll()">
+                    load external content
+                </a>
+                <span title="This embedded content is currently deactivated. When loaded, data will be transmitted to external servers and cookies might be set. By clicking one the text the content will be loaded from the external site." alt=" ? ">
+                    <%- include('../svg/questionmark.svg'); %>
+                </span>
                 <br>
-                <button onclick="loadExternalAll()">
-                    load all embedded elements
-                </button>
             </div>
         </div>
     </div>

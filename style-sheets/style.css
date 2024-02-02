@@ -117,3 +117,15 @@ code, pre {
     transition-property: opacity;
     transition-duration: 0.25s;
 }
+.external_content a, .external_content span{
+    cursor: pointer;
+}
+.external_content svg {
+    width: 1.2em;
+    height: 1.2em;
+    display: inline-block;
+    vertical-align: middle;
+}
+.external_content svg path {
+    fill: var(--color-text);
+}
