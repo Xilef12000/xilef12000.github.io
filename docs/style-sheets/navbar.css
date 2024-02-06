@@ -54,7 +54,7 @@
 .navbar a:is(.nav-svg-text, .nav-text ):is(:hover, :focus) {
     background-color: var(--color-a-hover)
 }
-.head-bar a:nth-last-child(-n+5):is(.nav-svg-text, .nav-text ):is(:hover, :focus) {
+.head-bar a:nth-last-child(-n+7):is(.nav-svg-text, .nav-text ):is(:hover, :focus) {
     background-color: #0950cd;
     text-shadow: 0 0 1em #ffffff;
 }
