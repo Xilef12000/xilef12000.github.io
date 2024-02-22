@@ -7,6 +7,8 @@ document.querySelectorAll(".card__image").forEach(function(element) {
     });
 });
 document.querySelectorAll(".card__image__instant").forEach(function(element) {
-    element.parentNode.parentNode.classList.add('is-flipped'); //for gallery
-    element.parentNode.parentNode.parentNode.classList.add('is-flipped'); //for projects
+    setTimeout(() => {
+        element.parentNode.parentNode.classList.add('is-flipped'); //for gallery
+        element.parentNode.parentNode.parentNode.classList.add('is-flipped'); //for projects
+    }, 0) // after delay of 0ms
 });
