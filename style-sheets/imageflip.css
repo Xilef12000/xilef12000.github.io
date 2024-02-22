@@ -61,6 +61,9 @@
     margin-top: 1vmin;
     margin-bottom: 1vmin;
 }
+.scene-wrapper-project .scene .stats img{
+    margin-right: 1vmin;
+}
 .scene-wrapper-project .scene .stats .toggle_href{
     width: fit-content;
 }
