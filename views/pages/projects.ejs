@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <%- include('../partials/head', {title:"Projects"}); %>
+  <script src="/scripts/externalContent.js" type="text/javascript"></script>
 </head>
 <body>
   <header>
@@ -14,12 +15,12 @@
       //https://3dtransforms.desandro.com/card-flip
     -->
     <div class="scene-wrapper-project">
-      <%- include('../partials/frame_projects', {id:"13a2", href:"/project/13a2",src:"/assets/project/13a2/thumbnail.png", alt:"Lissaious Form for MA2 Effects"}); %>
-      <%- include('../partials/frame_projects', {id:"f24d", href:"https://github.com/Xilef12000/scripts",src:"/assets/project/f24d/thumbnail.png", alt:"scripts"}); %>
-      <%- include('../partials/frame_projects', {id:"10a2", href:"/project/10a2",src:"/assets/project/10a2/thumbnail.png", alt:"QLC+ Dark Theme"}); %>
-      <%- include('../partials/frame_projects', {id:"6497", href:"/project/6497",src:"/assets/project/6497/thumbnail.png", alt:"WS2821 over Artnet"}); %>
-      <%- include('../partials/frame_projects', {id:"29b7", href:"/project/29b7",src:"/assets/project/29b7/thumbnail.png", alt:"Custom Browser Start Page"}); %>
-      <%- include('../partials/frame_projects', {id:"1082", href:"/",src:"/assets/project/1082/thumbnail.png", alt:"xilef12000.github.io"}); %>
+      <%- include('../partials/frame_projects', {id:"13a2", href:"/project/13a2", title:"Lissaious Form for MA2 Effects", description:"This importable Form for MA2 adds a Lissaious Form as seen in the image", stats:'<img alt="grandMA2" src="https://img.shields.io/badge/grandMA2-eea800?style=for-the-badge">'}); %>
+      <%- include('../partials/frame_projects', {id:"f24d", href:"https://github.com/Xilef12000/scripts", title:"scripts", description:"a collection of useful shell/bash scripts (and some other scipts)", stats:'<img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"><img alt="Shell" src="https://img.shields.io/badge/Bash-89e051?style=for-the-badge&logo=GNUBash&logoColor=black"><img alt="Stars" src="https://img.shields.io/github/stars/Xilef12000/scripts?style=for-the-badge">'}); %>
+      <%- include('../partials/frame_projects', {id:"10a2", href:"/project/10a2", title:"QLC+ Dark Theme", description:"Simple dark theme for QLC+", stats:'<img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"><img alt="CSS" src="https://img.shields.io/badge/CSS-264de4?style=for-the-badge&logo=css3&logoColor=white"><img alt="Stars" src="https://img.shields.io/github/stars/Xilef12000/qlcplus-dark-theme?style=for-the-badge">'}); %>
+      <%- include('../partials/frame_projects', {id:"6497", href:"/project/6497", title:"WS2821 over Artnet", description:"ws2812 over artnet with a raspberrypi", stats:'<img alt="Raspberry Pi" src="https://img.shields.io/badge/Raspberry%20Pi-c7053d?style=for-the-badge&logo=raspberrypi&logoColor=white"><img alt="Python" src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=306998"><img alt="Stars" src="https://img.shields.io/github/stars/Xilef12000/ws2812-over-artnet?style=for-the-badge">'}); %>
+      <%- include('../partials/frame_projects', {id:"29b7", href:"/project/29b7", title:"Custom Browser Start Page", description:"custom browser start page with plenty shortcuts", stats:'<img alt="Firefox" src="https://img.shields.io/badge/Firefox-FF9500?style=for-the-badge&logo=firefox&logoColor=00539F"><img alt="Java Script" src="https://img.shields.io/badge/JS-f0db4f?style=for-the-badge&logo=javascript&logoColor=323330"><img alt="Stars" src="https://img.shields.io/github/stars/Xilef12000/custom-browser-start-page?style=for-the-badge">'}); %>
+      <%- include('../partials/frame_projects', {id:"1082", href:"/", title:"xilef12000.github.io", description:"Xilef12000's Github Repository for his Github Pages website", stats:'<img alt="Firefox" src="https://img.shields.io/badge/Firefox-FF9500?style=for-the-badge&logo=firefox&logoColor=00539F"><img alt="Node.js" src="https://img.shields.io/badge/Node.js-3c873a?style=for-the-badge&logo=Node.js&logoColor=303030"><img alt="Stars" src="https://img.shields.io/github/stars/Xilef12000/xilef12000.github.io?style=for-the-badge">'}); %>
     </div>  
     <script src="scripts/imageflip.js">
     </script>

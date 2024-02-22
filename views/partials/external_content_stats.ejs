@@ -1,0 +1,8 @@
+<div class="external_content toggle_href" onmouseover="disable_href(this)" onmouseleave="enable_href(this)" draggable="false" external='<%= typeof content != 'undefined' ? content : '' %>'>
+    <span class="purple" onclick="loadExternalAll()">
+        load external content
+    </span>
+    <span title="This embedded content is currently deactivated. When loaded, data will be transmitted to external servers and cookies might be set. By clicking one the text the content will be loaded from the external site." alt=" ? ">
+        <%- include('../svg/questionmark.svg'); %>
+    </span>
+</div>

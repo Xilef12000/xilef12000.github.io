@@ -2,8 +2,14 @@
   <div class="card">
     <div class="card__face card__face--front">loading...</div>
     <div class="card__face card__face--back">
-      <a href="<%= typeof href != 'undefined' ? href : '' %>">
-        <img id="<%= typeof id != 'undefined' ? id : '' %>" class="card__image" src="<%= typeof src != 'undefined' ? src : '' %>" alt="<%= typeof alt != 'undefined' ? alt : '' %>" draggable="false" />
+      <a class="link" href="<%= typeof href != 'undefined' ? href : '' %>" href_alt="<%= typeof href != 'undefined' ? href : '' %>">
+        <div id="<%= typeof id != 'undefined' ? id : '' %>" class="card__image__instant link-div" alt="<%= typeof title != 'undefined' ? title : '' %>" draggable="false" >
+          <h1><%= typeof title != 'undefined' ? title : '' %></h1>
+          <p><%= typeof description != 'undefined' ? description : '' %></p>
+          <div class="stats" alt="stats">
+            <%- typeof stats != 'undefined' ? include('../partials/external_content_stats', {content:stats}) : ''%>
+          </div>
+        </div>
       </a>
     </div>
   </div>
