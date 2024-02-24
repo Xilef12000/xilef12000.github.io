@@ -47,10 +47,10 @@
 }
 .close {
     position: fixed;
-    top: 15px;
-    right: 35px;
+    top: 1rem;
+    right: 2rem;
     color: #f1f1f1;
-    font-size: 40px;
+    font-size: 3rem;
     font-weight: bold;
     transition: 0.3s;
 }

@@ -26,7 +26,7 @@
     color: #f2f2f2;
     text-align: center;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 1.125rem;
     transition-property: background-color;
     transition-duration: var(--transition);
 }
